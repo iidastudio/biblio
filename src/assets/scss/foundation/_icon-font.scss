@@ -1,0 +1,109 @@
+$icomoon-font-family: "biblio-icon" !default;
+$icomoon-font-path: "../font/biblio-icon" !default;
+
+$icon-home: "\e900";
+$icon-publish-date: "\e901";
+$icon-modified-date: "\e902";
+$icon-category: "\e903";
+$icon-tag: "\e904";
+$icon-quote-left: "\e905";
+$icon-quote-right: "\e906";
+$icon-comment: "\e907";
+$icon-favorite-outline: "\e908";
+$icon-favorite-fill: "\e909";
+$icon-bookmark-outline: "\e90a";
+$icon-bookmark-fill: "\e90b";
+
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?jioue3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?jioue3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?jioue3') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  position: relative;
+  padding-left: 1.2em;
+  &:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(calc(-50% + 0.4px));
+  font-family: '#{$icomoon-font-family}' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
+.icon-home {
+  &:before {
+    content: $icon-home; 
+  }
+}
+.icon-publish-date {
+  &:before {
+    content: $icon-publish-date; 
+  }
+}
+.icon-modified-date {
+  &:before {
+    content: $icon-modified-date; 
+  }
+}
+.icon-category {
+  &:before {
+    content: $icon-category; 
+  }
+}
+.icon-tag {
+  &:before {
+    content: $icon-tag; 
+  }
+}
+.icon-quote-left {
+  &:before {
+    content: $icon-quote-left; 
+  }
+}
+.icon-quote-right {
+  &:before {
+    content: $icon-quote-right; 
+  }
+}
+.icon-comment {
+  &:before {
+    content: $icon-comment; 
+  }
+}
+.icon-favorite-outline {
+  &:before {
+    content: $icon-favorite-outline; 
+  }
+}
+.icon-favorite-fill {
+  &:before {
+    content: $icon-favorite-fill; 
+  }
+}
+.icon-bookmark-outline {
+  &:before {
+    content: $icon-bookmark-outline; 
+  }
+}
+.icon-bookmark-fill {
+  &:before {
+    content: $icon-bookmark-fill; 
+  }
+}

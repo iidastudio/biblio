@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/paragraph": {
+        "typography": {
+          "lineHeight": "2"
+        }
+      }
+    }
+  }
+}

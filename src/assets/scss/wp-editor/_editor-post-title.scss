@@ -1,0 +1,5 @@
+@use '../tool' as *;
+
+.edit-post-visual-editor__post-title-wrapper {
+  margin: var(--wp--style--block-gap) 0;
+}

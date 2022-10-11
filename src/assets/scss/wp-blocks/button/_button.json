@@ -1,0 +1,19 @@
+{
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "4px"
+        },
+        "color": {
+          "text": "var(--color-dark-text-main)",
+          "background": "var(--color-dark-bg)"
+        },
+        "typography": {
+          "fontSize": "inherit",
+					"lineHeight": "1.4"
+				}
+      }
+    }
+  }
+}

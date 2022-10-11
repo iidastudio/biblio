@@ -1,0 +1,21 @@
+{
+  "styles": {
+    "typography": {
+      "// comment": {
+        "minWidth": "614px",
+        "maxWidth": "705px",
+        "minFontSize": "1rem (16px)",
+        "maxFontSize": "1.125rem (18px)"
+      },
+      "fontSize": "clamp(1rem, 0.1566rem + 2.1978vw, 1.125rem)",
+      "fontFamily": "var(--wp--preset--font-family--optimal-gothic)",
+      "fontWeight": "300",
+      "letterSpacing": "var(--wp--custom--letter-spacing)"
+    }
+  },
+  "settings": {
+    "custom": {
+      "letterSpacing": "0.05em"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/heading": {
+        "color": {
+          "// text": "var(--wp--preset--color--text-black)"
+        }
+      }
+    }
+  }
+}

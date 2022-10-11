@@ -1,0 +1,15 @@
+{
+    "name": "iidastudio/biblio",
+    "authors": [
+        {
+            "name": "Takayuki Iida"
+        }
+    ],
+    "description": "",
+    "require": {}, 
+    "autoload": {
+        "psr-4": {
+            "biblio\\": "./"
+        }
+    }
+}

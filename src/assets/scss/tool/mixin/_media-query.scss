@@ -1,0 +1,42 @@
+@use '../../variable' as *;
+
+// min-width from variable
+@mixin mq($breakpoint: min ) {
+  @if $breakpoint == min {
+    $min: map-get($media-query,"sm") - 0.00001rem;
+    @media (max-width: $min ) {
+      @content;
+    }
+  } 
+  @else if $breakpoint == sm {
+    @media (min-width: map-get($media-query,"sm") ) {
+      @content;
+    }
+  } 
+  @else if $breakpoint == md {
+    @media (min-width: map-get($media-query,"md") ) {
+      @content;
+    }
+  }
+  @else if $breakpoint == lg {
+    @media (min-width: map-get($media-query,"lg") ) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: map-get($media-query,"xl") ) {
+      @content;
+    }
+  } @else if $breakpoint == land {
+    @media (orientation: landscape) {
+      @content;
+    }
+  } @else if $breakpoint == port {
+    @media (orientation: portrait) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

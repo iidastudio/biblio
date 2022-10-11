@@ -1,0 +1,40 @@
+// ex) color(main);
+@function color($color-name){
+  @return var(--color-#{$color-name});
+}
+
+@function fontSize($size-name: md, $calc: 0, $unit: px){
+  @if $calc > 0 {
+    @return calc(var(--font-size-#{$size-name}) + #{$calc}#{$unit});
+  } @else if $calc < 0 {
+    @return calc(var(--font-size-#{$size-name}) - #{abs($calc)}#{$unit});
+  } @else {
+    @return var(--font-size-#{$size-name});
+  }
+}
+
+// ex) spacing(md);
+@function spacing($size-name: md, $calc: 0, $unit: px, $plus-minus: plus){
+  @if $plus-minus == 'plus' {
+    @if $calc > 0 {
+      @return calc(var(--spacing-#{$size-name}) + #{$calc}#{$unit});
+    } @else if $calc < 0 {
+      @return calc(var(--spacing-#{$size-name}) - #{abs($calc)}#{$unit});
+    } @else {
+      @return var(--spacing-#{$size-name});
+    }
+  } @else if $plus-minus == 'minus' {
+    @if $calc > 0 {
+      @return calc((var(--spacing-#{$size-name}) + #{$calc}#{$unit}) * -1);
+    } @else if $calc < 0 {
+      @return calc((var(--spacing-#{$size-name}) - #{abs($calc)}#{$unit}) * -1);
+    } @else {
+      @return calc(var(--spacing-#{$size-name}) * -1);
+    }
+  }
+}
+
+// ex) lineHeight(md);
+@function lineHeight($size-name: base){
+  @return var(--line-height-#{$size-name});
+}

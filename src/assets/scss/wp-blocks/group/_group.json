@@ -1,0 +1,13 @@
+{
+  "styles": {
+    "blocks": {
+      "core/group": {
+        "spacing": {
+          "// margin": {
+            "top": "0"
+          }
+        }
+      }
+    }
+  }
+}

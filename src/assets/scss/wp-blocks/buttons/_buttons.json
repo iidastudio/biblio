@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/buttons": {
+        "spacing": {
+          "blockGap": "1em"
+        }
+      }
+    }
+  }
+}

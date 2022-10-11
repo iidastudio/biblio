@@ -1,0 +1,23 @@
+ul.wp-block-archives {
+  &.wp-block-archives-list {
+    li {
+      margin-top: 0;
+    }
+    &.alignleft, &.alignright {
+      float: none;
+    }
+  }
+  &.alignleft {
+    text-align: left;
+  }
+  &.alignright {
+    text-align: right;
+    list-style: none;
+    padding-left: 0;
+  }
+  &.aligncenter {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+  }
+}

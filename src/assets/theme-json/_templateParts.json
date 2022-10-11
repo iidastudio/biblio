@@ -1,0 +1,29 @@
+{
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "home-main",
+      "title": "Home main",
+      "area": "biblio/home/main"
+    },
+    {
+      "name": "single-main",
+      "title": "Single main",
+      "area": "biblio/single/main"
+    },
+    {
+      "name": "page-main",
+      "title": "Page main",
+      "area": "biblio/page/main"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+@use '../../tool' as *;
+
+.wp-block-pullquote {
+  &__citation {
+    margin-top: 1em;
+    font-size: fontSize(sm);
+  }
+}

@@ -1,0 +1,70 @@
+// biblio font Settings
+@font-face {
+	$font-family: "biblio" !default;
+	$font-path: "../font/biblio" !default;
+	
+  font-family: $font-family;
+  src:
+    url('#{$font-path}/#{$font-family}.woff2') format('woff2'),
+    url('#{$font-path}/#{$font-family}.woff') format('woff'),
+    url('#{$font-path}/#{$font-family}.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+	unicode-range: u+2014, u+2015, u+2026;
+  font-display: block;
+}
+
+// Yakumono
+// @use "../../../../node_modules/yakuhanjp/dist/scss/yakuhanjp_s" with (
+// 	$yakuhanjps-font-dir: "../font",
+// 	$yakuhanjps-swap-use: true,
+// 	$yakuhanjps-eot-use: false,
+// 	$yakuhanjps-weight: (300:"DemiLight",400:"Regular",700:"Bold") 
+// );
+
+// // Hiragino Sans Setting
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W1');
+// 	font-weight: 100;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W2');
+// 	font-weight: 200;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W3');
+// 	font-weight: 300;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Biblio Hiragino Sans W3');
+// 	font-weight: 400;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W5');
+// 	font-weight: 500;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W6');
+// 	font-weight: 600;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W7');
+// 	font-weight: 700;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W8');
+// 	font-weight: 800;
+// }
+// @font-face {
+// 	font-family: 'Biblio Hiragino Sans';
+// 	src: local( 'Hiragino Sans W9');
+// 	font-weight: 900;
+// }

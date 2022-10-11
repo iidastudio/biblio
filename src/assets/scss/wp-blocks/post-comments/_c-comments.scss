@@ -1,0 +1,30 @@
+@use '../../tool' as *;
+
+.c-comments {
+  ol, ul {
+    padding-left: 0;
+  }
+  .comment {
+    list-style: none;
+    padding: spacing(sm);
+    background: color(support);
+  }
+  &__title {
+    margin: 0;
+  }
+  .depth-1 {
+    margin-top: spacing(sm);
+  }
+
+  .children {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-left: solid 1px color(text-support);
+    .comment {
+      margin-top: spacing(sm);
+      padding: spacing(sm) 0 0 spacing(sm);
+      border-top: solid 1px color(text-support);
+      background: transparent;
+    }
+  }
+}

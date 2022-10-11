@@ -1,0 +1,32 @@
+.vertical-rl {
+  writing-mode: vertical-rl;
+  column-count: 1;
+  width: 100vw;
+  > {
+    * {
+      margin-top: 0 !important;
+    }
+    * + * {
+      margin-right: 0;
+    }
+
+    p {
+      text-indent: calc(1em + var(--wp--custom--letter-spacing));
+    }
+
+    figure.wp-block-image {
+      writing-mode: horizontal-tb;
+      &.alignleft, &.alignright {
+        margin: 0;
+        margin-right: 0.5rem;
+        padding: 0;
+      }
+      &.alignleft {
+        margin-bottom: 1rem !important;
+      }
+      &.alignright {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/post-navigation-link": {
+        "spacing": {
+          "blockGap": "0"
+        }
+      }
+    }
+  }
+}

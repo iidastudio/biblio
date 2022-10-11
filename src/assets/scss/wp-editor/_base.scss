@@ -1,0 +1,10 @@
+@use '../tool' as *;
+
+ol, ul {
+  box-sizing: border-box;
+}
+
+code {
+	background-color: color(support);
+	border-radius: 0;
+}

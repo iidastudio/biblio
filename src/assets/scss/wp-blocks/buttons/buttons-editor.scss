@@ -1,0 +1,14 @@
+.wp-block-buttons {
+  .block-list-appender {
+    margin-right: calc(-24px - 1em);
+    .block-list-appender__toggle {
+      margin-left: 0;
+    }
+  }
+  &.is-content-justification-space-between {
+    .block-list-appender {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

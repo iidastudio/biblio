@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+  "styles": {
+    "blocks": {
+      "core/post-excerpt": {
+        "typography": {
+          "fontSize": "14px"
+        }
+      }
+    }
+  }
+}

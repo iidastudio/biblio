@@ -1,0 +1,63 @@
+// variables
+//-----------------------------------
+$images: (
+  avatar-mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cGF0aCBpZD0iYXZhdGFyLW1hc2siIGRhdGEtbmFtZT0iYXZhdGFyLW1hc2siIGQ9Ik0xNiwwQzI2LjYyNywwLDMyLDUuMzczLDMyLDE2UzI2LjYyNywzMiwxNiwzMiwwLDI2LjYyNywwLDE2LDUuMzczLDAsMTYsMFoiLz4KPC9zdmc+")
+);
+
+$colors: (
+  main: #3EC1D3,
+  support: hsla(0,0%,80%,0.1),
+  accent: #ffe600,
+  bg: #fff,
+  text-main: #333,
+  text-support: hsla(0,0%,50%,0.3),
+  text-link: #333,
+  text-link-hover: #333,
+  test-link-visited: #333,
+  dark-support: #ffffff09,
+  dark-text-main: #fff,
+  dark-text-support: hsla(0,0%,60%,0.2),
+  dark-text-support-light: hsla(0,0%,60%,0.5),
+  dark-bg: #333,
+  // component
+  c-header: color(bg),
+  c-main: color(bg),
+  c-footer: color(bg),
+  c-sidebar: color(bg),
+  c-nav-heager__submenu: color(text-main),
+  // block
+  b-table-border-default: #ededed
+);
+
+// font-size, px to rem.
+$font-size: (
+  xxs: 10px,
+  xs:  12px,
+  sm:  14px,
+  md:  16px,
+  lg:  24px,
+  xl:  32px,
+  xxl: 48px,
+);
+
+// margin or padding, px to rem.
+$spacing: (
+  xxs:  4px,
+  xs:   8px,
+  sm:  16px,
+  md:  32px,
+  lg:  48px,
+  xl:  64px,
+  xxl: 80px,
+);
+
+$line-height: (
+  base: 2,
+);
+
+$media-query: (
+  sm: 43.34375rem, // layout post width(41.34375rem) + side margin(1rem * 2)
+  md: 1024px,
+  lg: 1280px, // layout wide
+  xl: 1920px, // layout page-wide
+);

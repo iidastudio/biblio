@@ -1,0 +1,61 @@
+{
+  "settings": {
+    "typography": {
+      "customFontSize": true,
+			"dropCap": true,
+			"fontStyle": true,
+			"fontWeight": true,
+			"letterSpacing": true,
+			"lineHeight": true,
+			"textDecoration": true,
+			"textTransform": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "biblio, \"Roboto\", \"Segoe UI\", 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'meiryo',  sans-serif",
+          "slug": "optimal-gothic",
+          "name": "optimal-gothic"
+        }
+      ],
+      "fontSizes": [
+				{
+					"slug": "sm",
+					"size": "12px",
+					"name": "S"
+				},
+				{
+					"slug": "md",
+					"size": "16px",
+					"name": "M"
+				},
+				{
+					"slug": "lg",
+					"size": "32px",
+					"name": "L"
+				},
+				{
+					"slug": "xl",
+					"size": "64px",
+					"name": "XL"
+				},
+				{
+					"slug": "xxl",
+					"size": "80px",
+					"name": "XXL"
+				}
+			]
+    },
+		"custom": {
+			"base": {
+				"fontSize": {
+					"xxs": "10px",
+					"xs": "12px",
+					"sm": "14px",
+					"md": "16px",
+					"lg": "24px",
+					"xl": "32px",
+					"xxl": "48px"
+				}
+			}
+		}
+  }
+}

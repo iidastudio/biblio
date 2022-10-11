@@ -1,0 +1,21 @@
+{
+  "styles": {
+    "blocks": {
+      "core/post-terms": {
+        "spacing": {
+          "blockGap": "0"
+        },
+        "typography": {
+          "lineHeight": "1"
+        },
+        "elements": {
+          "link": {
+            "typography": {
+              "textDecoration": "none"
+            }
+          }
+        }
+      }
+    }
+  }
+}

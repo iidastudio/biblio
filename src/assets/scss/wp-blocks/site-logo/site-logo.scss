@@ -1,0 +1,22 @@
+@use '../../tool' as *;
+
+.wp-block-site-logo {
+  &.alignleft.alignleft, &.alignright.alignright {
+    float: none;
+  }
+  &.alignleft {
+    .custom-logo-link {
+      float: left;
+      margin-right: spacing(sm);
+    }
+  }
+  &.alignright {
+    .custom-logo-link {
+      float: right;
+      margin-left: spacing(sm);
+    }
+  }
+  &.aligncenter {
+    text-align: center;
+  }
+}

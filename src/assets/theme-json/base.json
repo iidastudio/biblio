@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": false,
+    "layout": {},
+    "spacing": {},
+    "typography": {},
+    "border": {},
+    "color": {},
+    "blocks": {},
+    "custom": {}
+  },
+  "styles": {
+    "color": {},
+    "typography": {},
+    "spacing": {},
+    "elements": {},
+    "blocks": {}
+  },
+  "customTemplates": [],
+  "templateParts": []
+}

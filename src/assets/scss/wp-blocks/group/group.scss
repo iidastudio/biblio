@@ -1,0 +1,62 @@
+@use '../../tool' as *;
+
+.wp-block-group {
+  &.has-background,
+  &.has-border-color,
+  &[style*="border-"] {
+    padding: .5em var(--wp--custom--base--padding--side);
+  }
+  &:not(:where(.has-background, .has-border-color), .has-border-color, [style*="border-"]) {
+    &.alignfull {
+      padding: 0 var(--wp--custom--base--padding--side);
+    }
+  }
+  // floatがはみ出さない処理
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  // 横並びや縦並びの時にはclearfixを無視
+  &.is-horizontal,
+  &.is-vertical,
+  &.is-nowrap {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+//-------------------------------------------------
+// グループロック内で画像（左寄せ、右寄せ）の後に段落ブロックが来た場合はマージントップを削除する処理
+//-------------------------------------------------
+.wp-block-group > {
+  .wp-block-image:first-child {
+    + p {
+      margin-block-start: 0;
+    }
+  }  
+}
+
+
+//-------------------------------------------------
+// style pattern
+//-------------------------------------------------
+.wp-block-group {
+  &.is-style-biblio-paper-filter {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(/wp-content/themes/biblio/assets/img/paper-texture.png);
+      opacity: .5;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+}

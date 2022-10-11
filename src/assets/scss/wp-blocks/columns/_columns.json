@@ -1,0 +1,23 @@
+{
+  "styles": {
+    "blocks": {
+      "core/columns": {
+        "spacing": {
+          "// blockGap": "1rem"
+        }
+      }
+    }
+  },
+  "settings": {
+    "blocks": {
+      "core/columns": {
+        "custom": {
+          "columns": {
+            "gap": "1rem",
+            "marginBlockStart": "clamp(2rem, -4.7473rem + 17.5824vw, 3rem)"
+          }
+        }
+      }
+    }
+  }
+}

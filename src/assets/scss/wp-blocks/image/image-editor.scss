@@ -1,0 +1,24 @@
+@use '../../tool' as *;
+
+.wp-block-image {
+  display: block;
+  max-width: 100%;
+  figcaption {
+    display: block;
+  }
+  .components-resizable-box__container {
+    max-width: 100% !important;
+    height: auto !important;
+    vertical-align: middle;
+  }
+}
+
+// float回り込み調整
+.block-editor-block-list__layout.is-root-container .wp-block-image {
+  &.alignleft {
+    margin-inline-start: calc(50% - (100% / 2));
+  }
+  &.alignright {
+    margin-inline-end: calc((100% / 2) - 50%);
+  }
+}

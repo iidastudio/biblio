@@ -1,0 +1,51 @@
+{
+  "styles": {
+    "elements": {
+      "h1": {
+        "typography": {
+          "// fontSize'": "32px", 
+          "fontSize": "var(--wp--custom--clamp--post--24-32)",
+          "fontWeight": "600"
+        }
+      },
+      "h2": {
+        "typography": {
+          "// fontSize": "24px",
+          "fontSize": "var(--wp--custom--clamp--post--20-24)",
+          "fontWeight": "600"
+        }
+      },
+      "h3": {
+        "typography": {
+          "// fontSize": "20px",
+          "fontSize": "var(--wp--custom--clamp--post--18-20)",
+          "fontWeight": "600"
+        }
+      },
+      "h4": {
+        "typography": {
+          "// fontSize": "18px",
+          "fontSize": "var(--wp--custom--clamp--post--16-18)",
+          "fontWeight": "600"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontSize": "1rem",
+          "fontWeight": "600"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": ".875rem",
+          "fontWeight": "600"
+        }
+      },
+      "link": {
+        "color": {
+					"text": "currentColor"
+				}
+      }
+    }
+  }
+}

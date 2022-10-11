@@ -1,0 +1,9 @@
+{
+  "customTemplates": [
+    {
+      "name": "page-home",
+      "title": "Page without title",
+      "postTypes": [ "page" ]
+    }
+  ]
+}

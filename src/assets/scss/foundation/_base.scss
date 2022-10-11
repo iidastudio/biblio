@@ -1,0 +1,120 @@
+@use "../tool" as *;
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "pkna" 1;
+  font-kerning: normal;
+	font-family: var(--wp--preset--font-family--optimal-gothic);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+audio {
+	vertical-align: bottom;
+}
+
+p {
+	margin: 0;
+	// inline image
+	img {
+		margin: 0 0.1em -2px;
+	}
+}
+
+a {
+	text-decoration: underline;
+	text-underline-offset: 0.1em;
+	transition: var(--wp--custom--base--transition);
+	&:hover {
+		text-decoration: none;
+		opacity: 0.8;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	&.has-background {
+		padding: 0.5em 0.7em;
+	}
+}
+
+// itlic
+em {
+	margin-inline-start: -0.1em;
+	margin-inline-end: 0.1em;
+}
+
+// bold
+strong {
+	font-weight: 600;
+}
+
+// list
+ol, ul:not(:where(
+.c-comments__list,
+.wp-block-navigation__container,
+.wp-block-page-list,
+.wp-block-post-template)){
+	margin: 0;
+	padding-inline-start: 1.4em;
+	line-height: 1.5;
+	li:not(:first-child) {
+		margin-block-start: 0.5em;
+	}
+	li {
+		ol, ul:where(:not(.wp-block-navigation__submenu-container)) {
+			li {
+				&:first-child {
+					margin-block-start: 0.125em;
+				}
+				&:not(:first-child) {
+					margin-block-start: 0.125em;
+				}
+			}
+		}
+	}
+}
+
+sup, sub {
+	font-size: fontSize(xs);
+	line-height: 0;
+	letter-spacing: 0.15em;
+	position: relative;
+}
+sup {
+	top: 0;
+}
+sub {
+	bottom: 0.2em;
+}
+
+
+code {
+	background-color: color(support);
+	border: solid 1px color(text-support);
+	border-radius: 2px;
+	font-size: fontSize(sm);
+	padding: 0.2em 0.4em;
+	margin: 0 0.2em;
+	line-height: 1;
+	letter-spacing: 0;
+}
+
+// block editor レスポンシブ テスト
+@media (min-width: 360px) {
+	.site-sidebar-right {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 300px;
+		background-color: silver;
+	}
+}

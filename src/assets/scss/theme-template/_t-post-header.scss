@@ -1,0 +1,16 @@
+.t-post-header {
+  > *:not(:first-child) {
+    margin-top: clamp(1.5rem, -1.8736rem + 8.7912vw, 2rem);
+  }
+}
+
+[class*="single-paged"] .t-post-header {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}

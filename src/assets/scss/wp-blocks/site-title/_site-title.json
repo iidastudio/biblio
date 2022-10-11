@@ -1,0 +1,18 @@
+{
+  "styles": {
+    "blocks": {
+      "core/site-title": {
+        "typography": {
+          "fontSize": "32px"
+        },
+        "elements": {
+          "link": {
+            "typography": {
+              "textDecoration": "none"
+            }
+          }
+        }
+      }
+    }
+  }
+}

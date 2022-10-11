@@ -1,0 +1,15 @@
+@use '../../tool' as *;
+
+// for each template
+.blog .wp-block-post-author-name {
+  font-size: fontSize(xs);
+}
+.single .wp-block-post-author-name {
+  font-size: fontSize(sm);
+}
+
+.wp-block-post-author-name {
+  &__link {
+    text-decoration: none;
+  }
+}

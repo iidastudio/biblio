@@ -1,0 +1,15 @@
+.edit-post-visual-editor__post-title-wrapper > [data-align="left"],
+.block-editor-block-list__layout.is-root-container > [data-align="left"],
+.edit-post-visual-editor__post-title-wrapper > [data-align="right"],
+.block-editor-block-list__layout.is-root-container > [data-align="right"] {
+  float: initial !important;
+}
+
+.wp-block {
+  &[data-align=right] > * {
+    float: right;
+  }
+  &[data-align=left] > * {
+    float: left;
+  }
+} 

@@ -1,0 +1,26 @@
+// 回り込みさせずにtext-align方式に変更
+.wp-block-categories {
+  &.wp-block-categories-list {
+    li {
+      margin-top: 0;
+    }
+    &.alignleft, &.alignright {
+      float: none;
+    }
+  }
+  &.alignleft {
+    text-align: left;
+    margin-right: 0;
+  }
+  &.alignright {
+    text-align: right;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  &.aligncenter {
+    text-align: center;
+    padding-left: 0;
+    list-style: none;
+  }
+}

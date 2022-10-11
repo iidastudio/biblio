@@ -1,0 +1,86 @@
+{
+  "name": "biblio",
+  "version": "1.0.0",
+  "description": "WordPress theme development env",
+  "main": "index.js",
+  "author": "Takayuki Iida",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "npm run wp-env start --update",
+    "stop": "npm run wp-env stop",
+    "wpclean": "npm run wp-env clean",
+    "destroy": "npm run wp-env destroy",
+    "cli": "wp-env run cli",
+    "wp-env": "wp-env",
+    "watch": "run-p watch:*",
+    "watch:sass-auto-index": "sass-auto-index ./src/assets/scss -w",
+    "watch:css": "chokidar './src/assets/scss/' -c 'npm run css' --silent --initial",
+    "watch:js": "chokidar './src/assets/js/' -c 'npm run js' --silent --initial ",
+    "watch:image": "chokidar './src/assets/img/' -c 'npm run image' --silent --initial",
+    "watch:json": "chokidar './src/**/*.json' -c 'npm run json' --initial",
+    "watch:font": "chokidar './src/assets/fonts/' -c 'npm run font' --initial",
+    "build": "run-p json css js image font",
+    "json": "run-s json:*",
+    "json:themejson": "merge-theme-json -b ./src/assets/theme-json/base.json -t ./src/assets/theme-json ./src/assets/scss/wp-blocks -o ./theme.json",
+    "json:pxtorem": "node ./themejson-pxtorem",
+    "css": "run-s css:*",
+    "css:sass": "sass src/assets/scss:$npm_package_config_dist/css -s expanded --no-source-map",
+    "css:autoprefixer": "postcss ./$npm_package_config_dist/css/**/*.css --base ./$npm_package_config_dist/css -d ./$npm_package_config_dist/css --no-map",
+    "js": "webpack --mode=development",
+    "image": "node imagemin",
+    "font": "cpx './src/assets/font/**/{*.svg,*.ttf,*.woff,*.woff2}' ./$npm_package_config_dist/font",
+    "clean": "rimraf ./$npm_package_config_dist",
+    "clean:css": "rimraf ./$npm_package_config_dist/*.css && rimraf ./$npm_package_config_dist/css/ && mkdir -p ./$npm_package_config_dist/css/",
+    "clean:js": "rimraf ./$npm_package_config_dist/assets/js/ && mkdir -p ./$npm_package_config_dist/js/",
+    "clean:img": "rimraf ./$npm_package_config_dist/assets/img/ && mkdir -p ./$npm_package_config_dist/img/",
+    "clean:font": "rimraf ./$npm_package_config_dist/assets/font/ && mkdir -p ./$npm_package_config_dist/font/",
+    "tolocal": "cpx './**/*.{html,css,php,json}' '/Users/pchan/Local Sites/shoptest/app/public/wp-content/themes/biblio'",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses --prod --gpl2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@wordpress/browserslist-config": "^4.1.2",
+    "@wordpress/env": "^5.1.0",
+    "@wordpress/scripts": "^24.1.0",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
+    "browserlist": "^1.0.1",
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "cpx": "^1.5.0",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "9.0.0",
+    "merge-theme-json": "git+https://github.com/iidastudio/merge-theme-json.git",
+    "npm-run-all": "^4.1.5",
+    "po2json": "^0.4.5",
+    "postcss-cli": "^10.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.54.4",
+    "sass-auto-index": "git+https://github.com/iidastudio/sass-auto-index.git",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "dependencies": {
+    "@wordpress/i18n": "^4.15.0",
+    "yakuhanjp": "^3.4.1"
+  },
+  "config": {
+    "dist": "assets"
+  }
+}

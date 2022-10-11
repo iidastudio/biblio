@@ -1,0 +1,61 @@
+@use '../../tool' as *;
+
+table {
+	border-color:	inherit;
+}
+
+.wp-block-table {
+	border-color: color(b-table-border-default);
+	:where(.has-border-color) {
+		border-style: none;
+	}
+	table {
+		margin-bottom: 0;
+	}
+  figcaption {
+		font-size: fontSize(xs);
+		border-bottom: 0;
+    margin-top: 0.5em;
+		text-align: center;
+  }
+	th, td {
+		border: solid 1px;
+		border-color: inherit;
+		padding: 0.2em 0.4em;
+	}
+	th {
+		color: color(dark-text-main);
+		background-color: color(dark-bg);
+		font-weight: 500;
+	}
+	tfoot td {
+		border-top: solid 2px;
+		border-color: inherit;
+	}
+
+	&.is-style-stripes {
+		border-bottom: 0;
+		tbody td {
+			border-bottom: 0;
+		}
+		tfoot td {
+			border-top: solid 1px color(b-table-border-default);
+			border-bottom: solid 1px color(b-table-border-default);
+		}
+	}
+}
+
+
+// 実験的に作ったプラグイン用 core-block-custom-test
+.wp-block-table {
+	&.center-horizontally {
+		th, td {
+			text-align: center !important;
+		}
+	}
+	&.center-vertically{
+		th, td{
+			vertical-align: middle !important;
+		}
+	}
+}

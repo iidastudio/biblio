@@ -1,0 +1,6 @@
+.block-editor-block-list__layout.is-root-container {
+  .wp-block-social-links {
+    // blockGapがmargin-topにも作用するため
+    margin-top: 0;
+  }
+}

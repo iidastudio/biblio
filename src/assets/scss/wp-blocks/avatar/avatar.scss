@@ -1,0 +1,12 @@
+@use '../../tool' as *;
+
+.wp-block-avatar {
+  &.is-style-biblio-squircle {
+    height: auto;
+    margin-right: 0;
+    img {
+      mask-size: 100%, 100%;
+      mask-image: var(--img-avatar-mask);  
+    }
+  }
+}

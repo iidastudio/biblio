@@ -1,0 +1,82 @@
+@use '../../tool' as *;
+
+.wp-block-post-template {
+  // thumbnail action
+  .wp-block-post {
+    &:hover {
+      .wp-block-post-featured-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .wp-block-post-featured-image {
+      img {
+        transition: .4s transform ease;
+      }
+    }
+  }
+}
+
+//-------------------------------------------------
+// core clumns style reset and restyle.
+//-------------------------------------------------
+// reset
+@media (min-width: 600px) {
+  .wp-block-post-template,
+  .wp-block-query-loop {
+    &.is-flex-container.is-flex-container {
+      &.columns-2, &.columns-3, &.columns-4, &.columns-5 {
+        & > li {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+// common
+.wp-block-post-template,
+.wp-block-query-loop {
+  &.is-flex-container.is-flex-container {
+    display: grid;
+    gap: var( --wp--custom--post-template--gap)
+  }
+}
+
+.min-columns-2 {
+  .wp-block-post-template,
+  .wp-block-query-loop {
+    &.is-flex-container.is-flex-container {
+      @include mq(min) {
+        &.columns-2, &.columns-3, &.columns-4, &.columns-5 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+.wp-block-post-template,
+.wp-block-query-loop {
+  &.is-flex-container.is-flex-container {
+    @include mq(sm) {
+      &.columns-2, &.columns-3, &.columns-4, &.columns-5 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @include mq(md) {
+      &.columns-3, &.columns-4, &.columns-5 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @include mq(lg) {
+      &.columns-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      &.columns-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  }
+}

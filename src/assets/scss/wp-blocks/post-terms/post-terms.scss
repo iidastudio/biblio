@@ -1,0 +1,7 @@
+@use '../../tool' as *;
+
+.wp-block-post-terms {
+  &.taxonomy-category {
+    font-size: fontSize(xs);
+  }
+}

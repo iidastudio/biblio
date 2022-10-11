@@ -1,0 +1,16 @@
+@use '../../tool' as *;
+
+.wp-block-post-navigation-link {
+  margin-top: 0;
+  padding-top: 1em;
+  line-height: 1;
+  clear: both;
+  a {
+    display: block;
+    border-bottom: solid 1px color(text-main);
+    padding: 2.5em 0 1em;
+    margin-top: -2em;
+    text-decoration: none;
+    line-height: 1.5;
+  }
+}

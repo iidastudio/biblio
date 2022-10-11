@@ -1,0 +1,27 @@
+@use "../../tool" as *;
+
+.wp-block-post-author {
+  align-items: center;
+  &__avatar {
+    height: auto;
+    margin-right: 0;
+    img {
+      mask-size: 100%, 100%;
+      mask-image: var(--img-avatar-mask);  
+    }
+    + .wp-block-post-author__content {
+      margin-left: 0.5em;
+    }
+  }
+  &__name {
+    line-height: 1;
+  }
+  &__byline {
+    line-height: 1;
+  }
+  &__bio {
+    line-height: 1;
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+  }
+}

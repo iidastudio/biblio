@@ -1,0 +1,41 @@
+@use '../../tool' as *;
+
+.wp-block-quote {
+  border-left: 0;
+  // padding: 2rem 2.5rem;
+  padding: var(--wp--custom--clamp--post--24-32) var(--wp--custom--clamp--post--32-40);
+  position: relative;
+  background-color: color(support);
+  p {
+    // font-size: fontSize(sm);
+    margin-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  cite {
+    display: block;
+    margin-top: 2em;
+    font-size: fontSize(xs);
+    text-align: right;
+    font-style: italic;
+  }
+  &::before, &::after {
+    font-family: "biblio-icon";
+    font-size: 1.5em;
+    color: color(text-support);
+    position: absolute;
+  }
+  &::before {
+    content: "\e905";
+    top: 4px;
+    left: 4px;
+  }
+  &::after {
+    content: "\e906";
+    bottom: 4px;
+    right: 4px;
+    top: auto;
+    left: auto;
+  }
+}

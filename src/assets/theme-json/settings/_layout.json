@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "layout": {
+      "contentSize": "var(--wp--custom--layout--content-size)",
+      "wideSize": "var(--wp--custom--layout--content-wide)"
+    },
+    "custom": {
+      "layout": {
+        "post": "41.34375rem",
+        "wide": "calc(1280px - var(--wp--custom--base--padding--side) * 2)",
+        "page": "calc(1280px - var(--wp--custom--base--padding--side) * 2)",
+        "pageWide": "calc(1920px - var(--wp--custom--base--padding--side) * 2)",
+        "contentSize": "min(calc(100% - var(--wp--custom--base--padding--side) * 2), var(--wp--custom--layout--post))",
+        "wideSize": "min(calc(100% - var(--wp--custom--base--padding--side) * 2), var(--wp--custom--layout--wide))",
+        "pageContentSize": "min(calc(100% - var(--wp--custom--base--padding--side) * 2), var(--wp--custom--layout--page))",
+        "pageWideSize": "min(calc(100% - var(--wp--custom--base--padding--side) * 2), var(--wp--custom--layout--page-wide))"
+      }
+    }
+  }
+}

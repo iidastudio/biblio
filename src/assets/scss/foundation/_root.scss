@@ -1,0 +1,24 @@
+@use '../variable' as *;
+
+:root {
+  // img
+  @each $key, $img in $images {
+    --img-#{$key}: #{$img};
+  }
+  // color
+  @each $key, $color in $colors {
+    --color-#{$key}: #{$color};
+  }
+  // font-size
+  @each $size-name, $size in $font-size {
+    --font-size-#{$size-name}: #{$size};
+  }
+  // spacing
+  @each $size-name, $size in $spacing {
+    --spacing-#{$size-name}: #{$size};
+  }
+  // line-height
+  @each $size-name, $size in $line-height {
+    --line-height-#{$size-name}: #{$size};
+  }
+}

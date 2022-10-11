@@ -1,0 +1,9 @@
+.wp-block-columns {
+  &.wp-block-columns.wp-block-columns {
+    --wp--style--block-gap: var(--wp--custom--columns--gap);
+    margin-block-start: var(--wp--custom--columns--margin-block-start);
+  }
+  &.has-background {
+    padding: 0 var(--wp--custom--base--padding--side);
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "styles": {
+    "blocks": {
+      "core/site-tagline": {
+        "typography": {
+          "fontSize": "12px",
+          "lineHeight": "1"
+        }
+      }
+    }
+  }
+}

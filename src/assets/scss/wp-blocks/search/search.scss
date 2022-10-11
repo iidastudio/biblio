@@ -1,0 +1,56 @@
+@use '../../tool' as *;
+
+
+.wp-block-search {
+  .wp-block-search {
+    &__label {
+      display: inline-block;
+      margin-bottom: spacing(xxs);
+      font-weight: 600;
+    }
+    &__button {
+      color: color(dark-text-main);
+      background-color: color(dark-bg);
+      border-width: 0;
+      padding: spacing(xs);
+      font-size: fontSize(sm);
+      margin: 0;
+    }
+    &__input {
+      padding: spacing(xs);
+      margin: 0;
+      background-color: color(support);
+      border: 0;
+      font-weight: 300;
+      letter-spacing: inherit;
+      line-height: 1;
+    }
+  }
+  // inside button
+  &.wp-block-search__button-inside {
+    .wp-block-search__inside-wrapper {
+      background-color: color(support);
+      .wp-block-search {
+        &__button {
+          padding: spacing(xs);
+        }
+        &__input {
+          padding: spacing(xs);
+        }
+      }
+    }
+  }
+  // text button
+  &.wp-block-search__text-button {
+      .wp-block-search {
+        &__button {
+          padding: spacing(xs);
+        }
+        &__input {
+          margin: 0;
+          padding: spacing(xs);
+        }
+      }
+  }
+
+}

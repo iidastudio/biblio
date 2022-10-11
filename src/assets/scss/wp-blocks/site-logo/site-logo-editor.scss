@@ -1,0 +1,30 @@
+@use '../../tool' as *;
+
+.wp-block-site-logo {
+  display: block;
+  &.is-default-size {
+    width: auto;
+  }
+
+  .components-resizable-box__container {
+    min-width: auto !important;
+  }
+}
+
+[data-align="left"] {
+  .wp-block-site-logo {
+    margin-right: spacing(sm);
+  }
+}
+
+[data-align="right"] {
+  .wp-block-site-logo {
+    margin-left: spacing(sm);
+  }
+}
+
+[data-align="center"] {
+  .wp-block-site-logo {
+    display: table;
+  }
+}

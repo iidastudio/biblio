@@ -1,0 +1,11 @@
+p {
+  &.has-background {
+    padding: 1em 1.5em;
+  }
+  &.is-style-biblio-align-justify {
+    text-align: justify;
+    &.vertical-rl {
+      text-justify: inter-ideograph;
+    }
+  }
+}

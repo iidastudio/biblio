@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/spacer": {
+        "spacing": {
+          "blockGap": "0"
+        }
+      }
+    }
+  }
+}

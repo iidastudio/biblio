@@ -1,0 +1,58 @@
+{
+  "settings": {
+    "color": {
+      "background": true,
+      "custom": true,
+      "customGradient": true,
+      "customDuotone": true,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "text": true,
+      "link": true,
+
+      "palette": [
+        {
+          "slug": "text-black",
+          "color": "#333333",
+          "name": "Text-Black"
+        },
+        {
+          "slug": "support-gray",
+          "color": "#f8f8f8",
+          "name": "Support-Gray"
+        },
+        {
+          "slug": "purple",
+          "color": "#D1D1E4",
+          "name": "Purple"
+        },
+        {
+          "slug": "red",
+          "color": "#E4D1D1",
+          "name": "Red"
+        }
+      ],
+
+      "gradients": [
+        {
+          "slug": "purple-to-red",
+          "gradient": "linear-gradient(160deg, var(--wp--preset--color--purple), var(--wp--preset--color--red))",
+          "name": "Purple to Red"
+        }
+      ],
+      
+      "duotone": [
+        {
+          "slug": "dark-blue-and-light-blue",
+          "colors": [ "#1d1f35", "#6cace4" ],
+          "name": "Dark blue and Light blue"
+        },
+        {
+          "slug": "dark-blue-and-beige",
+          "colors": [ "#1d1f35", "#c7c0af" ],
+          "name": "Dark blue and Beige"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "blocks": {
+      "core/social-links": {
+        "spacing": {
+          "blockGap": "8px"
+        }
+      }
+    }
+  }
+}

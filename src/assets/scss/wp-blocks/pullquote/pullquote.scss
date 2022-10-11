@@ -1,0 +1,20 @@
+@use '../../tool' as *;
+
+.wp-block-pullquote {
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  padding: 3em 0;
+  color: currentColor;
+  blockquote {
+    margin: 0 auto;
+  }
+  p {
+    margin: 0 auto;
+    font-size: 24px;
+  }
+  cite {
+    display: block;
+    margin-top: 1em;
+    font-size: fontSize(sm);
+  }
+}

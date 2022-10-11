@@ -1,0 +1,17 @@
+@use '../../tool' as *;
+
+.wp-block-audio {
+  figcaption {
+    font-size: fontSize(xs);
+    margin: 0.5em 0 0 0;
+    text-align: center;
+    color: #555;
+  }
+}
+.is-dark-theme {
+  .wp-block-audio {
+    figcaption {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}

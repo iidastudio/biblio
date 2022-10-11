@@ -1,0 +1,34 @@
+@use '../../tool' as *;
+
+
+.wp-block-latest-posts {
+  margin-bottom: 0;
+  li:not(:first-child) {
+    margin-top: spacing(md);
+  }
+  a {
+    font-size: fontSize(md);
+  }
+  &__post-excerpt {
+    margin: 0;
+    margin-top: spacing(xxs);
+    line-height: 1.5;
+    font-size: fontSize(sm);
+  }
+  &__post-author {
+    font-size: fontSize(xs);
+    line-height: 1;
+    margin-top: spacing(xxs);
+  }
+  &__post-date {
+    font-size: fontSize(xs);
+    line-height: 1;
+    margin-top: spacing(xxs);
+  }
+
+  &.is-grid {
+    li:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+}

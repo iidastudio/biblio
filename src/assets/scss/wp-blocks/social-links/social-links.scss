@@ -1,0 +1,61 @@
+@use '../../tool' as *;
+
+// blockGapがmargin-topにも作用するため
+ul.wp-block-social-links {
+  margin-top: 0;
+}
+
+.wp-block-social-links {
+  align-items: center;
+  .wp-social-link {
+    margin: 0;
+    padding: 0;
+    svg {
+      height: 0.667em;
+      width: 0.667em;
+    }
+  }
+
+  &.is-style-logos-only {
+    .wp-block-social-link-anchor {
+      padding: 0;
+    }
+    // editor
+    .components-button {
+      padding: 0;
+    }
+  }
+
+  &.is-selected,
+  &.has-child-selected {
+    .block-list-appender {
+      margin: revert;
+      margin-right: calc(-24px - 8px);
+      .block-list-appender__toggle {
+        margin-left: 0;
+        transition: 0s;
+      }
+    }
+    &.items-justified-right {
+      justify-content: flex-end;
+    }
+    &.items-justified-center {
+      justify-content: center;
+    }
+    &.items-justified-space-between {
+      .block-list-appender {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  &__social-prompt {
+    margin-left: calc(24px + 8px);
+  }
+}
+
+[data-align="left"], [data-align="right"], [data-align="center"] {
+  .wp-block-social-links {
+    margin: 0;
+  }
+}

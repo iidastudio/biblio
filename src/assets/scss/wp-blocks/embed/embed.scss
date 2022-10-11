@@ -1,0 +1,36 @@
+@use '../../tool' as *;
+
+figure.wp-block-embed {
+  // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも
+  &.alignleft, &.alignright {
+    max-width: calc(42rem / 2);
+    margin-top: spacing(lg, 0.5, em);
+  }
+  &.alignright {
+    margin-right: calc( (100% - 42rem) / 2 ) !important;
+    margin-left: 1em !important;
+  }
+  &.alignleft {
+    margin-left: calc( (100% - 42rem) / 2 ) !important;
+    margin-right: 1em !important;
+  }
+  &.aligncenter {
+    .twitter-tweet {
+      margin: 0 auto;
+    }
+  }
+  figcaption {
+    font-size: fontSize(xs);
+    margin: 0.5em 0 0 0;
+    color: #555;
+    text-align: center;
+  }
+}
+
+.is-dark-theme {
+  .wp-block-embed {
+    figcaption {
+      color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}

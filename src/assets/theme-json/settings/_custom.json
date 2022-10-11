@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "custom": {
+      "// generated custom variables": "--wp--custom--{key}--{nested-key}: {value};",
+      "base": {
+        "transition": "opacity .2s ease, visibility .2s ease"
+      },
+      "utility": {
+        "height": {
+          "1": "calc(8em + 8 * var(--wp--custom--letter-spacing))",
+          "2": "calc(16em + 16 * var(--wp--custom--letter-spacing))",
+          "3": "calc(24em + 24 * var(--wp--custom--letter-spacing))"
+        }
+      }
+    }
+  }
+}

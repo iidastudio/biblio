@@ -1,0 +1,79 @@
+@use '../../tool' as *;
+
+.c-comment {
+  p {
+    line-height: 1.5;
+    font-size: fontSize(sm);
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    margin: 0 spacing(xs) 0 0;
+    mask-image: var(--img-avatar-mask);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+  }
+
+  &__meta-text {
+    line-height: 1;
+    margin-left: 0;
+    a {
+      // color: color(text-main);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: #33333366;
+      }
+    }
+  }
+
+  &__author {
+    font-size: fontSize(sm);
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: fontSize(xxs);
+    margin-top: 0.2em;
+  }
+
+  &__awaiting-moderation {
+    display: block;
+    font-size: fontSize(sm);
+    line-height: 1.5;
+    margin: 1em 0;
+    border-left: solid 2px color(text-main);
+    padding-left: 0.5em;
+  }
+
+  &__content {
+    font-size: fontSize(sm);
+    p {
+      margin: 1em 0 0 0;
+    }
+  }
+  
+  &__reply {
+    font-size: fontSize(xs);
+    text-align: right;
+    line-height: 1;
+    padding-top: 0.5em;
+    a {
+      display: inline-block;
+      border: solid 1px currentColor;
+      border-radius: 2px;
+      color: currentColor;
+      padding: 0.3em 0.4em 0.16em 0.5em;
+      text-decoration: none;
+    }
+  }
+  
+}

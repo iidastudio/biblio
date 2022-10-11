@@ -1,0 +1,28 @@
+@use '../../tool' as *;
+
+.wp-block-freeform.block-library-rich-text__tinymce {
+  // base spacing from editor
+  > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: spacing(lg);
+  }
+  * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    border-left: 2px solid var(--wp--preset--color--text-black);
+    padding-left: calc( 1em - 2px );
+  }
+  
+  ol, ul {
+    padding-left: 1em;
+    ol, ul {
+      padding-left: 2.1em;
+    }
+  }
+}

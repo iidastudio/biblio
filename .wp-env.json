@@ -1,0 +1,23 @@
+{
+  "themes": [
+    "./",
+    "../unitone"
+  ],
+  "plugins": [
+    "../../plugins/test-plugin",
+    "../../plugins/my-first-gutenberg-app",
+    "https://downloads.wordpress.org/plugin/gutenberg.14.1.1.zip",
+    "https://downloads.wordpress.org/plugin/wp-data-access.5.2.5.zip",
+    "https://downloads.wordpress.org/plugin/bbpress.2.6.9.zip"
+  ],
+  "config": {
+    "WPLANG": "ja",
+    "WP_DEBUG": true,
+		"WP_UPLOAD_MAX_FILESIZE": "128M",
+		"WP_MEMORY_LIMIT": "256M"
+  },
+  "mappings": {
+    "wp-content/uploads": "../../uploads",
+    "wp-content/languages": "../../languages"
+  }
+}
