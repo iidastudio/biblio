@@ -43,7 +43,7 @@ class Theme_Support {
       echo '<style>
         .editor-styles-wrapper.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > *,
         .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
-          max-width: min(calc(100% - var(--wp--custom--base--padding--side) * 2), var(--wp--custom--layout--wide));
+          max-width: min(calc(100% - var(--wp--style--root--padding-left) * 2), var(--wp--custom--layout--wide));
         }
       </style>'."\n";
     }
