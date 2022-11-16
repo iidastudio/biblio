@@ -1,7 +1,12 @@
 {
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
   "styles": {
     "spacing": {
-			"blockGap": "var(--wp--custom--clamp--post--32-48)"
+			"blockGap": "var(--wp--custom--clamp--post--32-48)",
+			"padding": {
+				"right": "var(--wp--style--root--padding-left)",
+				"left": "16px"
+			}
 		}
   },
 	"settings": {
