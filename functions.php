@@ -19,6 +19,7 @@ new inc\Block_Patterns();
 new inc\Ogp_Settings();
 new inc\Theme_Support();
 new inc\Template_part_areas();
+new inc\Theme_Update();
 
 // ショートコードブロックテスト用「hello shortcode!」と出力
 function hello_func() {
@@ -36,7 +37,6 @@ if(have_posts()) {
     };
   };
 };
-
 
 // 抜粋の文字数調整
 // function twpp_change_excerpt_length( $length ) {
