@@ -1,5 +1,10 @@
 @use '../../tool' as *;
 
+// fix 全幅時に全幅にならない、幅広時に中央に配置されないのを修正
+body .is-layout-constrained > .wp-block-cover.alignfull {
+  max-width: none;
+}
+
 .wp-block-cover {
   &__inner-container {
     margin-top: 0;
@@ -17,7 +22,7 @@
 
   // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも
   &.alignleft, &.alignright {
-    max-width: calc(42rem / 2);
+    max-width: calc(var(--wp--style--global--content-size) / 2);
     margin-top: spacing(md, 0.5, em);
     @include mq(sm) {
       margin-top: spacing(lg, 0.5, em);
@@ -27,14 +32,14 @@
     margin-right: calc( (100% - 100vw + 2rem) / 2 ) !important;
     margin-left: 1em !important;
     @include mq(sm) {
-      margin-right: calc( (100% - var(--wp--custom--layout--post)) / 2 ) !important;
+      margin-right: calc( (100% - var(--wp--style--global--content-size)) / 2 ) !important;
     }
   }
   &.alignleft {
     margin-right: 1em !important;
     margin-left: calc( (100% - 100vw + 2rem) / 2 ) !important;
     @include mq(sm) {
-      margin-left: calc( (100% - var(--wp--custom--layout--post)) / 2 ) !important;  
+      margin-left: calc( (100% - var(--wp--style--global--content-size)) / 2 ) !important;  
     }
   }
 }

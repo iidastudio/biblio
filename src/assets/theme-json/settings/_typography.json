@@ -11,7 +11,7 @@
 			"textTransform": true,
       "fontFamilies": [
         {
-          "fontFamily": "biblio, \"Roboto\", \"Segoe UI\", 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'meiryo',  sans-serif",
+          "fontFamily": "biblio, 'Hiragino Kaku Gothic ProN','Hiragino Sans', \"Roboto\", \"Segoe UI\", 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
           "slug": "optimal-gothic",
           "name": "optimal-gothic"
         }

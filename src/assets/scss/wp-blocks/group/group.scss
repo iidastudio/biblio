@@ -27,9 +27,13 @@
   }
 }
 
-//-------------------------------------------------
+// グループブロック内のブロックにサイドのマージンが適用されないようにする
+.has-global-padding > .wp-block-group.alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 // グループロック内で画像（左寄せ、右寄せ）の後に段落ブロックが来た場合はマージントップを削除する処理
-//-------------------------------------------------
 .wp-block-group > {
   .wp-block-image:first-child {
     + p {
