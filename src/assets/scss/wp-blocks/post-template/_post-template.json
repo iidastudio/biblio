@@ -19,16 +19,11 @@
     }
   },
   "settings": {
-    "custom": {
-      "post-template": {
-        "gap": "1.25em"
-      }
-    },
     "blocks": {
       "core/post-template": {
         "custom": {
           "post-template": {
-            "gap": "1.25em"
+            "gap": "2em"
           }
         }
       }

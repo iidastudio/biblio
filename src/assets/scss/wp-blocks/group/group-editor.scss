@@ -1,14 +1,3 @@
-.is-root-container .wp-block[data-align="full"] {
-  .wp-block-group {
-    &.has-background,
-    &.has-border-color,
-    &[style*="border-style"] {
-      padding: 0 var(--wp--custom--base--padding--side);
-    }
-  }
-}
-
-
 .block-editor-block-list__layout {
   .wp-block-group {
     &.block-editor-block-list__block {
@@ -42,4 +31,9 @@
       }
     }
   }
+}
+
+// グループブロック内のブロックにサイドのマージンが適用されないようにする
+.is-layout-constrained.wp-block-group > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: min(100%, var(--wp--custom--layout--post));
 }
