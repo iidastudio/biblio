@@ -1,6 +1,6 @@
 .DS_STORE
 node_modules/
 vendor/
-assets/
+/assets/
 theme.json
 plugin-update-checker/
