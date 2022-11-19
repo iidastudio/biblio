@@ -91,6 +91,24 @@
           transform: translateX(-50%);
         }
       }
+      > .wp-block-navigation-link,
+      > .wp-block-home-link {
+        background-color: #fff;
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 1px;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          background-color: currentColor;
+          transition: .1s;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+      }
     }
 
     //-------------------------------------------------
