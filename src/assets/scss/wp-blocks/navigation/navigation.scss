@@ -72,6 +72,22 @@
         line-height: 1;
         white-space: nowrap;
 
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: calc(100% + var(--wp--custom--navigation--gap) / 2);
+          transform: translateY(-50%);
+          width: 1px;
+          height: 1em;
+          background-color: currentColor;
+        }
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
         // arrow icon
         .wp-block-navigation__submenu-icon {
           width: auto;
@@ -89,24 +105,6 @@
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
-        }
-      }
-      > .wp-block-navigation-link,
-      > .wp-block-home-link {
-        background-color: #fff;
-        &::before {
-          content: "";
-          display: block;
-          width: 0;
-          height: 1px;
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          background-color: currentColor;
-          transition: .1s;
-        }
-        &:hover::before {
-          width: 100%;
         }
       }
     }
@@ -143,14 +141,14 @@
           // border-radius
           > .wp-block-navigation-item {
             &:first-child {
-              border-top-left-radius: 2px;
-              border-top-right-radius: 2px;
+              border-top-left-radius: 1px;
+              border-top-right-radius: 1px;
             }
             &:last-child {
-              border-bottom-left-radius: 2px;
-              border-bottom-right-radius: 2px;
+              border-bottom-left-radius: 1px;
+              border-bottom-right-radius: 1px;
             }
-          }
+          }  
         }
       }
     }

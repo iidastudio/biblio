@@ -12,8 +12,8 @@
         "pageWide": "calc(1920px - var(--wp--style--root--padding-left) * 2)",
         "contentSize": "min(100%, var(--wp--custom--layout--post))",
         "wideSize": "min(100%, var(--wp--custom--layout--wide))",
-        "pageContentSize": "min(100%, var(--wp--custom--layout--page))",
-        "pageWideSize": "min(100%, var(--wp--custom--layout--page-wide))"
+        "pageContentSize": "min(calc(100% - var(--wp--style--root--padding-left) * 2), var(--wp--custom--layout--page))",
+        "pageWideSize": "min(calc(100% - var(--wp--style--root--padding-left) * 2), var(--wp--custom--layout--page-wide))"
       }
     }
   }
