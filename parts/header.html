@@ -13,27 +13,18 @@
 } -->
 <div class="wp-block-group wp-block-template-part__container" style="padding-top:32px; padding-bottom:32px;">
 
-  <!-- wp:group {
-    "layout":{
-      "type":"flex",
-      "justifyContent":"space-between",
-      "orientation":"horizontal"
-    },
-    "style":{
-      "spacing":{
-        "blockGap": "16px"
-      }
-    }
-  } -->
+  <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","orientation":"horizontal"} } -->
   <div class="wp-block-group">
 
     <!-- wp:group {"className":"c-site-branding", "layout":{"type":"flex","justifyContent":"left"}, "style":{"spacing":{"blockGap":"0.5em"}}} -->
     <div class="wp-block-group c-site-branding">
-      <!-- wp:site-logo {"className":"c-site-logo", "width":135 } /-->
+      <!-- wp:site-logo {"className":"c-site-logo", "width":"32" } /-->
     </div>
     <!-- /wp:group -->
 
     <!-- wp:navigation {
+      "setCascadingProperties":true,
+      "isResponsive":true,
       "className":"c-nav-header is-style-biblio-navigation",
       "style": {
         "spacing": {
