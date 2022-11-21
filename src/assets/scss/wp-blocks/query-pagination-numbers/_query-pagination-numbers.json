@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+  "styles": {
+    "blocks": {
+      "core/query-pagination-numbers" : {
+        "spacing": {
+          "margin": {
+            "right": "0",
+            "bottom": "0"
+          }
+        }
+      }
+    }
+  }
+}

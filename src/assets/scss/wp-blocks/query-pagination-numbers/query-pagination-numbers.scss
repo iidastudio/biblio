@@ -1,0 +1,29 @@
+.wp-block-query-pagination > .wp-block-query-pagination-numbers {
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.wp-block-query-pagination-numbers {
+  display: flex;
+  gap: 8px;
+  .page-numbers {
+    &:not(.dots) {
+      padding: .8rem 1rem;
+      background-color: #fff;
+      border: solid 1px var(--wp--preset--color--text-black);
+    }
+    &:hover:not(.dots) {
+      opacity: 1;
+      color: #fff;
+      background-color: var(--wp--preset--color--text-black);
+      transition: .4s;
+    }
+    &.current {
+      color: #fff;
+      background-color: var(--wp--preset--color--text-black);
+    }
+    &.dots {
+      padding: .8rem calc(.8rem - 8px);
+    }
+  }
+}
