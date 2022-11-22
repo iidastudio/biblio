@@ -1,5 +1,20 @@
-// .wp-block-query-pagination {
-//   display: flex;
-//   align-items: center;
-//   gap: 16px;
-// }
+.wp-block-query-pagination-previous,
+.wp-block-query-pagination-next {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--wp--preset--color--text-black);
+    transition: .1s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
