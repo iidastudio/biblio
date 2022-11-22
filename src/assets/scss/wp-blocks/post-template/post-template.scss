@@ -1,23 +1,5 @@
 @use '../../tool' as *;
 
-.wp-block-post-template {
-  // thumbnail action
-  .wp-block-post {
-    &:hover {
-      .wp-block-post-featured-image {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-    .wp-block-post-featured-image {
-      img {
-        transition: .4s transform ease;
-      }
-    }
-  }
-}
-
 //-------------------------------------------------
 // core clumns style reset and restyle.
 //-------------------------------------------------
