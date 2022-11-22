@@ -3,12 +3,7 @@
   "styles": {
     "blocks": {
       "core/query-pagination-numbers" : {
-        "spacing": {
-          "margin": {
-            "right": "0",
-            "bottom": "0"
-          }
-        }
+
       }
     }
   }

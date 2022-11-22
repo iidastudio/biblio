@@ -7,8 +7,9 @@
   display: flex;
   gap: 8px;
   .page-numbers {
+    height: fit-content;
     &:not(.dots) {
-      padding: .8rem 1rem;
+      padding: .6rem .8rem;
       background-color: #fff;
       border: solid 1px var(--wp--preset--color--text-black);
     }
@@ -23,7 +24,7 @@
       background-color: var(--wp--preset--color--text-black);
     }
     &.dots {
-      padding: .8rem calc(.8rem - 8px);
+      padding-block: .6rem;
     }
   }
 }
