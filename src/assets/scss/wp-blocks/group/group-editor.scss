@@ -32,8 +32,3 @@
     }
   }
 }
-
-// グループブロック内のブロックにサイドのマージンが適用されないようにする
-.is-layout-constrained.wp-block-group > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-  max-width: min(100%, var(--wp--custom--layout--post));
-}

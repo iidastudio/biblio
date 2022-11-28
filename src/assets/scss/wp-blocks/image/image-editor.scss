@@ -1,8 +1,6 @@
 @use '../../tool' as *;
 
 .wp-block-image {
-  display: block;
-  max-width: 100%;
   figcaption {
     display: block;
   }

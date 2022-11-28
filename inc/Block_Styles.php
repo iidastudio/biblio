@@ -32,9 +32,9 @@ class Block_styles {
 			register_block_style(
 				'core/group',
 				array(
-					'name'         => 'biblio-paper-filter',
-					'label'        => __( 'Paper filter', 'biblio' ),
-					'style_handle' => 'biblio-paper-filter',
+					'name'         => 'biblio-noise',
+					'label'        => __( 'Noise', 'biblio' ),
+					'style_handle' => 'biblio-noise',
 				)
 			);
 

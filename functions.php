@@ -15,7 +15,7 @@ require_once('vendor/autoload.php');
 
 // autoload
 new inc\Block_Styles();
-new inc\Block_Patterns();
+// new inc\Block_Patterns();
 new inc\Ogp_Settings();
 new inc\Theme_Support();
 new inc\Template_part_areas();

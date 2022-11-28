@@ -93,7 +93,6 @@
       }
       > .wp-block-navigation-link,
       > .wp-block-home-link {
-        background-color: #fff;
         &::before {
           content: "";
           display: block;
@@ -158,8 +157,7 @@
     // menu hover時
     .wp-block-navigation-item:hover {
       > .wp-block-navigation__submenu-container {
-        width: fit-content;
-        min-width: var(--wp--custom--navigation--submenu--width) !important;
+        width: var(--wp--custom--navigation--submenu--width);
       }
       .wp-block-navigation__submenu-container {
         height: auto;

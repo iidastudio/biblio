@@ -1,69 +1,14 @@
 <!-- wp:group {
+  "backgroundColor":"biblio/background",
   "className":"l-main__container",
   "layout":{
     "contentSize": "var(--wp--custom--layout--page-content-size)",
     "wideSize": "var(--wp--custom--layout--page-wide-size)"
   }
 } -->
-<div class="wp-block-group l-main__container">
+<div class="wp-block-group l-main__container has-biblio-background-background-color has-background">
 
-  <!-- wp:query {
-    "query":{
-      "pages":"100",
-      "offset":0,
-      "postType":"post",
-      "categoryIds":[],
-      "tagIds":[],
-      "order":"desc",
-      "orderBy":"date",
-      "author":"",
-      "search":"",
-      "sticky":"",
-      "exclude":[],
-      "perPage":12,
-      "inherit":true
-    },
-    "className":"bp-query-card",
-    "displayLayout":{"type":"flex","columns":3}
-  } -->
-  <div class="wp-block-query bp-query-card">
-    <!-- wp:post-template -->
-
-      <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-      <div class="wp-block-group">
-        <!-- wp:post-featured-image {"isLink":true} /-->
-        <!-- wp:post-title {"isLink":true} /-->
-
-        <!-- wp:group {"style":{"spacing":{"blockGap":"2px"}}} -->
-        <div class="wp-block-group">
-          <!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-          <div class="wp-block-group">
-            <!-- wp:avatar {"size":20,"isLink":true,"className":"is-style-biblio-squircle"} /-->
-            <!-- wp:post-author-name {"isLink":true,"style":{"typography":{"fontSize":"14px"}}} /-->
-          </div>
-          <!-- /wp:group -->
-
-          <!-- wp:group {"style":{"spacing":{"blockGap":"0.25em"}}, "layout":{"type":"flex","justifyContent":"left"} } -->
-          <div class="wp-block-group">
-            <!-- wp:post-date {"format":"Y/m/d", "className":"icon-publish-date" } /-->
-            <!-- wp:post-terms {"term":"category", "className":"icon-category" } /-->
-          </div>
-          <!-- /wp:group -->
-          
-        </div>
-        <!-- /wp:group -->
-      </div>
-      <!-- /wp:group -->
-
-    <!-- /wp:post-template -->
-    
-    <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"}} -->
-      <!-- wp:query-pagination-previous /-->
-      <!-- wp:query-pagination-numbers /-->
-      <!-- wp:query-pagination-next /-->
-    <!-- /wp:query-pagination -->
-  </div>
-  <!-- /wp:query -->
+  <!-- wp:pattern {"slug":"biblio/query/card/1"} /-->
 
 </div>
 <!-- /wp:group -->

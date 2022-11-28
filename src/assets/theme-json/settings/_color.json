@@ -12,24 +12,29 @@
 
       "palette": [
         {
-          "slug": "text-black",
+          "slug": "biblio/text",
           "color": "#333333",
-          "name": "Text-Black"
+          "name": "Text"
         },
         {
-          "slug": "support-gray",
-          "color": "#f8f8f8",
-          "name": "Support-Gray"
+          "slug": "biblio/background",
+          "color": "#ffffff",
+          "name": "Background"
         },
         {
-          "slug": "purple",
-          "color": "#D1D1E4",
-          "name": "Purple"
+          "slug": "biblio/foreground",
+          "color": "#ffffff",
+          "name": "Foreground"
         },
         {
-          "slug": "red",
-          "color": "#E4D1D1",
-          "name": "Red"
+          "slug": "biblio/support/foreground",
+          "color": "hsla(0,0%,80%,0.1)",
+          "name": "Support Foreground"
+        },
+        {
+          "slug": "biblio/support/text",
+          "color": "hsla(0,0%,80%,0.1)",
+          "name": "Support Text"
         }
       ],
 

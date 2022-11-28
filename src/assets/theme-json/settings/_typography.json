@@ -3,6 +3,7 @@
     "typography": {
       "customFontSize": true,
 			"dropCap": true,
+			"// fluid": true,
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
