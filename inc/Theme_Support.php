@@ -14,12 +14,17 @@ class Theme_Support {
   public function __construct() {
     add_action( 'after_setup_theme', [ $this, 'add_theme_supports' ] );
     add_action( 'wp_enqueue_scripts', [ $this, 'add_scripts_and_styles' ] );
-    add_action( 'admin_print_styles', [ $this, 'add_styles_by_post_type']);
+    add_action( 'admin_print_styles', [ $this, 'add_styles_by_post_type'] );
     add_action( 'wp_enqueue_scripts', [ $this, 'set_script_translations' ] );
     add_filter( 'should_load_separate_core_block_assets', '__return_true' );
     add_action( 'wp_enqueue_scripts', [ $this, 'biblio_enqueue_wp_core_block_styles'] );
     add_action( 'admin_init', [ $this, 'biblio_enqueue_wp_core_block_styles'] ); 
     add_action( 'enqueue_block_editor_assets', [ $this, 'biblio_block_variation_enqueue'] );
+    add_action( 'init', [ $this, 'remove_core_block_patterns' ], 9 );
+  }
+
+  public function remove_core_block_patterns() {
+    remove_theme_support( 'core-block-patterns' );
   }
 
   // add_theme_support
@@ -43,7 +48,7 @@ class Theme_Support {
       echo '<style>
         .editor-styles-wrapper.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > *,
         .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
-          max-width: min(calc(100% - var(--wp--style--root--padding-left) * 2), var(--wp--custom--layout--wide));
+          max-width: min(100%, var(--wp--custom--layout--wide);
         }
       </style>'."\n";
     }
