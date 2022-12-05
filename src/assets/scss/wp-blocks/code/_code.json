@@ -1,11 +1,25 @@
 {
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
   "styles": {
     "blocks": {
       "core/code": {
         "typography": {
           "fontFamily": "\"SFMono-Regular\",Consolas,\"Liberation Mono\",Menlo,Courier,monospace",
           "fontSize": "14.4px",
-          "lineHeight": "1.8"
+          "lineHeight": "1.5"
+        },
+        "spacing": {
+          "padding": {
+            "top": ".5em",
+            "right": "1em",
+            "bottom": ".5em",
+            "left": "1em"
+          }
+        },
+        "border": {
+          "style": "solid",
+          "width": "1px",
+          "color": "var(--wp--preset--color--biblio-support-text)"
         }
       }
     }

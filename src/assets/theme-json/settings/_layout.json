@@ -8,12 +8,10 @@
       "layout": {
         "post": "624px",
         "wide": "calc(1280px - var(--wp--style--root--padding-left) * 2)",
-        "page": "calc(1280px - var(--wp--style--root--padding-left) * 2)",
-        "pageWide": "calc(1920px - var(--wp--style--root--padding-left) * 2)",
+        "extraWide": "calc(1920px - var(--wp--style--root--padding-left) * 2)",
         "contentSize": "min(100%, var(--wp--custom--layout--post))",
         "wideSize": "min(100%, var(--wp--custom--layout--wide))",
-        "pageContentSize": "min(100%, var(--wp--custom--layout--page))",
-        "pageWideSize": "min(100%, var(--wp--custom--layout--page-wide))"
+        "extraWideSize": "min(100%, var(--wp--custom--layout--extra-wide))"
       }
     }
   }

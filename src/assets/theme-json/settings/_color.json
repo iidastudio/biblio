@@ -33,7 +33,7 @@
         },
         {
           "slug": "biblio/support/text",
-          "color": "hsla(0,0%,80%,0.1)",
+          "color": "hsla(0,0%,50%,0.3)",
           "name": "Support Text"
         }
       ],

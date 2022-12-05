@@ -66,7 +66,7 @@ ol, ul:not(:where(
 	margin: 0;
 	padding-inline-start: 1.4em;
 	line-height: 1.5;
-	li:not(:first-child) {
+	li:not(:where(:first-child, .wp-social-link)) {
 		margin-block-start: 0.5em;
 	}
 	li {

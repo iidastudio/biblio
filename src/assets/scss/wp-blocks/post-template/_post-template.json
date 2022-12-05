@@ -22,7 +22,7 @@
       "core/post-template": {
         "custom": {
           "post-template": {
-            "gap": "2em"
+            "gap": "4rem"
           }
         }
       }
