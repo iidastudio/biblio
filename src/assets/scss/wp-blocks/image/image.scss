@@ -30,98 +30,21 @@ figure.wp-block-image {
 //-------------------------------------------------
 // fix: 右・左寄せが幅に収まらない
 //-------------------------------------------------
-// 投稿
-.single {
-  figure.wp-block-image {
+.wp-block-image.wp-block-image {
+  &.alignleft {
+    margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
+  }
+  &.alignright {
+    margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
+  }
+}
+.wp-block-group:where(:not(.is-layout-constrained)) > {
+  .wp-block-image {
     &.alignleft {
-      margin-inline-start: max(calc((100% - var(--wp--custom--layout--post)) / 2), 0px);
+      margin-inline-start: initial;
     }
     &.alignright {
-      margin-inline-end: max(calc((100% - var(--wp--custom--layout--post)) / 2), 0px);
-    }
-  }
-  .wp-block-group > {
-    figure.wp-block-image {
-      &.alignleft {
-        margin-inline-start: initial;
-      }
-      &.alignright {
-        margin-inline-start: initial;
-      }
-    }
-  }
-}
-// 固定ページ
-.page {
-  figure.wp-block-image {
-    &.alignleft {
-      margin-inline-start: max(calc((100% - var(--wp--custom--layout--wide)) / 2), 0px);
-    }
-    &.alignright {
-      margin-inline-end: max(calc((100% - var(--wp--custom--layout--wide)) / 2), 0px);
-    }
-  }
-  .wp-block-group > {
-    figure.wp-block-image {
-      &.alignleft {
-        margin-inline-start: initial;
-      }
-      &.alignright {
-        margin-inline-start: initial;
-      }
-    }
-  }
-}
-// エディター用(image-editorでは.post-type-postが適用されない)
-.post-type-post {
-  .block-editor-block-list__layout.is-root-container {
-    figure.wp-block-image {
-      &.alignleft {
-        margin-inline-start: max(calc((100% - var(--wp--custom--layout--post)) / 2), 0px);
-      }
-      &.alignright {
-        margin-inline-end: max(calc((100% - var(--wp--custom--layout--post)) / 2), 0px);
-      }
-    }
-    .wp-block-group > {
-      figure.wp-block-image {
-        &.alignleft {
-          margin-inline-start: initial;
-        }
-        &.alignright {
-          margin-inline-start: initial;
-        }
-      }
-    }
-  }
-}
-.post-type-page {
-  .block-editor-block-list__layout.is-root-container {
-    figure.wp-block-image {
-      &.alignleft {
-        margin-inline-start: max(calc((100% - var(--wp--custom--layout--wide)) / 2), 0px);
-      }
-      &.alignright {
-        margin-inline-end: max(calc((100% - var(--wp--custom--layout--wide)) / 2), 0px);
-      }
-    }
-    .wp-block-group > {
-      figure.wp-block-image {
-        &.alignleft {
-          margin-inline-start: initial;
-        }
-        &.alignright {
-          margin-inline-start: initial;
-        }
-      }
-    }
-  }
-}
-
-.is-dark-theme {
-  figure.wp-block-image {
-    figcaption {
-      color: rgba(255, 255, 255, 0.65);
+      margin-inline-start: initial;
     }
   }
 }

@@ -1,3 +1,9 @@
-.wp-block-spacer {
-  margin: 0;
+body .is-layout-constrained > .wp-block-spacer {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+body .is-layout-constrained > .wp-block-spacer + * {
+  margin-top: 0;
+  margin-block-start: 0;
 }

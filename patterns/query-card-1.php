@@ -23,10 +23,9 @@
     "exclude":[],
     "inherit":false
   },
-  "className":"bp-query-card",
   "displayLayout":{"type":"flex","columns":3}
 } -->
-<div class="wp-block-query bp-query-card">
+<div class="wp-block-query">
   <!-- wp:post-template -->
 
     <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -36,6 +35,7 @@
 
       <!-- wp:group {"style":{"spacing":{"blockGap":"2px"}}} -->
       <div class="wp-block-group">
+
         <!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
         <div class="wp-block-group">
           <!-- wp:avatar {"size":20,"isLink":true,"className":"is-style-biblio-squircle"} /-->

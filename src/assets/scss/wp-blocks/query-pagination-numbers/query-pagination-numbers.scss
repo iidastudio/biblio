@@ -9,19 +9,19 @@
   .page-numbers {
     height: fit-content;
     &:not(.dots) {
-      padding: .6rem .8rem;
+      padding: .6rem .75rem;
       background-color: #fff;
-      border: solid 1px var(--wp--preset--color--text-black);
+      border: solid 1px var(--wp--preset--color--biblio-text);
     }
     &:hover:not(.dots) {
       opacity: 1;
       color: #fff;
-      background-color: var(--wp--preset--color--text-black);
+      background-color: var(--wp--preset--color--biblio-text);
       transition: .4s;
     }
     &.current {
       color: #fff;
-      background-color: var(--wp--preset--color--text-black);
+      background-color: var(--wp--preset--color--biblio-text);
     }
     &.dots {
       padding-block: .6rem;

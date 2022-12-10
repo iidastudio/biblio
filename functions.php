@@ -97,3 +97,4 @@ if (class_exists('bbPress')) {
   );
   add_filter('bbp_get_author_ip', '__return_empty_string');
 }
+

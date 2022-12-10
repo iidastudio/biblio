@@ -19,6 +19,8 @@ class Theme_Support {
     add_action( 'wp_enqueue_scripts', [ $this, 'biblio_enqueue_wp_core_block_styles'] );
     add_action( 'admin_init', [ $this, 'biblio_enqueue_wp_core_block_styles'] ); 
     add_action( 'enqueue_block_editor_assets', [ $this, 'biblio_block_variation_enqueue'] );
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
     // add_action( 'init', [ $this, 'remove_core_block_patterns' ], 9 );
   }
 
@@ -28,11 +30,7 @@ class Theme_Support {
 
   // add_theme_support
   public function add_theme_supports() {
-    add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'responsive-embeds' );
-    add_theme_support( 'editor-styles' );
     add_editor_style( '/assets/css/editor.css' );
-    add_theme_support( 'post-thumbnails');
     load_theme_textdomain( 'biblio', get_template_directory().'/languages' );
   }
 
@@ -64,6 +62,10 @@ class Theme_Support {
       'categories',
       'code',
       'columns',
+      'comments',
+      'comments-pagination',
+      'comments-title',
+      'comment-template',
       'cover',
       'embed',
       'freeform',
@@ -118,7 +120,7 @@ class Theme_Support {
 
       $dir = "assets/css/wp-blocks/$block_name/";
       $extension = ".css";
-      $editor_extension = "-editor.css";
+      $editor_suffix = "-editor";
 
       if( file_exists(get_theme_file_path( $dir.$block_name.$extension)) ) {
         // get styles.
@@ -126,9 +128,10 @@ class Theme_Support {
 
         wp_add_inline_style( $handle, $styles ); // add front
         add_editor_style( $dir.$block_name.$extension ); // add editor
+        
       }
-      if ( file_exists( get_theme_file_path( $dir.$block_name.$editor_extension ) ) ) {
-        add_editor_style( $dir.$block_name.$editor_extension ); // add editor
+      if ( file_exists( get_theme_file_path( $dir.$block_name.$editor_suffix.$extension ) ) ) {
+        add_editor_style( $dir.$block_name.$editor_suffix.$extension ); // add editor
       }
     }
   }

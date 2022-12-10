@@ -7,5 +7,14 @@
         }
       }
     }
+  },
+  "settings": {
+    "blocks": {
+      "core/social-links": {
+        "custom": {
+          "svgSize": "1em"
+        }
+      }
+    }
   }
 }
