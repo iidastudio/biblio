@@ -26,14 +26,31 @@ $icon-bookmark-fill: "\e90b";
   font-display: block;
 }
 
+// [class^="icon-"], [class*=" icon-"] {
+//   position: relative;
+//   padding-left: 1.2em;
+//   &:before {
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+//   transform: translateY(calc(-50% + 0.4px));
+//   font-family: '#{$icomoon-font-family}' !important;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+
+//   /* Better Font Rendering =========== */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   }
+// }
+
 [class^="icon-"], [class*=" icon-"] {
-  position: relative;
-  padding-left: 1.2em;
   &:before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(calc(-50% + 0.4px));
+  position: relative;
+  display: inline-block;
+  padding-inline-end: .1em;
   font-family: '#{$icomoon-font-family}' !important;
   font-style: normal;
   font-weight: normal;
@@ -45,7 +62,6 @@ $icon-bookmark-fill: "\e90b";
   -moz-osx-font-smoothing: grayscale;
   }
 }
-
 
 .icon-home {
   &:before {
