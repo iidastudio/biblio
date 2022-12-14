@@ -31,7 +31,6 @@ p {
 }
 
 a {
-	text-decoration: underline;
 	text-underline-offset: 0.1em;
 	transition: var(--wp--custom--base--transition);
 	&:hover {
@@ -66,7 +65,7 @@ ol, ul:not(:where(
 	margin: 0;
 	padding-inline-start: 1.4em;
 	line-height: 1.5;
-	li:not(:where(:first-child, .wp-social-link)) {
+	li:not(:where(:first-child, .wp-social-link, .comment)) {
 		margin-block-start: 0.5em;
 	}
 	li {
@@ -96,6 +95,9 @@ sub {
 	bottom: 0.2em;
 }
 
+pre {
+	white-space: pre-wrap;
+}
 
 code {
 	background-color: color(support);
@@ -106,6 +108,7 @@ code {
 	margin: 0 0.2em;
 	line-height: 1;
 	letter-spacing: 0;
+	overflow: auto;
 }
 
 // block editor レスポンシブ テスト
