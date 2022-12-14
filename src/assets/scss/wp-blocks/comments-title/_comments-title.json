@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "styles": {
+    "blocks": {
+      "core/comments-title": {
+        "spacing": {
+          "margin": {
+            "top": "0",
+            "bottom": "0"
+          }
+        }
+      }
+    }
+  }
+}

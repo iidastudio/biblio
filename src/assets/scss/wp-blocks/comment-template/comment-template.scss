@@ -1,0 +1,30 @@
+.wp-block-comment-template {
+  // fix コメント内でリストタグが正常に表示されるようにする
+  ol {
+    list-style: auto;
+  }
+  .depth-1 {
+    background-color: var(--wp--preset--color--biblio-support-foreground);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .comment {
+    margin-block-start: 1rem !important;
+    padding-block-start: 1rem;
+    padding-inline-start: 1rem;
+    &:not(.depth-1) {
+      border-top: solid 1px var(--wp--preset--color--biblio-support-text);
+    }
+    > ol {
+      list-style: none;
+      padding-left: 0;
+      margin-block-start: 1rem;
+      border-left: solid 1px var(--wp--preset--color--biblio-support-text);
+    }
+  }
+  .comment {
+    .wp-block-columns {
+      margin: 0;
+    }
+  }
+}

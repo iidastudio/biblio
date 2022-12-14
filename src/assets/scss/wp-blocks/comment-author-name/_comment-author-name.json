@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "blocks": {
+      "core/comment-author-name": {
+        "typography": {
+          "fontWeight": "600",
+          "lineHeight": "1"
+        },
+        "elements": {
+          "link": {
+            "typography": {
+              "textDecoration": "none",
+              "lineHeight": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

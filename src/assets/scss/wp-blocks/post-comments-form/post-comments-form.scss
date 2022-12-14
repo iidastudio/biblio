@@ -1,0 +1,51 @@
+.wp-block-post-comments-form {
+  margin-block-start: 3rem;
+  .logged-in-as,
+  .comment-notes {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .comment-form-comment,
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url,
+  .comment-form-cookies-consent {
+    margin-block-start: 8px;
+    line-height: 1.5;
+    label {
+      font-size: 14px;
+    }
+  }
+  .comment-form-cookies-consent {
+    align-items: center;
+    #wp-comment-cookies-consent {
+      margin-top: 0;
+      margin: 0;
+    }
+  }
+
+  textarea, input:not([type=submit]):not([type=checkbox]) {
+    width: 100%;
+    background-color: var(--wp--preset--color--biblio-support-foreground);
+    border: 0;
+    margin-top: spacing(xs);
+    padding: 0.5em 0.8em;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: fontSize(sm);
+    color: inherit;
+    line-height: 1.5;
+    letter-spacing: inherit;
+  }
+
+  .form-submit {
+    line-height: 1;
+    text-align: center;
+    margin-block-start: 1rem;
+    .wp-block-button__link {
+      font-size: 14px;
+      padding: 0.5em 1em;
+    }
+  }
+}
