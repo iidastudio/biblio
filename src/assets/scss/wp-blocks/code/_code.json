@@ -1,7 +1,12 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/code": {
+        "color": {
+          "background": "var(--wp--preset--color--biblio-text)",
+          "text": "var(--wp--preset--color--biblio-background)"
+        },
         "typography": {
           "fontFamily": "\"SFMono-Regular\",Consolas,\"Liberation Mono\",Menlo,Courier,monospace",
           "fontSize": "14.4px",
