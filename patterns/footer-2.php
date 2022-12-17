@@ -1,16 +1,26 @@
+<?php
+/**
+ * Title: Footer 2
+ * Slug: biblio/footer/2
+ * Categories: footer
+ * Keywords: footer
+ * Block Types: core/template-part/footer
+ */
+?>
+
 <!-- wp:group {
+  "align":"full",
   "style":{
     "spacing":{
       "padding":"16px"
     }
   },
-  "className":"wp-block-template-part__container",
   "layout":{
     "inherit":true,
     "type":"constrained"
   }
 } -->
-<div class="wp-block-group wp-block-template-part__container" style="padding:16px">
+<div class="wp-block-group alignfull" style="padding:16px">
 
   <!-- wp:columns {"align":"wide"} -->
   <div class="wp-block-columns alignwide">
