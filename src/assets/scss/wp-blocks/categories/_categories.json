@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "blocks": {
+      "core/categories": {
+        "typography": {
+          "fontSize": "14px"
+        }
+      }
+    }
+  }
+}

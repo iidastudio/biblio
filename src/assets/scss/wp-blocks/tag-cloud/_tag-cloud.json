@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "blocks": {
+      "core/tag-cloud": {
+        "typography": {
+          "fontSize": "12px"
+        },
+        "elements": {
+          "link": {
+            "spacing": {
+              "margin": {
+                "right": "0"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
