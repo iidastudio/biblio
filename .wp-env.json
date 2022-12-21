@@ -3,7 +3,7 @@
     "./"
   ],
   "plugins": [
-    "https://downloads.wordpress.org/plugin/gutenberg.14.5.0.zip",
+    "https://downloads.wordpress.org/plugin/gutenberg.14.7.3.zip",
     "https://downloads.wordpress.org/plugin/bbpress.2.6.9.zip",
     "https://downloads.wordpress.org/plugin/safe-svg.2.0.3.zip",
     "https://downloads.wordpress.org/plugin/one-user-avatar.2.3.9.zip"

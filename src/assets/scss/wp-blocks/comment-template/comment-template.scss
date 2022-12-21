@@ -3,28 +3,35 @@
   ol {
     list-style: auto;
   }
+
+  // 共通
+  .comment {
+    .wp-block-columns {
+      margin: 0;
+    }
+    > ol {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+  
   .depth-1 {
     background-color: var(--wp--preset--color--biblio-support-foreground);
     padding: 1rem;
     margin-top: 1rem;
   }
-  .comment {
-    margin-block-start: 1rem !important;
-    padding-block-start: 1rem;
-    padding-inline-start: 1rem;
-    &:not(.depth-1) {
-      border-top: solid 1px var(--wp--preset--color--biblio-support-text);
-    }
-    > ol {
-      list-style: none;
-      padding-left: 0;
-      margin-block-start: 1rem;
-      border-left: solid 1px var(--wp--preset--color--biblio-support-text);
-    }
+  .comment.depth-2 {
+    padding-inline-start: 0;
   }
-  .comment {
-    .wp-block-columns {
-      margin: 0;
-    }
+  // depth-1以降
+  .comment:where(:not(.depth-1)) {
+      border-top: solid 1px var(--wp--preset--color--biblio-support-text);
+      padding-block-start: 1rem;
+      margin-block-start: 1rem !important;
+      // padding-inline-start: 1rem;
+      > ol {
+        margin-block-start: 1rem !important;
+        padding-inline-start: 1rem;
+      }
   }
 }

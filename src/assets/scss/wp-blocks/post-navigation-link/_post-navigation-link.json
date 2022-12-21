@@ -1,9 +1,29 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/post-navigation-link": {
         "spacing": {
           "blockGap": "0"
+        },
+        "elements": {
+          "link": {
+            "color": {
+              "text": "var(--wp--preset--color--biblio-text)",
+              "background": "var(--wp--preset--color--biblio-support-foreground)"
+            },
+            "spacing": {
+              "padding": {
+                "top": "0.5em",
+                "right": "1em",
+                "bottom": "0.5em",
+                "left": "1em"
+              }
+            },
+            "typography": {
+              "textDecoration": "none"
+            }
+          }
         }
       }
     }

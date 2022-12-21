@@ -1,16 +1,17 @@
-@use '../../tool' as *;
-
 .wp-block-post-navigation-link {
-  margin-top: 0;
-  padding-top: 1em;
-  line-height: 1;
-  clear: both;
+  display: flex;
+  flex-direction: column;
   a {
+    order: 2;
     display: block;
-    border-bottom: solid 1px color(text-main);
-    padding: 2.5em 0 1em;
-    margin-top: -2em;
-    text-decoration: none;
-    line-height: 1.5;
+    position: relative;
+    span {
+      display: block;
+    }
+  }
+  .is-arrow-arrow {
+    order: 1;
+    margin: 0;
+    line-height: 1;
   }
 }

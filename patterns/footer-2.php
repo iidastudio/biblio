@@ -31,7 +31,10 @@
       <!-- wp:site-logo {"width":121} /-->
 
       <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.5"}}} -->
-      <p style="font-size:0.875rem;line-height:1.5">彼らはあなたの悩みのせいにする人々の一般的な義務を放棄しました。</p>
+      <p style="font-size:0.875rem;line-height:1.5">
+      読みやすく書きやすいをコンセプトに開発したテーマです。<br>
+      よりよいテーマになるようサポーターフォーラムでご意見いただけると嬉しいです。
+      </p>
       <!-- /wp:paragraph -->
 
     </div>

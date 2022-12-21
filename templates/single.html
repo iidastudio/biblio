@@ -41,10 +41,23 @@
 
   <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
 
-  <!-- wp:group {"className":"c-post-navigation", "layout":{"type":"constrained"}} -->
-  <div class="wp-block-group c-post-navigation">
-    <!-- wp:post-navigation-link {"label":"Next", "showTitle":true} /-->
-    <!-- wp:post-navigation-link {"type":"previous", "label":"Previous", "showTitle":true} /-->
+  <!-- wp:group {"layout":{"type":"constrained"}} -->
+  <div class="wp-block-group">
+    <!-- wp:columns {"style":{"spacing":{"blockGap":"1rem"}}} -->
+    <div class="wp-block-columns">
+      <!-- wp:column -->
+      <div class="wp-block-column">
+        <!-- wp:post-navigation-link {"label":"前へ","textAlign":"left","type":"previous","showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
+      </div>
+      <!-- /wp:column -->
+      
+      <!-- wp:column -->
+      <div class="wp-block-column">
+        <!-- wp:post-navigation-link {"label":"次へ","textAlign":"right","showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
+      </div>
+      <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
   </div>
   <!-- /wp:group -->
 
