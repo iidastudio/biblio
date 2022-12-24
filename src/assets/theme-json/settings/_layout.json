@@ -6,7 +6,7 @@
     },
     "custom": {
       "layout": {
-        "post": "624px",
+        "post": "40rem",
         "wide": "calc(1280px - var(--wp--style--root--padding-left) * 2)",
         "extraWide": "calc(1920px - var(--wp--style--root--padding-left) * 2)",
         "contentSize": "min(100%, var(--wp--custom--layout--post))",
