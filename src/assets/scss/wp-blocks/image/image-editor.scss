@@ -7,3 +7,23 @@
     vertical-align: middle;
   }
 }
+
+// 優先度不足のためエディターのみ再記述
+.wp-block-image.wp-block-image {
+  &.alignleft {
+    margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
+  }
+  &.alignright {
+    margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
+  }
+}
+.wp-block-group:where(:not(.is-layout-constrained)) > {
+  .wp-block-image {
+    &.alignleft {
+      margin-inline-start: initial;
+    }
+    &.alignright {
+      margin-inline-start: initial;
+    }
+  }
+}
