@@ -6,8 +6,8 @@
           "radius": "2px"
         },
         "color": {
-          "text": "var(--color-dark-text-main)",
-          "background": "var(--color-dark-bg)"
+          "text": "var(--color--background)",
+          "background": "var(--color--text)"
         },
         "typography": {
           "fontSize": "inherit",

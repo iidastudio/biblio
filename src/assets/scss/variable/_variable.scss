@@ -5,28 +5,11 @@ $images: (
 );
 
 $colors: (
-  main: #3EC1D3,
-  support: hsla(0,0%,80%,0.1),
-  accent: #ffe600,
-  bg: #fff,
-  text-main: #333,
-  text-support: hsla(0,0%,50%,0.3),
-  text-link: #333,
-  text-link-hover: #333,
-  test-link-visited: #333,
-  dark-support: #ffffff09,
-  dark-text-main: #fff,
-  dark-text-support: hsla(0,0%,60%,0.2),
-  dark-text-support-light: hsla(0,0%,60%,0.5),
-  dark-bg: #333,
-  // component
-  c-header: color(bg),
-  c-main: color(bg),
-  c-footer: color(bg),
-  c-sidebar: color(bg),
-  c-nav-heager__submenu: color(text-main),
-  // block
-  b-table-border-default: #ededed
+  text: var(--wp--preset--color--biblio-text),
+  background: var(--wp--preset--color--biblio-background),
+  support-text: var(--wp--preset--color--biblio-support-text),
+  support-foreground: var(--wp--preset--color--biblio-support-foreground),
+  accent: var(--wp--preset--color--biblio-accent),
 );
 
 // font-size, px to rem.

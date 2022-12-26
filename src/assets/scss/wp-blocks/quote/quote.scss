@@ -5,7 +5,6 @@
   // padding: 2rem 2.5rem;
   padding: var(--wp--custom--clamp--post--24-32) var(--wp--custom--clamp--post--32-40);
   position: relative;
-  background-color: color(support);
   p {
     // font-size: fontSize(sm);
     margin-bottom: 0;
@@ -23,7 +22,7 @@
   &::before, &::after {
     font-family: "biblio-icon";
     font-size: 1.5em;
-    color: color(text-support);
+    color: color(support-text);
     position: absolute;
   }
   &::before {

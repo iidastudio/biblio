@@ -5,7 +5,7 @@ table {
 }
 
 .wp-block-table {
-	border-color: color(b-table-border-default);
+	border-color: color(background);
 	:where(.has-border-color) {
 		border-style: none;
 	}
@@ -24,8 +24,8 @@ table {
 		padding: 0.2em 0.4em;
 	}
 	th {
-		color: color(dark-text-main);
-		background-color: color(dark-bg);
+		color: color(background);
+		background-color: color(text);
 		font-weight: 500;
 	}
 	tfoot td {
@@ -39,8 +39,8 @@ table {
 			border-bottom: 0;
 		}
 		tfoot td {
-			border-top: solid 1px color(b-table-border-default);
-			border-bottom: solid 1px color(b-table-border-default);
+			border-top: solid 1px color(background);
+			border-bottom: solid 1px color(background);
 		}
 	}
 }

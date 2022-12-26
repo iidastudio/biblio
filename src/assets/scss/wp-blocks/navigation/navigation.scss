@@ -179,9 +179,9 @@
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
-          color: color(dark-text-main);
-          background-color: color(text-main);
-          border-top: solid 1px color(dark-text-support-light);
+          color: color(background);
+          background-color: color(text);
+          border-top: solid 1px color(support-text);
           border-left: 0;
           white-space: normal;
           &:first-child {
@@ -196,13 +196,13 @@
             outline-offset: -3px;
             white-space: normal;
             &:hover {
-              background-color: color(dark-text-support);
+              background-color: color(support-foreground);
               opacity: 1;
             }
           }
           // link in has-child li
           &.has-child > .wp-block-navigation-item__content {
-            flex-basis: calc(100% - 0.8em - 26px - (var(--spacing-xs) * 2));
+            flex-basis: calc(100% - 0.8em - 26px - (var(--spacing--xs) * 2));
             padding-right: 0;
           }
 
@@ -216,7 +216,7 @@
             height: 26px;
             position: relative;
             margin: 0 spacing(xs);
-            border: solid 1px color(dark-text-support-light);
+            border: solid 1px color(support-text);
             background-color: transparent;
             svg {
               height: 10px;
@@ -287,12 +287,12 @@
             }
             // has button
             &.has-child > .wp-block-navigation-item__content {
-              flex-basis: calc(100% - 0.8em - 26px - (var(--spacing-xs) * 2));
+              flex-basis: calc(100% - 0.8em - 26px - (var(--spacing--xs) * 2));
               padding-right: 0;
             }
             .wp-block-navigation__submenu-container {
               padding-left: spacing(sm, 4, px);
-              border-left: solid 1px color(dark-text-support-light);
+              border-left: solid 1px color(support-text);
             }
             &:last-child {
               .wp-block-navigation__submenu-container {
@@ -300,7 +300,7 @@
                 // grand child
                 .wp-block-navigation-item:not(:last-child) {
                   .wp-block-navigation__submenu-container {
-                    border-left: solid 1px color(dark-text-support-light);
+                    border-left: solid 1px color(support-text);
                     .wp-block-navigation-item:last-child {
                       .wp-block-navigation__submenu-container {
                         border-left: solid 1px transparent;
@@ -317,7 +317,7 @@
               &::before, &::after {
                 display: block;
                 content: "";
-                background-color: color(dark-text-support-light);
+                background-color: color(support-text);
                 position: absolute;
                 left: -0.8em;
               }

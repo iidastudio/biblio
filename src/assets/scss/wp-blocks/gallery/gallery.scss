@@ -13,6 +13,6 @@
   .blocks-gallery-caption {
     font-size: fontSize(xs);
     margin-top: calc( -1 * var(--wp--style--unstable-gallery-gap) + 0.5em);
-    color: #555;
+    color: color(support-text);
   }
 }

@@ -22,15 +22,7 @@ figure.wp-block-embed {
   figcaption {
     font-size: fontSize(xs);
     margin: 0.5em 0 0 0;
-    color: #555;
+    color: color(support-text);
     text-align: center;
-  }
-}
-
-.is-dark-theme {
-  .wp-block-embed {
-    figcaption {
-      color: rgba(255, 255, 255, 0.65);
-    }
   }
 }

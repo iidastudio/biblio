@@ -6,6 +6,7 @@
           "blockGap": "16px"
         },
         "typography": {
+          "fontSize": "16px",
           "lineHeight": "1"
         },
         "elements": {

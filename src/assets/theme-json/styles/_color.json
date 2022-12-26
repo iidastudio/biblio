@@ -2,7 +2,7 @@
   "styles": {
     "color": {
       "background": "#fff",
-      "text": "var(--wp--preset--color--text-black)"
+      "text": "var(--color--text)"
     }
   }
 }

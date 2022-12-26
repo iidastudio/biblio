@@ -10,14 +10,12 @@
     height: fit-content;
     &:not(.dots) {
       padding: .6rem .75rem;
-      background-color: #fff;
-      border: solid 1px var(--wp--preset--color--biblio-text);
+      background-color: var(--wp--preset--color--biblio-support-foreground);
     }
     &:hover:not(.dots) {
       opacity: 1;
       color: #fff;
       background-color: var(--wp--preset--color--biblio-text);
-      transition: .4s;
     }
     &.current {
       color: #fff;
