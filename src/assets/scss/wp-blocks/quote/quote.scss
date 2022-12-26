@@ -22,7 +22,7 @@
   &::before, &::after {
     font-family: "biblio-icon";
     font-size: 1.5em;
-    color: color(support-text);
+    color: var(--color--support-text);
     position: absolute;
   }
   &::before {

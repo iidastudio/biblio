@@ -100,8 +100,8 @@ pre {
 }
 
 code {
-	background-color: color(support-foreground);
-	border: solid 1px color(support-text);
+	background-color: var(--color--support-foreground);
+	border: solid 1px var(--color--support-text);
 	border-radius: 2px;
 	font-size: fontSize(sm);
 	padding: 0.2em 0.4em;

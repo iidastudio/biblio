@@ -22,7 +22,7 @@ figure.wp-block-embed {
   figcaption {
     font-size: fontSize(xs);
     margin: 0.5em 0 0 0;
-    color: color(support-text);
+    color: var(--color--support-text);
     text-align: center;
   }
 }

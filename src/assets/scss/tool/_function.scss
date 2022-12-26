@@ -1,8 +1,3 @@
-// ex) color(main);
-@function color($color-name){
-  @return var(--color--#{$color-name});
-}
-
 @function fontSize($size-name: md, $calc: 0, $unit: px){
   @if $calc > 0 {
     @return calc(var(--font-size--#{$size-name}) + #{$calc}#{$unit});
