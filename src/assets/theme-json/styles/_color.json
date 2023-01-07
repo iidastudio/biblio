@@ -1,8 +1,8 @@
 {
   "styles": {
     "color": {
-      "background": "#fff",
-      "text": "var(--color--text)"
+      "background": "var(--wp--preset--color--biblio-background)",
+      "text": "var(--wp--preset--color--biblio-text)"
     }
   }
 }

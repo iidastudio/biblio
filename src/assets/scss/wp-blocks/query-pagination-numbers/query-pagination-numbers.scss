@@ -10,16 +10,16 @@
     height: fit-content;
     &:not(.dots) {
       padding: .6rem .75rem;
-      background-color: var(--wp--preset--color--biblio-support-foreground);
+      background-color: var(--color--support-foreground);
     }
     &:hover:not(.dots) {
       opacity: 1;
-      color: #fff;
-      background-color: var(--wp--preset--color--biblio-text);
+      color: var(--color--background);
+      background-color: var(--color--text);
     }
     &.current {
-      color: #fff;
-      background-color: var(--wp--preset--color--biblio-text);
+      color: var(--color--background);
+      background-color: var(--color--text);
     }
     &.dots {
       padding-block: .6rem;

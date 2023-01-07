@@ -6,8 +6,8 @@
           "radius": "2px"
         },
         "color": {
-          "text": "var(--color--background)",
-          "background": "var(--color--text)"
+          "text": "var(--wp--preset--color--biblio-background)",
+          "background": "var(--wp--preset--color--biblio-text)"
         },
         "typography": {
           "fontSize": "inherit",

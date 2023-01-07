@@ -20,7 +20,7 @@
 <div class="wp-block-group p-biblio-fixed-social-left-1" style="margin-top:0;">
   <!-- wp:social-links {
     "iconColor":"biblio/text",
-    "iconColorValue":"#333333",
+    "iconColorValue":"var(--wp--preset--color--biblio-text)",
     "className":"is-style-logos-only",
     "layout":{"type":"flex","orientation":"vertical"}
   } -->

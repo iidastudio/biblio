@@ -12,9 +12,24 @@
 			"textTransform": true,
       "fontFamilies": [
         {
-          "fontFamily": "biblio, 'Hiragino Kaku Gothic ProN','Hiragino Sans', \"Roboto\", \"Segoe UI\", 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
-          "slug": "optimal-gothic",
-          "name": "optimal-gothic"
+          "fontFamily": "biblio, YakuHanJPs, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
+          "slug": "system-gothic",
+          "name": "Gothic"
+        },
+				{
+          "fontFamily": "biblio, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
+          "slug": "system-gothic-vertical",
+          "name": "Gothic vertical"
+        },
+				{
+          "fontFamily": "biblio, YakuHanMPs, Times New Roman, 'ヒラギノ明朝 ProN W3', Hiragino Mincho ProN, '游明朝 Medium', 'YuMincho Medium', Noto Serif Japanese,'ヒラギノ明朝 ProN W3',Hiragino Mincho ProN, serif",
+          "slug": "system-mincho",
+          "name": "Mincho"
+        },
+				{
+          "fontFamily": "biblio, Times New Roman, 'ヒラギノ明朝 ProN W3', Hiragino Mincho ProN, '游明朝 Medium', 'YuMincho Medium', Noto Serif Japanese,'ヒラギノ明朝 ProN W3',Hiragino Mincho ProN, serif",
+          "slug": "system-mincho-vertical",
+          "name": "Mincho vertical"
         }
       ],
       "fontSizes": [

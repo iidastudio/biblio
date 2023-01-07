@@ -79,12 +79,13 @@
         &.has-child:hover::after{
           content: "";
           display: block;
-          width: 100%;
+          width: var(--wp--custom--navigation--submenu--width);
           height: spacing(sm);
           position: absolute;
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
+          z-index: 10;
         }
       }
       > .wp-block-navigation-link,
@@ -117,10 +118,6 @@
           top: calc(100% + spacing(sm));
           left: 50%;
           transform: translateX(-50%);
-          // overflow: visible;
-          // width: fit-content;
-          // min-width: var(--wp--custom--navigation--submenu--width) !important;
-          // fukidashi arrow
           > .wp-block-navigation-item:first-child::before {
             content: "";
             position: absolute;

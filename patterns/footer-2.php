@@ -8,19 +8,8 @@
  */
 ?>
 
-<!-- wp:group {
-  "align":"full",
-  "style":{
-    "spacing":{
-      "padding":"16px"
-    }
-  },
-  "layout":{
-    "inherit":true,
-    "type":"constrained"
-  }
-} -->
-<div class="wp-block-group alignfull" style="padding:16px">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
 
   <!-- wp:columns {"align":"wide"} -->
   <div class="wp-block-columns alignwide">
@@ -32,8 +21,7 @@
 
       <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.5"}}} -->
       <p style="font-size:0.875rem;line-height:1.5">
-      読みやすく書きやすいをコンセプトに開発したテーマです。<br>
-      よりよいテーマになるようサポーターフォーラムでご意見いただけると嬉しいです。
+      読みやすく書きやすいをコンセプトに開発したテーマです。よりよいテーマになるようサポーターフォーラムでご意見いただけると嬉しいです。
       </p>
       <!-- /wp:paragraph -->
 
@@ -43,6 +31,7 @@
     <!-- wp:column {"width":"66.6%","style":{"spacing":{"blockGap":"1.5rem"}}} -->
     <div class="wp-block-column" style="flex-basis:66.6%">
 
+    
       <!-- wp:navigation {
         "overlayMenu":"never",
         "className":"is-style-default",
@@ -54,12 +43,13 @@
         },
         "style":{
           "spacing":{
-            "blockGap":"2rem"
+            "blockGap":"1rem 2rem"
           }
         }
       } /-->
 
-      <!-- wp:search {"label":"検索",
+      <!-- wp:search {
+        "label":"検索",
         "showLabel":false,
         "width":300,
         "widthUnit":"px",
@@ -74,8 +64,8 @@
   </div>
   <!-- /wp:columns -->
 
-  <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.875rem"}}} -->
-  <p class="has-text-align-center" style="font-size:0.875rem">
+  <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.875rem"},"spacing":{"padding":{"top":"4px","bottom":"4px"}}}} -->
+  <p class="has-text-align-center" style="padding-top:4px;padding-bottom:4px;font-size:0.875rem">
     Proudly powered by <a href="https://wordpress.org/">WordPress</a>.
   </p>
   <!-- /wp:paragraph -->

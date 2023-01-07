@@ -9,7 +9,7 @@
       },
       "// fontSize": "clamp(1rem, 0.1566rem + 2.1978vw, 1.125rem)",
       "fontSize": "clamp(1rem, -0.475rem + 4vw, 1.125rem)",
-      "fontFamily": "var(--wp--preset--font-family--optimal-gothic)",
+      "fontFamily": "var(--wp--preset--font-family--system-gothic)",
       "fontWeight": "300",
       "letterSpacing": "var(--wp--custom--letter-spacing)"
     }

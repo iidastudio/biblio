@@ -3,7 +3,7 @@
     "blocks": {
       "core/quote": {
         "color": {
-          "background": "var(--color--support-foreground)"
+          "background": "var(--wp--preset--color--biblio-support-foreground)"
         },
         "typography": {
           "fontSize": "var(--wp--custom--clamp--post--14-16)"

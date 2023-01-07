@@ -1,13 +1,28 @@
+// Yakumono
+@use "../../../../node_modules/yakuhanjp/dist/scss/yakuhanjp_s" with (
+	$yakuhanjps-font-dir: "../fonts",
+	$yakuhanjps-swap-use: true,
+	$yakuhanjps-eot-use: false,
+	$yakuhanjps-weight: (300:"DemiLight",400:"Regular",700:"Bold") 
+);
+
+@use "../../../../node_modules/yakuhanjp/dist/scss/yakuhanmp_s" with (
+	$yakuhanmps-font-dir: "../fonts",
+	$yakuhanmps-swap-use: true,
+	$yakuhanmps-eot-use: false,
+	$yakuhanmps-weight: (300:"Regular",400:"Medium",700:"Bold") 
+);
+
 // biblio font Settings
 @font-face {
 	$font-family: "biblio" !default;
-	$font-path: "../font/biblio" !default;
+	$font-path: "../fonts" !default;
 	
   font-family: $font-family;
   src:
-    url('#{$font-path}/#{$font-family}.woff2') format('woff2'),
-    url('#{$font-path}/#{$font-family}.woff') format('woff'),
-    url('#{$font-path}/#{$font-family}.svg') format('svg');
+    url('#{$font-path}/#{$font-family}/#{$font-family}.woff2') format('woff2'),
+    url('#{$font-path}/#{$font-family}/#{$font-family}.woff') format('woff'),
+    url('#{$font-path}/#{$font-family}/#{$font-family}.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 	unicode-range: u+2014, u+2015, u+2026;

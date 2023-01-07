@@ -9,8 +9,18 @@
         "elements": {
           "link": {
             "color": {
-              "text": "var(--wp--preset--color--biblio-text)",
-              "background": "var(--wp--preset--color--biblio-support-foreground)"
+              "text": "var(--wp--preset--color--biblio-text)"
+            },
+            "border": {
+              "style": "solid",
+              "color": "currentColor",
+              "width": "0",
+              "top": {
+                "width": "1px"
+              },
+              "bottom": {
+                "width": "1px"
+              }
             },
             "spacing": {
               "padding": {
@@ -22,6 +32,12 @@
             },
             "typography": {
               "textDecoration": "none"
+            },
+            ":hover": {
+              "color": {
+                "text": "var(--wp--preset--color--biblio-background)",
+                "background": "var(--wp--preset--color--biblio-text)"
+              }
             }
           }
         }

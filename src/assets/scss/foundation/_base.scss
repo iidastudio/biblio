@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "pkna" 1;
   font-kerning: normal;
-	font-family: var(--wp--preset--font-family--optimal-gothic);
+	font-family: var(--wp--preset--font-family--system-gothic);
 }
 
 * {
@@ -27,6 +27,9 @@ p {
 	// inline image
 	img {
 		margin: 0 0.1em -2px;
+	}
+	.palt {
+		font-feature-settings: "palt";
 	}
 }
 

@@ -18,14 +18,21 @@ class Theme_Support {
     add_filter( 'should_load_separate_core_block_assets', '__return_true' );
     add_filter( 'after_setup_theme', [ $this, 'biblio_enqueue_wp_block_styles'] );
     add_action( 'enqueue_block_editor_assets', [ $this, 'biblio_block_variation_enqueue'] );
+    add_action('enqueue_block_editor_assets', [ $this, 'remove_core_block_patterns' ]);
+    add_filter('document_title_separator', [ $this ,'title_separator_change' ]);
+    // remove
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
     remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
     add_action( 'init', [ $this, 'remove_core_block_patterns' ], 9 );
-    add_action('enqueue_block_editor_assets', [ $this, 'remove_core_block_patterns' ]);
   }
 
   public function remove_core_block_patterns() {
     remove_theme_support( 'core-block-patterns' );
+  }
+
+  // title separator change
+  public function title_separator_change( $separator ) {
+    return $separator = "|";
   }
 
   // add_theme_support

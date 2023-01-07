@@ -5,7 +5,7 @@ export const applyFontFeatureSettingsPalt = () => {
     const regex = /(「|」|・|（|）)/g;
     const replaceHTML = data.innerHTML.replace(/(「|」|・|（|）)/g, `<span class="palt">$1</span>`);
     data.innerHTML = replaceHTML;
+    console.log(data);
   }
 }
-
 applyFontFeatureSettingsPalt();

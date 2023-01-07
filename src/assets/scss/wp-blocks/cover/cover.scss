@@ -15,9 +15,6 @@ body .is-layout-constrained > .wp-block-cover.alignfull {
   // クリア時のデフォルトカラーを透明にする
   .has-background-dim:not([class*=-background-color]) {
     background-color: transparent;
-    & + .wp-block-cover__inner-container {
-      color: #fff;
-    }
   }
 
   // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも

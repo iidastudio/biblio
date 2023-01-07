@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+	"title": "Midnight",
+	"settings": {
+		"color": {
+			"palette": [
+        {
+          "slug": "biblio/text",
+          "color": "#fffef7",
+          "name": "Text"
+        },
+        {
+          "slug": "biblio/background",
+          "color": "#00152D",
+          "name": "Background"
+        },
+        {
+          "slug": "biblio/support/text",
+          "color": "hsla(0,0%,70%,0.5)",
+          "name": "Support Text"
+        },
+        {
+          "slug": "biblio/support/foreground",
+          "color": "hsla(0,0%,80%,0.16)",
+          "name": "Support Foreground"
+        },
+        {
+          "slug": "biblio/accent",
+          "color": "#e3d858",
+          "name": "Accent"
+        }
+			]
+		}
+	},
+  "styles": {
+    "elements": {
+      "h1": {
+        "color": {
+          "text": "var(--wp--preset--color--biblio-accent)"
+        }
+      }
+    },
+    "blocks": {
+      "core/button": {
+        "color": {
+          "background": "var(--wp--preset--color--biblio-accent)"
+        }
+      },
+      "core/social-link": {
+        "color": {
+          "text": "var(--wp--preset--color--biblio-accent)"
+        }
+      }
+    }
+  }
+}

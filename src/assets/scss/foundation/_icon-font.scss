@@ -1,5 +1,5 @@
 $icomoon-font-family: "biblio-icon" !default;
-$icomoon-font-path: "../font/biblio-icon" !default;
+$icomoon-font-path: "../fonts" !default;
 
 $icon-home: "\e900";
 $icon-publish-date: "\e901";
@@ -18,9 +18,9 @@ $icon-bookmark-fill: "\e90b";
 @font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?jioue3') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?jioue3') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?jioue3') format('svg');
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.ttf?jioue3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.woff?jioue3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}/#{$icomoon-font-family}.svg?jioue3') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: block;

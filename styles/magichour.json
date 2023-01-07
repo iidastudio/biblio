@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+	"title": "Magic Hour",
+	"settings": {
+		"color": {
+			"palette": [
+        {
+          "slug": "biblio/text",
+          "color": "#354A4A",
+          "name": "Text"
+        },
+        {
+          "slug": "biblio/background",
+          "color": "#ffffff",
+          "name": "Background"
+        },
+        {
+          "slug": "biblio/support/text",
+          "color": "hsla(0,0%,70%,0.5)",
+          "name": "Support Text"
+        },
+        {
+          "slug": "biblio/support/foreground",
+          "color": "hsla(0,0%,80%,0.16)",
+          "name": "Support Foreground"
+        },
+        {
+          "slug": "biblio/accent",
+          "color": "#F285A3",
+          "name": "Accent"
+        }
+			],
+      "gradients": [
+        {
+          "slug": "biblio/magichour",
+          "gradient": "linear-gradient(180deg,rgb(170,195,233) 0%,rgb(207,202,227) 84%,rgb(225,196,212) 100%)",
+          "name": "Magic Hour"
+        }
+      ]
+		}
+	},
+  "styles": {
+    "color": {
+      "background":"#ffffff",
+      "gradient":  "var(--wp--preset--gradient--biblio-magichour)"
+    },
+    "blocks": {
+      "core/button": {
+        "color": {
+          "text": "var(--wp--preset--color--biblio-text)",
+          "background": "var(--wp--preset--color--biblio-accent)"
+        }
+      }
+    }
+  }
+}
