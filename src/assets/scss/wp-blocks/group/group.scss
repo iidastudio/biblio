@@ -1,15 +1,13 @@
 @use '../../tool' as *;
 
 .wp-block-group {
-  &.is-layout-constrained {
-    &.has-background.has-background,
-    &.has-border-color,
-    &[style*="border-"] {
-      padding-top: 0.5em;
-      padding-right: var(--wp--style--root--padding-right);
-      padding-bottom: 0.5em;
-      padding-left: var(--wp--style--root--padding-left);
-    }
+  &.has-background.has-background,
+  &.has-border-color,
+  &[style*="border-"] {
+    padding-top: 0.5em;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-bottom: 0.5em;
+    padding-left: var(--wp--style--root--padding-left);
   }
   // floatがはみ出さない処理
   &::after {

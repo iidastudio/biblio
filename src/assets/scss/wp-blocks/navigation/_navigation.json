@@ -14,9 +14,9 @@
       "core/navigation": {
         "custom": {
           "navigation": {
-            "gap": "2em",
+            "gap": "2rem",
             "submenu": {
-              "width": "24em"
+              "width": "20rem"
             }
           }
         }
