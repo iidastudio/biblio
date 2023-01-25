@@ -3,7 +3,7 @@
     "blocks": {
       "core/button": {
         "border": {
-          "radius": "2px"
+          "radius": "4px"
         },
         "color": {
           "text": "var(--wp--preset--color--biblio-background)",

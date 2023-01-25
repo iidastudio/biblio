@@ -43,7 +43,7 @@
     <!-- /wp:group -->
 
     <!-- wp:navigation {
-      "className":"c-nav-header is-style-biblio-navigation",
+      "className":"c-nav-header is-style-biblio",
       "style": {
         "spacing": {
           "blockGap": "1em 2em"

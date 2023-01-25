@@ -28,7 +28,6 @@ class Block_styles {
 					'style_handle' => 'biblio-align-Justify',
 				)
 			);
-
 			register_block_style(
 				'core/group',
 				array(
@@ -37,13 +36,12 @@ class Block_styles {
 					'style_handle' => 'biblio-filter-noise',
 				)
 			);
-
 			register_block_style(
 				'core/navigation',
 				array(
-					'name'         => 'biblio-navigation',
+					'name'         => 'biblio',
 					'label'        => __( 'Biblio', 'biblio' ),
-					'style_handle' => 'biblio-navigation',
+					'style_handle' => 'biblio',
 				)
 			);
 			register_block_style(
@@ -54,7 +52,6 @@ class Block_styles {
 					'style_handle' => 'biblio-squircle',
 				)
 			);
-
 		}
 	}
 }
