@@ -1,0 +1,22 @@
+@use '../../tool' as *;
+
+.wp-block-search {
+  .wp-block-search {
+    &__button {
+      padding: spacing(xxs)
+    }
+  }
+  // inside button
+  &.wp-block-search__button-inside {
+    .wp-block-search__inside-wrapper {
+      .wp-block-search {
+        &__button {
+          padding: spacing(xxs);
+        }
+        &__input {
+          padding: spacing(xxs);
+        }
+      }
+    }
+  }
+}
