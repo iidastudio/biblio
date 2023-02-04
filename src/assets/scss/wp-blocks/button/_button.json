@@ -1,9 +1,10 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/button": {
         "border": {
-          "radius": "4px"
+          "radius": "2px"
         },
         "color": {
           "text": "var(--wp--preset--color--biblio-background)",

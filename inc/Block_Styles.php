@@ -37,6 +37,14 @@ class Block_styles {
 				)
 			);
 			register_block_style(
+				'core/group',
+				array(
+					'name'         => 'biblio-filter-glass',
+					'label'        => __( 'Filter-Glass', 'biblio' ),
+					'style_handle' => 'biblio-filter-glass',
+				)
+			);
+			register_block_style(
 				'core/navigation',
 				array(
 					'name'         => 'biblio',

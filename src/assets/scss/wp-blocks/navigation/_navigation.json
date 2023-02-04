@@ -1,10 +1,27 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/navigation": {
         "typography": {
           "fontWeight": "600",
           "fontSize": "14px"
+        },
+        "spacing": {
+          "blockGap": "0 1.5rem"
+        },
+        "elements": {
+          "link": {
+            "spacing": {
+              "padding": {
+                "top": "1rem",
+                "bottom": "1rem"
+              }
+            },
+            "typography": {
+              "textDecoration": "none"
+            }
+          }
         }
       }
     }

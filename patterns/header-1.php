@@ -14,13 +14,13 @@
     "spacing":{
       "blockGap": "16px",
       "padding": {
-        "top": "32px",
-        "bottom": "32px"
+        "top": "16px",
+        "bottom": "16px"
       }
     }
   }
 } -->
-<div class="wp-block-group" style="padding-top:32px; padding-bottom:32px;">
+<div class="wp-block-group" style="padding-top:16px; padding-bottom:16px;">
 
   <!-- wp:group {
     "layout":{
@@ -46,7 +46,7 @@
       "className":"c-nav-header is-style-biblio",
       "style": {
         "spacing": {
-          "blockGap": "1em 2em"
+          "blockGap": "0 1.5rem"
         }
       }
     } /-->

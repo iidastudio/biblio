@@ -24,7 +24,7 @@
   }
   
   &.post-navigation-link-previous {
-    border-left: solid 1px var(--color--text);
+    border-left: solid 2px var(--color--text);
     .is-arrow-arrow,
     .is-arrow-chevron {
       padding-left: 4px;
@@ -35,7 +35,7 @@
   }
   
   &.post-navigation-link-next {
-    border-right: solid 1px var(--color--text);
+    border-right: solid 2px var(--color--text);
     .is-arrow-arrow,
     .is-arrow-chevron {
       padding-right: 4px;

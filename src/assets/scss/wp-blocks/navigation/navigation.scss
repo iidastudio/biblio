@@ -21,38 +21,13 @@
   }
 }
 
+
 //===========================================================
 // block-style: biblio
 //===========================================================
 .wp-block-navigation.is-style-biblio {
   .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
-    // font-size: fontSize(sm);
     line-height: 1;
-
-    // 固定ページ自動配置とカスタムリンクを連結
-    .wp-block-page-list + .wp-block-navigation__container,
-    .wp-block-page-list + .wp-block-search,
-    .wp-block-navigation__container + .wp-block-page-list,
-    .wp-block-navigation__container + .wp-block-search,
-    .wp-block-search + .wp-block-navigation__container,
-    .wp-block-search + .wp-block-page-list,
-    .wp-block-search + .wp-block-navigation-item,
-    .wp-block-navigation-item + .wp-block-search {
-      position: relative;
-      // > .wp-block-navigation-item:first-child {
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 50%;
-          right: calc(100% + var(--wp--custom--navigation--gap) / 2);
-          transform: translateY(-50%);
-          width: 1px;
-          height: 1em;
-          background-color: currentColor;
-        }
-      // }
-    }
 
     // メニュー内の検索フォームの縦位置調整
     .wp-block-search {
@@ -75,23 +50,6 @@
           padding-left: spacing(xxs);
         }
       }
-      > .wp-block-navigation-link,
-      > .wp-block-home-link {
-        &::before {
-          content: "";
-          display: block;
-          width: 0;
-          height: 1px;
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          background-color: currentColor;
-          transition: .1s;
-        }
-        &:hover::before {
-          width: 100%;
-        }
-      }
     }
 
     //-------------------------------------------------
@@ -104,7 +62,7 @@
         &::before {
           content: "";
           position: absolute;
-          bottom: -1rem;
+          bottom: 0;
           left: 50%;
           transform: translateX(-50%);
           width: 1rem;
@@ -123,32 +81,14 @@
       }
     }
 
-    // gap between submenu
-    .wp-block-navigation__container,
-    .wp-block-page-list {
-      > .wp-block-navigation-submenu {
-        &.has-child:hover::after{
-          content: "";
-          display: block;
-          width: var(--wp--custom--navigation--submenu--width);
-          height: spacing(sm);
-          position: absolute;
-          top: 100%;
-          right: 0;
-          left: unset;
-          z-index: 1;
-        }
-      }
-    }
-
     // sabmenu container
     .wp-block-navigation__container,
     .wp-block-page-list {
       > .wp-block-navigation-submenu {
         > .wp-block-navigation__submenu-container {
-          top: calc(100% + spacing(sm));
-          right: 0;
-          left: unset;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
           // border-radius
           > .wp-block-navigation-item {
             &:first-child {

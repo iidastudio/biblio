@@ -3,7 +3,7 @@
     "typography": {
       "customFontSize": true,
 			"dropCap": true,
-			"// fluid": true,
+			"fluid": true,
 			"fontStyle": true,
 			"fontWeight": true,
 			"letterSpacing": true,
@@ -32,31 +32,92 @@
           "name": "Mincho vertical"
         }
       ],
-      "fontSizes": [
+			"fontSizes": [
 				{
-					"slug": "sm",
-					"size": "12px",
-					"name": "S"
+					"size": "0.625rem",
+					"slug": "10",
+					"name": "10px"
 				},
 				{
-					"slug": "md",
-					"size": "16px",
-					"name": "M"
+					"size": "0.625rem",
+					"fluid": {
+						"min": "0.625rem",
+						"max": "0.75rem"
+					},
+					"slug": "12-10",
+					"name": "12-10px"
 				},
 				{
-					"slug": "lg",
-					"size": "32px",
-					"name": "L"
+					"size": "0.75rem",
+					"fluid": {
+						"min": "0.75rem",
+						"max": "0.875rem"
+					},
+					"slug": "16-14px",
+					"name": "16-14px"
 				},
 				{
-					"slug": "xl",
-					"size": "64px",
-					"name": "XL"
+					"size": "1rem",
+					"fluid": {
+						"min": "1rem",
+						"max": "1.125rem"
+					},
+					"slug": "18-16",
+					"name": "18-16px"
 				},
 				{
-					"slug": "xxl",
-					"size": "80px",
-					"name": "XXL"
+					"size": "1.25rem",
+					"fluid": {
+						"min": "1.25rem",
+						"max": "1.5rem"
+					},
+					"slug": "24-20",
+					"name": "24-20px"
+				},
+				{
+					"size": "1.5rem",
+					"fluid": {
+						"min": "1.5rem",
+						"max": "2rem"
+					},
+					"slug": "32-24",
+					"name": "32-24px"
+				},
+				{
+					"size": "2rem",
+					"fluid": {
+						"min": "2rem",
+						"max": "3rem"
+					},
+					"slug": "48-32",
+					"name": "48-32px"
+				},
+				{
+					"size": "3rem",
+					"fluid": {
+						"min": "3rem",
+						"max": "4rem"
+					},
+					"slug": "64-48",
+					"name": "64-48px"
+				},
+				{
+					"size": "4rem",
+					"fluid": {
+						"min": "4rem",
+						"max": "5rem"
+					},
+					"slug": "80-64",
+					"name": "80-64px"
+				},
+				{
+					"size": "5rem",
+					"fluid": {
+						"min": "5rem",
+						"max": "6rem"
+					},
+					"slug": "96-80",
+					"name": "96-80px"
 				}
 			]
     },

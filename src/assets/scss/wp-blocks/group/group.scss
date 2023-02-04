@@ -69,4 +69,8 @@
       pointer-events: none;
     }
   }
+
+  &.is-style-biblio-filter-glass {
+    backdrop-filter: blur(20px);
+  }
 }
