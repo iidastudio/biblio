@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "settings": {
+    "shadow": {
+      "palette": [
+        {
+          "name": "Double lines",
+          "slug": "double-lines",
+          "shadow": "5px 5px 0px -2px #DDCFFF, 5px 5px #040DE1"
+        }
+      ]
+    }
+  }
+}
