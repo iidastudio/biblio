@@ -9,11 +9,16 @@
 }
 
 // 優先度不足のためエディターのみ再記述
-.wp-block-image.wp-block-image {
+:is(.wp-block-image, .wp-block-gallery) {
+  &:is(.alignleft, .alignright) {
+    margin-block-end: .5em;
+  }
   &.alignleft {
     margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
+    margin-inline-end: 1em;
   }
   &.alignright {
+    margin-inline-start: 1em;
     margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
   }
 }

@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
   "settings": {
     "spacing": {
       "blockGap": true
@@ -8,8 +7,8 @@
   "styles": {
     "blocks": {
       "core/gallery": {
-        "// spacing": {
-          "blockGap": "10rem"
+        "spacing": {
+          "// blockGap": "1rem"
         }
       }
     }

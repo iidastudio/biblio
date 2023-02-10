@@ -1,21 +1,10 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "typography": {
-      "// comment": {
-        "minWidth": "614px",
-        "maxWidth": "705px",
-        "minFontSize": "1rem (16px)",
-        "maxFontSize": "1.125rem (18px)"
-      },
-      "// fontSize": "clamp(1rem, 0.1566rem + 2.1978vw, 1.125rem)",
-      "fontSize": "clamp(1rem, -0.475rem + 4vw, 1.125rem)",
+      "fontSize": "var(--wp--preset--font-size--md)",
       "fontFamily": "var(--wp--preset--font-family--system-gothic)",
-      "fontWeight": "300",
-      "letterSpacing": "var(--wp--custom--letter-spacing)"
-    }
-  },
-  "settings": {
-    "custom": {
+      "fontWeight": "400",
       "letterSpacing": "0.05em"
     }
   }

@@ -36,7 +36,7 @@
     "clean:js": "rimraf ./$npm_package_config_dist/js/ && mkdir -p ./$npm_package_config_dist/js/",
     "clean:image": "rimraf ./$npm_package_config_dist/img/ && mkdir -p ./$npm_package_config_dist/img/",
     "clean:fonts": "rimraf ./$npm_package_config_dist/fonts/ && mkdir -p ./$npm_package_config_dist/fonts/",
-    "tolocal": "cpx './**/*.{html,css,php,json}' '/Users/pchan/Local Sites/shoptest/app/public/wp-content/themes/biblio'",
+    "tolocal": "cpx './**/*' '/Users/pchan/Local Sites/test/app/public/wp-content/themes/biblio'",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses --prod --gpl2"
   },

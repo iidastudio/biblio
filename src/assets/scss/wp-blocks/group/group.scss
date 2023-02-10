@@ -4,9 +4,9 @@
   &.has-background.has-background,
   &.has-border-color,
   &[style*="border-"] {
-    padding-top: 0.5em;
+    padding-top: 1em;
     padding-right: var(--wp--style--root--padding-right);
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     padding-left: var(--wp--style--root--padding-left);
   }
   // floatがはみ出さない処理
@@ -36,9 +36,8 @@
 
 // グループロック内で画像（左寄せ、右寄せ）の後に段落ブロックが来た場合はマージントップを削除する処理
 .wp-block-group > {
-  .wp-block-image {
-    &.alignright,
-    &.alignleft {
+  :where(.wp-block-image, .wp-block-cover) {
+    &:where(.alignright, .alignleft) {
       &:first-child {
         + p {
           margin-block-start: 0;

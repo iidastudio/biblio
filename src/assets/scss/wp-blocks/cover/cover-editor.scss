@@ -1,0 +1,11 @@
+@use '../../tool' as *;
+
+.wp-block-cover {
+  // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも
+  &:where(.alignleft, .alignright) {
+    margin-top: spacing(md, 0.5, em);
+    @include mq(sm) {
+      margin-top: spacing(lg, 0.5, em);
+    }
+  }
+}

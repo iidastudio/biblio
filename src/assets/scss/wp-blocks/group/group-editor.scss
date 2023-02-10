@@ -1,0 +1,35 @@
+// fix gutenberg15.1 エディターのみグループブロックにグローバルパディングが適用されたため打ち消し
+.has-global-padding :where(.has-global-padding) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// グループブロック内で画像・カバーがテキストより大きい場合選択時崩れないようにする（beforeに設定したcleafixがコアに消されるのでafterで補う）
+.block-editor-block-list__layout {
+  .block-editor-block-list__block:not([contenteditable]):focus {
+    > :where(.wp-block-image, .wp-block-cover) {
+      &:where(.alignleft, .alignright) {
+        ~ ::before {
+          border-radius: 1px;
+          bottom: 1px;
+          box-shadow: 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);
+          content: "";
+          left: 1px;
+          outline: 2px solid transparent;
+          pointer-events: none;
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          z-index: 1;
+        }
+        ~ ::after {
+          position: relative;
+          box-shadow: none;
+          clear: both;
+          content: "";
+          display: block;
+        }
+      }
+    }
+  }
+}

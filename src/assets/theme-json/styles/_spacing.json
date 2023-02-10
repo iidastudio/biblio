@@ -1,40 +1,17 @@
 {
   "styles": {
     "spacing": {
-			"blockGap": "var(--wp--custom--clamp--post--32-48)",
+			"blockGap": "var(--wp--preset--spacing--60)",
 			"padding": {
-				"right": "var(--wp--style--root--padding-left)",
+				"right": "16px",
 				"left": "16px"
 			}
 		}
   },
 	"settings": {
 		"custom": {
-			"base": {
-				"padding": {
-					"side": "16px",
-					"main": {
-						"top": "clamp(0rem, -1408.0000rem + 3200.0000vw, 2rem)",
-						"bottom": "2rem"
-					}
-				}
-			},
-			"// comment": {
-				"description": "font-size:18px-16pxで記事１行が35文字前後をできるだけキープする幅",
-				"name": "post",
-				"minWidth": "614px",
-				"maxWidth": "705px"
-			},
-			"clamp": {
-				"post": {
-					"32-48": "clamp(2rem, -4.7473rem + 17.5824vw, 3rem)",
-					"32-40": "clamp(2rem, -1.3736rem + 8.7912vw, 2.5rem)",
-					"24-32": "clamp(1.5rem, -1.8736rem + 8.7912vw, 2rem)",
-					"20-24": "clamp(1.25rem, -0.4368rem + 4.3956vw, 1.5rem)",
-					"18-20": "clamp(1.125rem, 0.2816rem + 2.1978vw, 1.25rem)",
-					"16-18": "clamp(1rem, 0.1566rem + 2.1978vw, 1.125rem)",
-					"14-16": "clamp(0.875rem, 0.0316rem + 2.1978vw, 1rem)"
-				}
+			"spacing": {
+				"blockGap": "var(--wp--preset--spacing--60)"
 			}
 		}
 	}

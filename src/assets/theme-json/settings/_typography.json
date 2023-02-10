@@ -12,12 +12,12 @@
 			"textTransform": true,
       "fontFamilies": [
         {
-          "fontFamily": "biblio, YakuHanJPs, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
+          "fontFamily": "biblio, YakuHanJPs, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Biblio Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
           "slug": "system-gothic",
           "name": "Gothic"
         },
 				{
-          "fontFamily": "biblio, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
+          "fontFamily": "biblio, \"-apple-system\", \"BlinkMacSystemFont\", \"Roboto\", \"Segoe UI\", 'Hiragino Kaku Gothic ProN','Biblio Hiragino Sans', 'Noto Sans JP', 'Yu Gothic Medium', '游ゴシック Medium', 'Meiryo',  sans-serif",
           "slug": "system-gothic-vertical",
           "name": "Gothic vertical"
         },
@@ -34,104 +34,87 @@
       ],
 			"fontSizes": [
 				{
+					"fluid": false,
 					"size": "0.625rem",
-					"slug": "10",
-					"name": "10px"
+					"slug": "xxxs",
+					"name": "3XS"
 				},
 				{
-					"size": "0.625rem",
-					"fluid": {
-						"min": "0.625rem",
-						"max": "0.75rem"
-					},
-					"slug": "12-10",
-					"name": "12-10px"
-				},
-				{
+					"fluid": false,
 					"size": "0.75rem",
-					"fluid": {
-						"min": "0.75rem",
-						"max": "0.875rem"
-					},
-					"slug": "16-14px",
-					"name": "16-14px"
+					"slug": "xxs",
+					"name": "XXS"
+				},
+				{
+					"fluid": false,
+					"size": "0.875rem",
+					"slug": "xs",
+					"name": "XS"
 				},
 				{
 					"size": "1rem",
 					"fluid": {
+						"min": "0.875rem",
+						"max": "1rem"
+					},
+					"slug": "sm",
+					"name": "S"
+				},
+				{
+					"size": "1.125rem",
+					"fluid": {
 						"min": "1rem",
 						"max": "1.125rem"
 					},
-					"slug": "18-16",
-					"name": "18-16px"
-				},
-				{
-					"size": "1.25rem",
-					"fluid": {
-						"min": "1.25rem",
-						"max": "1.5rem"
-					},
-					"slug": "24-20",
-					"name": "24-20px"
+					"slug": "md",
+					"name": "M"
 				},
 				{
 					"size": "1.5rem",
 					"fluid": {
-						"min": "1.5rem",
-						"max": "2rem"
+						"min": "1.25rem",
+						"max": "1.5rem"
 					},
-					"slug": "32-24",
-					"name": "32-24px"
+					"slug": "lg",
+					"name": "L"
 				},
 				{
 					"size": "2rem",
 					"fluid": {
-						"min": "2rem",
-						"max": "3rem"
+						"min": "1.5rem",
+						"max": "2rem"
 					},
-					"slug": "48-32",
-					"name": "48-32px"
+					"slug": "xl",
+					"name": "XL"
 				},
 				{
 					"size": "3rem",
 					"fluid": {
-						"min": "3rem",
-						"max": "4rem"
+						"min": "2rem",
+						"max": "3rem"
 					},
-					"slug": "64-48",
-					"name": "64-48px"
+					"slug": "xxl",
+					"name": "XXL"
 				},
 				{
-					"size": "4rem",
-					"fluid": {
-						"min": "4rem",
-						"max": "5rem"
-					},
-					"slug": "80-64",
-					"name": "80-64px"
+					"fluid": false,
+					"size": "calc(var(--wp--preset--font-size--xxl) * var(--wp--custom--font-size--ratio))",
+					"slug": "xxxl",
+					"name": "3XL"
 				},
 				{
-					"size": "5rem",
-					"fluid": {
-						"min": "5rem",
-						"max": "6rem"
-					},
-					"slug": "96-80",
-					"name": "96-80px"
+					"fluid": false,
+					"size": "calc(var(--wp--preset--font-size--xxxl) * var(--wp--custom--font-size--ratio))",
+					"slug": "xxxxl",
+					"name": "4XL"
 				}
 			]
     },
 		"custom": {
-			"base": {
-				"fontSize": {
-					"xxs": "10px",
-					"xs": "12px",
-					"sm": "14px",
-					"md": "16px",
-					"lg": "24px",
-					"xl": "32px",
-					"xxl": "48px"
-				}
+			"fontSize": {
+				"ratio": "1.5",
+				"maxViewport": "1280px",
+				"minViewport": "40rem"
 			}
 		}
   }

@@ -14,8 +14,8 @@
 
 .single .wp-block-post-featured-image {
   width: unset;
-  margin-right: calc( -1 * var(--wp--custom--base--padding--side)) !important;  
-  margin-left: calc( -1 * var(--wp--custom--base--padding--side)) !important;  
+  margin-right: calc( -1 * var(--wp--style--root--padding-right)) !important;  
+  margin-left: calc( -1 * var(--wp--style--root--padding-left)) !important;  
 }
 @include mq(sm) {
   .single .wp-block-post-featured-image {

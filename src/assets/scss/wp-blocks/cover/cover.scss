@@ -6,23 +6,24 @@ body .is-layout-constrained > .wp-block-cover.alignfull {
 }
 
 .wp-block-cover {
-  &__inner-container {
-    margin-top: 0;
-    p {
-      line-height: 1;
-    }
-  }
   // クリア時のデフォルトカラーを透明にする
   .has-background-dim:not([class*=-background-color]) {
     background-color: transparent;
   }
 
   // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも
-  &.alignleft, &.alignright {
+  &:is(.alignleft, .alignright) {
     max-width: calc(var(--wp--style--global--content-size) / 2);
     margin-top: spacing(md, 0.5, em);
     @include mq(sm) {
       margin-top: spacing(lg, 0.5, em);
+    }
+  }
+  &.alignleft {
+    margin-right: 1em !important;
+    margin-left: calc( (100% - 100vw + 2rem) / 2 ) !important;
+    @include mq(sm) {
+      margin-left: calc( (100% - var(--wp--style--global--content-size)) / 2 ) !important;  
     }
   }
   &.alignright {
@@ -32,11 +33,53 @@ body .is-layout-constrained > .wp-block-cover.alignfull {
       margin-right: calc( (100% - var(--wp--style--global--content-size)) / 2 ) !important;
     }
   }
-  &.alignleft {
-    margin-right: 1em !important;
-    margin-left: calc( (100% - 100vw + 2rem) / 2 ) !important;
-    @include mq(sm) {
-      margin-left: calc( (100% - var(--wp--style--global--content-size)) / 2 ) !important;  
+  // fix カバーブロック内での右寄せ左寄せ対応
+  .wp-block-cover__inner-container {
+    > .alignleft {
+      float: left;
+    }
+    > .alignright {
+      float: right;
+    }
+  }
+}
+
+
+// 強引に位置を調整 全幅幅広グループ内での左寄せ右寄せに対応
+.wp-block-group {
+  // グループ内での右寄せ左寄せ時の上下マージンを調整
+  > .wp-block-cover {
+    &:is(.alignleft, .alignright) {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+  &.is-layout-flow {
+    &.alignfull {
+      > .wp-block-cover {
+        &:where(.alignleft, .alignright) {
+          max-width: calc( 100% / 2 );
+        }
+        &.alignleft {
+          margin-left: var(--wp--style--root--padding-left) !important;
+        }
+        &.alignright {
+          margin-right: var(--wp--style--root--padding-right) !important;
+        }
+      }
+    }
+    &.alignwide {
+      > .wp-block-cover {
+        &:where(.alignleft, .alignright) {
+          max-width: calc(var(--wp--style--global--wide-size) / 2);
+        }
+        &.alignleft {
+          margin-left: calc( (100% - var(--wp--style--global--wide-size)) / 2 ) !important;  
+        }
+        &.alignright {
+          margin-right: calc( (100% - var(--wp--style--global--wide-size)) / 2 ) !important;  
+        }
+      }
     }
   }
 }

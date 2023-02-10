@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function fontSize($size-name: md, $calc: 0, $unit: px){
   @if $calc > 0 {
     @return calc(var(--font-size--#{$size-name}) + #{$calc}#{$unit});
@@ -32,4 +34,32 @@
 // ex) lineHeight(md);
 @function lineHeight($size-name: base){
   @return var(--line-height--#{$size-name});
+}
+
+// 単位除去
+@function stripUnit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+  @return $number;
+}
+
+// sassClump
+@function fluid($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
+  // breakpointの単位を削除 pxならremの数値に変換
+  @if unit($min-breakpoint) == 'px' {
+    $min-breakpoint: math.div(stripUnit($min-breakpoint), 16);
+  }@else if unit($min-breakpoint) == 'rem' or 'em' {
+    $min-breakpoint: stripUnit($min-breakpoint);
+  }
+  @if unit($max-breakpoint) == 'px' {
+    $max-breakpoint: math.div(stripUnit($max-breakpoint), 16);
+  }@else if unit($min-breakpoint) == 'rem' or 'em' {
+    $max-breakpoint: stripUnit($max-breakpoint);
+  }
+
+  $slope: math.div(stripUnit($max-size) - stripUnit($min-size), $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept: $min-size - $slope * $min-breakpoint;
+  @return clamp(#{$min-size}, #{$intercept} + #{$slope-to-unit}#{$unit}, #{$max-size});
 }

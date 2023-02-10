@@ -10,33 +10,33 @@ figure.wp-block-image {
     text-align: center;
     opacity: .8;
   }
-  
-  &.alignleft, &.alignright {
+}
+
+// ギャラリーブロックと共通 右寄せ左寄せ時の調整
+:is(.wp-block-image, .wp-block-gallery) {
+  &:is(.alignleft, .alignright) {
     padding-block-start: .5em;
     margin-block-end: .5em;
     figcaption {
       margin: .5em auto 0 auto;
     }
+    // 連続して寄せたブロックを使用した場合に間隔を詰める
+    + :is(.wp-block-image, .wp-block-gallery, .wp-block-cover) {
+      &:is(.alignleft, .alignright) {
+        margin-inline-start: 0 !important;
+      }
+    }
   }
-  &.alignleft.alignleft {
-    margin-inline-end: 1em;
+  &.alignleft {
+    margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
+    margin-inline-end: 1em !important;
   }
-  &.alignright.alignright {
-    margin-inline-start: 1em;
+  &.alignright {
+    margin-inline-start: 1em !important;
+    margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2) !important;
   }
 }
 
-//-------------------------------------------------
-// fix: 右・左寄せが幅に収まらない
-//-------------------------------------------------
-.wp-block-image.wp-block-image {
-  &.alignleft {
-    margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
-  }
-  &.alignright {
-    margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
-  }
-}
 .wp-block-group:where(:not(.is-layout-constrained)) > {
   .wp-block-image {
     &.alignleft {

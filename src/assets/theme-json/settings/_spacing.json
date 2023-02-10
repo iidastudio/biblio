@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
   "settings": {
     "spacing": {
       "blockGap": true,
@@ -10,6 +9,11 @@
 				"steps": 0
 			},
       "spacingSizes": [
+        {
+          "size": "0.25rem",
+          "slug": "20",
+          "name": "4px"
+        },
         {
           "size": "0.5rem",
           "slug": "30",
@@ -31,14 +35,14 @@
           "name": "48-32px"
         },
         {
-          "size": "clamp(4rem, 3.0769rem + 1.9231vw, 5rem)",
+          "size": "calc(var(--wp--preset--spacing--60) * 1.5)",
           "slug": "70",
-          "name": "80-64px"
+          "name": "72-48px"
         },
         {
-          "size": "clamp(6rem, 5.0769rem + 1.9231vw, 7rem)",
+          "size": "calc(var(--wp--preset--spacing--70) * 1.5)",
           "slug": "80",
-          "name": "112-96px"
+          "name": "108-72px"
         }
       ]
     }
