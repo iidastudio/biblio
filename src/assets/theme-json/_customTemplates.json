@@ -1,9 +1,14 @@
 {
   "customTemplates": [
     {
-      "name": "page-home",
+      "name": "page-without-title",
       "title": "Page without title",
       "postTypes": [ "page" ]
+    },
+    {
+      "name": "single-writings",
+      "title": "Single for writing",
+      "postTypes": [ "post" ]
     }
   ]
 }
