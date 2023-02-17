@@ -1,0 +1,10 @@
+.wp-block-table-of-contents {
+  .wp-block-table-of-contents__entry {
+    display: block;
+  }
+  > ol > li:last-of-type {
+    .wp-block-table-of-contents__entry {
+      border-bottom: none;
+    }
+  }
+}
