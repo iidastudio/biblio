@@ -115,6 +115,7 @@ class Theme_Support {
     'social-links',
     'spacer',
     'table',
+    'table-of-contents',
     'template-part',
     'verse',
   );
