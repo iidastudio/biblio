@@ -1,6 +1,18 @@
 .wp-block-table-of-contents {
-  .wp-block-table-of-contents__entry {
+  ol {
+    margin: 0;
+    padding-inline-start: 2em;
+  }
+  li:not(:first-child) {
+    margin-block-start: 0;
+
+  }
+  .wp-block-table-of-contents__entry.wp-block-table-of-contents__entry {
     display: block;
+    &:where(:not(.wp-element-button)) {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
   }
   > ol > li:last-of-type {
     .wp-block-table-of-contents__entry {
