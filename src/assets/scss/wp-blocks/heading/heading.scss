@@ -2,7 +2,6 @@
 
 .wp-block-post-content {
   .wp-block-heading {
-    margin-block: fluid(2rem, 3rem, 768px, 1600px) fluid(1.25rem, 1.5rem, 768px, 1600px) !important;
     margin-inline: 0;
     + * {
       margin-block-start: 0 !important;
@@ -13,5 +12,29 @@
     &:last-child {
       margin-block-end: 0 !important;
     }
+  }
+  h1.wp-block-heading {
+    margin-block-start: var(--wp--preset--spacing--70);
+    margin-block-end: var(--wp--preset--spacing--50);
+  }
+  h2.wp-block-heading {
+    margin-block-start: var(--wp--preset--spacing--70);
+    margin-block-end: var(--wp--preset--spacing--50);
+  }
+  h3.wp-block-heading {
+    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125);
+    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125);
+  }
+  h4.wp-block-heading {
+    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125);
+  }
+  h5.wp-block-heading {
+    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125 / 1.125);
+  }
+  h6.wp-block-heading {
+    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125 / 1.125);
   }
 }
