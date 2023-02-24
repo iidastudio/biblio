@@ -3,20 +3,14 @@
     margin: 0;
     padding-inline-start: 2em;
   }
-  li:not(:first-child) {
-    margin-block-start: 0;
-
-  }
-  .wp-block-table-of-contents__entry.wp-block-table-of-contents__entry {
-    display: block;
-    &:where(:not(.wp-element-button)) {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-    }
-  }
-  > ol > li:last-of-type {
+  li {
+    margin-block-start: 0 !important;
     .wp-block-table-of-contents__entry {
-      border-bottom: none;
+      display: block;
+      &:where(:not(.wp-element-button)) {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
     }
   }
 }

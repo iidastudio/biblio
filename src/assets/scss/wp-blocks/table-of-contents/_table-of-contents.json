@@ -8,8 +8,8 @@
         },
         "spacing": {
           "padding": {
-            "top": ".75rem",
-            "bottom": ".75rem",
+            "top": "1rem",
+            "bottom": "1.5rem",
             "left": "1rem",
             "right": "1rem"
           }
@@ -34,6 +34,11 @@
                 "top": "4px",
                 "bottom": "4px",
                 "right": "4px"
+              }
+            },
+            ":hover": {
+              "color": {
+                "background": "var(--wp--preset--color--biblio-support-foreground)"
               }
             }
           }
