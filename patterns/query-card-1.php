@@ -28,7 +28,7 @@
 <div class="wp-block-query">
   <!-- wp:post-template -->
 
-    <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}}} -->
     <div class="wp-block-group">
       <!-- wp:post-featured-image {"isLink":true} /-->
       <!-- wp:post-title {"isLink":true} /-->
