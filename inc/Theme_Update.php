@@ -56,7 +56,6 @@ class Theme_Update {
 
       set_transient( 'biblio-theme-update'.$version, $remote, HOUR_IN_SECONDS );
     }
-    var_dump(get_transient( 'biblio-theme-update'.$version ));
 
     $data = array(
       'theme' => $stylesheet,
