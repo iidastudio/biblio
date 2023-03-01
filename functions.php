@@ -18,8 +18,10 @@ new inc\Block_Styles();
 new inc\Custom_Post_Types();
 new inc\Ogp_Settings();
 new inc\Theme_Support();
-new inc\Template_part_areas();
-new inc\Theme_Update();
+new inc\Template_Part_Areas();
+if ( is_admin() ) {
+  new inc\Theme_Update();
+}
 
 // ショートコードブロックテスト用「hello shortcode!」と出力
 function hello_func() {
