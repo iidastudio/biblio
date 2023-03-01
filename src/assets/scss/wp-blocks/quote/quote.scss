@@ -2,28 +2,23 @@
 
 .wp-block-quote {
   border-left: 0;
-  // padding: 2rem 2.5rem;
-  padding: var(--wp--custom--clamp--post--24-32) var(--wp--custom--clamp--post--32-40);
   position: relative;
   p {
-    // font-size: fontSize(sm);
-    margin-bottom: 0;
+    line-height: inherit;
     &:first-child {
       margin-top: 0;
     }
   }
   cite {
     display: block;
-    margin-top: 2em;
-    font-size: fontSize(xs);
     text-align: right;
-    font-style: italic;
   }
   &::before, &::after {
     font-family: "biblio-icon";
     font-size: 1.5em;
     color: var(--color--support-text);
     position: absolute;
+    line-height: 1;
   }
   &::before {
     content: "\e905";
