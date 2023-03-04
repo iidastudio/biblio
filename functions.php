@@ -21,24 +21,8 @@ new inc\Theme_Support();
 new inc\Template_Part_Areas();
 if ( is_admin() ) {
   new inc\Theme_Update();
+  new inc\Custom_Pages();
 }
-
-// ショートコードブロックテスト用「hello shortcode!」と出力
-function hello_func() {
-  return "<div>hello shortcode!</div>";
-}
-add_shortcode('hello', 'hello_func');
-
-if(have_posts()) {
-  while(have_posts()) {
-    the_post();
-    if (has_post_thumbnail()) {
-      the_post_thumbnail('large');
-    } else {
-      ?> <img src="<?php echo get_template_directory_uri(); ?>assets/img/noimg.png"> <?php
-    };
-  };
-};
 
 // 抜粋の文字数調整
 // function twpp_change_excerpt_length( $length ) {
@@ -97,6 +81,9 @@ if (class_exists('bbPress')) {
       return $query_result;
     }
   );
+  /**
+   * Hide IP
+   */
   add_filter('bbp_get_author_ip', '__return_empty_string');
 }
 
