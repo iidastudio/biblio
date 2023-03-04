@@ -21,8 +21,15 @@ class Custom_Pages {
       __('BIBLIO Settings','biblio'),
       'manage_options',
       'biblio-settings',
-      'biblio-settings',
+      [ $this, 'biblio_settings'],
       'dashicons-admin-settings'
     );
+  }
+
+  public function biblio_settings() {
+    ?>
+      <H2>BIBLIO Settings</H2>
+      <div id="settings-main"></div>
+    <?php
   }
 }
