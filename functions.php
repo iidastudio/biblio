@@ -21,7 +21,7 @@ new inc\Theme_Support();
 new inc\Template_Part_Areas();
 if ( is_admin() ) {
   new inc\Theme_Update();
-  new inc\Custom_Pages();
+  new inc\Admin_Pages();
 }
 
 // 抜粋の文字数調整
@@ -86,4 +86,3 @@ if (class_exists('bbPress')) {
    */
   add_filter('bbp_get_author_ip', '__return_empty_string');
 }
-
