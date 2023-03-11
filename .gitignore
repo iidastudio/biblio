@@ -5,3 +5,4 @@ vendor/
 /assets/
 theme.json
 plugin-update-checker/
+build
