@@ -27,9 +27,9 @@
     "json:pxtorem": "node ./themejson-pxtorem",
     "css": "run-s css:*",
     "css:sass": "npm run clean:css && sass src/assets/scss:$npm_package_config_dist/css -s expanded --no-source-map",
-    "css:autoprefixer": "postcss ./$npm_package_config_dist/css/**/*.css --base ./$npm_package_config_dist/css -d ./$npm_package_config_dist/css --no-map",
-    "js": "npm run clean:js && webpack --mode=development",
-    "image": "npm run clean:image && node imagemin",
+    "css:autoprefixer": "postcss ./$npm_package_config_dist/css/**/*.css --base ./$npm_package_config_dist/css -d ./$npm_package_config_dist/css --no-map --config config/postcss.config.js",
+    "js": "npm run clean:js && wp-scripts build --config config/webpack.config.js",
+    "image": "npm run clean:image && node config/imagemin.js",
     "fonts": "npm run clean:fonts && cpx './src/assets/fonts/**/{*.svg,*.ttf,*.woff,*.woff2}' ./$npm_package_config_dist/fonts",
     "clean": "rimraf ./$npm_package_config_dist",
     "clean:css": "rimraf ./$npm_package_config_dist/*.css && rimraf ./$npm_package_config_dist/css/ && mkdir -p ./$npm_package_config_dist/css/",
@@ -41,12 +41,11 @@
     "check-licenses": "wp-scripts check-licenses --prod --gpl2"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@wordpress/browserslist-config": "^5.11.0",
     "@wordpress/env": "^5.13.0",
+    "@wordpress/scripts": "^25.5.1",
     "autoprefixer": "^10.4.13",
-    "babel-loader": "^9.1.2",
     "browser-sync": "^2.28.3",
     "browserlist": "^1.0.1",
     "chokidar": "^3.5.3",
@@ -65,9 +64,7 @@
     "postcss-pxtorem": "^6.0.0",
     "rimraf": "^4.3.1",
     "sass": "^1.58.3",
-    "sass-auto-index": "git+https://github.com/iidastudio/sass-auto-index.git",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "sass-auto-index": "git+https://github.com/iidastudio/sass-auto-index.git"
   },
   "babel": {
     "presets": [
