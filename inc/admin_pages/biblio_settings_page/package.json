@@ -8,10 +8,5 @@
   "type": "module",
   "scripts": {
     "build": "wp-scripts build"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
   }
 }

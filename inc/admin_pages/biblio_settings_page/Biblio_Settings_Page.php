@@ -11,12 +11,16 @@ defined( 'ABSPATH' ) || exit;
 
 class Biblio_Settings_Page {
 
+  public function __construct() {
+    add_action( 'admin_enqueue_scripts', [$this, 'page_script'] );
+    add_action( 'init', [$this, 'biblio_register_settings'] , 999);
+  }
+
   public function create_page() {
     ?>
-      <h1>BIBLIO Settings</h1>
       <div id="biblio-settings"></div>
     <?php
-    $this->page_script(get_current_screen()->id);
+    // $this->page_script(get_current_screen()->id);
   }
   
   public function page_script($hook_suffix) {
@@ -41,6 +45,19 @@ class Biblio_Settings_Page {
         $asset_file['dependencies'],
         $asset_file['version'],
         true // </body>`終了タグの直前でスクリプトを読み込む
+    );
+  }
+
+  public function biblio_register_settings() {
+    // 広告を表示する
+    register_setting(
+        'biblio_admin_settings',
+        'biblio_admin_show_writing_flg',
+        array(
+            'type'         => 'boolean',
+            'show_in_rest' => true,
+            'default'      => true,
+        )
     );
   }
 }
