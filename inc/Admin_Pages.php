@@ -13,7 +13,11 @@ defined( 'ABSPATH' ) || exit;
 class Admin_Pages {
 
   public function __construct() {
-    add_action('admin_menu', [ $this, 'add_custom_pages' ]);
+    if( is_admin() ) {
+      add_action('admin_menu', [ $this, 'add_custom_pages' ]);
+    }
+    // load page scripts.
+    $biblio_settings_page = new Biblio_Settings_Page;
   }
 
   // BIBLIO Settings page
@@ -24,8 +28,9 @@ class Admin_Pages {
       'manage_options',
       'biblio-settings',
       function () {
-        $biblio_settings_page = new Biblio_Settings_Page;
-        $biblio_settings_page -> create_page();
+        ?>
+          <div id="biblio-settings" class="biblio-settings"></div>
+        <?php
       },
       'dashicons-admin-settings'
     );

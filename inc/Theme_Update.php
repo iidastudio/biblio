@@ -11,9 +11,14 @@ defined( 'ABSPATH' ) || exit;
 
 class Theme_Update {
 
+  private $old_transient_name;
+
   public function __construct() {
-    add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_check'] );
-    add_filter( 'site_transient_update_themes', [ $this, 'update_check'] );
+    if( is_admin() ) {
+      add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_check'] );
+      add_filter( 'site_transient_update_themes', [ $this, 'update_check'] );
+      add_action( 'after_switch_theme', [$this, 'delete_old_transient'] );
+    }
 	}
 
   public function update_check( $transient ) {
@@ -69,12 +74,17 @@ class Theme_Update {
       && version_compare( $remote->requires, get_bloginfo( 'version' ), '<' )
       && version_compare( $remote->requires_php, PHP_VERSION, '<' )
     ) {
+      $this->old_transient_name = 'biblio-theme-update'.$version;
       $transient->response[ $stylesheet ] = $data;
-      delete_transient('biblio-theme-update'.$version);
     } else {
       $transient->no_update[ $stylesheet ] = $data;
     }
 
     return $transient;
+  }
+
+  // アップデート完了時に古いversionのtrasientを削除
+  public function delete_old_transient() {
+    delete_transient( $this->old_transient_name );
   }
 }

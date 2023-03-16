@@ -11,15 +11,66 @@ defined( 'ABSPATH' ) || exit;
 
 class Biblio_Settings_Page {
 
-  public function create_page() {
-    ?>
-      <h1>BIBLIO Settings</h1>
-      <div id="biblio-settings"></div>
-    <?php
+  public function __construct() {
+    add_action( 'admin_enqueue_scripts', [$this, 'page_script'] );
+    add_action( 'init', [$this, 'biblio_register_settings'] );
   }
   
-  private function page_script() {
-    var_dump("hoge");
+  public function page_script($hook_suffix) {
+    // 作成したオプションページ以外では読み込まない
+    if ( 'toplevel_page_biblio-settings' !== $hook_suffix ) {
+      return;
+    }
+    
+    $asset_file = include( get_template_directory(). '/inc/admin_pages/biblio_settings_page/build/index.asset.php' );
 
+    // CSSファイルの読み込み
+    wp_enqueue_style(
+        'biblio-settings-page-style',
+        get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.css',
+        array( 'wp-components' ) // ←Gutenbergコンポーネントのデフォルトスタイルを読み込み
+    );
+
+    // JavaScriptファイルの読み込み
+    wp_enqueue_script(
+        'biblio-settings-page-script',
+        get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.js',
+        $asset_file['dependencies'],
+        $asset_file['version']
+    );
+    wp_script_add_data('biblio-settings-page-script', 'defer', true);
+  }
+
+  public function biblio_register_settings() {
+    register_setting(
+        'biblio_admin_settings',
+        'biblio_admin_show_writing_flg',
+        array(
+            'type'         => 'boolean',
+            'show_in_rest' => true,
+            'default'      => false,
+        )
+    );
+
+        // テキスト
+        register_setting(
+          'my_gutenberg_admin_plugin_settings',
+          'my_gutenberg_admin_plugin_text',
+          array(
+              'type'         => 'string',
+              'show_in_rest' => true,
+              'default'      => 'ここにテキストが入ります',
+          )
+      );
+      // 文字サイズ
+      register_setting(
+          'my_gutenberg_admin_plugin_settings',
+          'my_gutenberg_admin_plugin_font_size',
+          array(
+              'type'         => 'number',
+              'show_in_rest' => true,
+              'default'      => 16,
+          )
+      );
   }
 }
