@@ -14,9 +14,11 @@ class Theme_Update {
   private $old_transient_name;
 
   public function __construct() {
-    add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_check'] );
-    add_filter( 'site_transient_update_themes', [ $this, 'update_check'] );
-    add_action( 'after_switch_theme', [$this, 'delete_old_transient'] );
+    if( is_admin() ) {
+      add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_check'] );
+      add_filter( 'site_transient_update_themes', [ $this, 'update_check'] );
+      add_action( 'after_switch_theme', [$this, 'delete_old_transient'] );
+    }
 	}
 
   public function update_check( $transient ) {

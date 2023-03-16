@@ -13,14 +13,7 @@ class Biblio_Settings_Page {
 
   public function __construct() {
     add_action( 'admin_enqueue_scripts', [$this, 'page_script'] );
-    add_action( 'init', [$this, 'biblio_register_settings'] , 999);
-  }
-
-  public function create_page() {
-    ?>
-      <div id="biblio-settings"></div>
-    <?php
-    // $this->page_script(get_current_screen()->id);
+    add_action( 'init', [$this, 'biblio_register_settings'] );
   }
   
   public function page_script($hook_suffix) {
@@ -37,27 +30,48 @@ class Biblio_Settings_Page {
         get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.css',
         array( 'wp-components' ) // ←Gutenbergコンポーネントのデフォルトスタイルを読み込み
     );
+    wp_script_add_data('biblio-settings-page-style', 'async', true);
 
     // JavaScriptファイルの読み込み
     wp_enqueue_script(
         'biblio-settings-page-script',
         get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.js',
         $asset_file['dependencies'],
-        $asset_file['version'],
-        true // </body>`終了タグの直前でスクリプトを読み込む
+        $asset_file['version']
     );
+    wp_script_add_data('biblio-settings-page-script', 'defer', true);
   }
 
   public function biblio_register_settings() {
-    // 広告を表示する
     register_setting(
         'biblio_admin_settings',
         'biblio_admin_show_writing_flg',
         array(
             'type'         => 'boolean',
             'show_in_rest' => true,
-            'default'      => true,
+            'default'      => false,
         )
     );
+
+        // テキスト
+        register_setting(
+          'my_gutenberg_admin_plugin_settings',
+          'my_gutenberg_admin_plugin_text',
+          array(
+              'type'         => 'string',
+              'show_in_rest' => true,
+              'default'      => 'ここにテキストが入ります',
+          )
+      );
+      // 文字サイズ
+      register_setting(
+          'my_gutenberg_admin_plugin_settings',
+          'my_gutenberg_admin_plugin_font_size',
+          array(
+              'type'         => 'number',
+              'show_in_rest' => true,
+              'default'      => 16,
+          )
+      );
   }
 }

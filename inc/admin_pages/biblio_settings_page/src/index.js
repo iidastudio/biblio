@@ -1,4 +1,4 @@
-import { render, useState } from '@wordpress/element'
+import { render, useState, useEffect } from '@wordpress/element'
 import {
   ToggleControl,
   TextControl,
@@ -7,21 +7,43 @@ import {
 import api from '@wordpress/api';
 import './admin.scss';
 
-console.log('hogehoge');
-
 const Settings = () => {
   const [ showWritingFlag, setShowWritingFlag ] = useState( true );
-  const [ showBookFlag, setShowBookFlag ] = useState( true );
+  const [ showBookFlag, setShowBookFlag ] = useState( false );
+  const [ text, setText ] = useState( 'ここにテキストが入ります' ); // テキスト
+  const [ fontSize, setFontSize ] = useState( 16 );   
 
-  api.loadPromise.then( () => {
-    // Modelの生成
-    const model = new api.models.Settings();
-
-    // 設定値の取得
-    model.fetch().then( response => {
-        console.log( response );
+  useEffect( () => {
+    api.loadPromise.then( () => {
+      const model = new api.models.Settings();
+      model.fetch().then( response => {
+        setShowWritingFlag( Boolean( response.biblio_admin_show_writing_flg ) );
+        setText( response.my_gutenberg_admin_plugin_text );
+        setFontSize( response.my_gutenberg_admin_plugin_font_size );
+      });
     });
-  });
+  }, []);
+
+  useEffect( () => {
+    api.loadPromise.then( () => {
+      const model = new api.models.Settings({
+        'biblio_admin_show_writing_flg': showWritingFlag,
+        'my_gutenberg_admin_plugin_text': text,
+        'my_gutenberg_admin_plugin_font_size': fontSize
+      });
+
+      const save = model.save();
+
+      save.success( ( response, status ) => {
+        console.log( response );
+        console.log( status );
+      });
+      save.error( ( response, status ) => {
+        console.log( response );
+        console.log( status );
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -32,8 +54,18 @@ const Settings = () => {
         checked={ showWritingFlag }
         onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
       />
-      <TextControl label="テキスト" />
-      <RangeControl label="文字サイズ" min="10" max="30"/>
+      <TextControl
+        label="テキスト"
+        value={ text }
+        onChange={ ( value ) => setText( value ) }
+      />
+      <RangeControl
+        label="文字サイズ"
+        min="10"
+        max="30"
+        value={ fontSize }
+        onChange={ ( value ) => setFontSize( value ) }
+      />
     </>
   );
 };

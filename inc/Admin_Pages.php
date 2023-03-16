@@ -12,11 +12,12 @@ defined( 'ABSPATH' ) || exit;
 
 class Admin_Pages {
 
-  private $biblio_settings_page;
-
   public function __construct() {
-    add_action('admin_menu', [ $this, 'add_custom_pages' ]);
-    $this->load_custom_page_scripts();
+    if( is_admin() ) {
+      add_action('admin_menu', [ $this, 'add_custom_pages' ]);
+    }
+    // load page scripts.
+    $biblio_settings_page = new Biblio_Settings_Page;
   }
 
   // BIBLIO Settings page
@@ -27,13 +28,11 @@ class Admin_Pages {
       'manage_options',
       'biblio-settings',
       function () {
-        $this->biblio_settings_page -> create_page();
+        ?>
+          <div id="biblio-settings" class="biblio-settings"></div>
+        <?php
       },
       'dashicons-admin-settings'
     );
-  }
-
-  public function load_custom_page_scripts() {
-    $this->biblio_settings_page = new Biblio_Settings_Page;
   }
 }
