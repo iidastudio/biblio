@@ -9,11 +9,14 @@
  */
 
 use biblio\inc;
+use biblio\lib;
 
 // composer autoload
 require_once('vendor/autoload.php');
 
-// autoload
+/**
+ * autoload
+ */
 new inc\Block_Styles();
 new inc\Custom_Post_Types();
 new inc\Ogp_Settings();
@@ -22,6 +25,8 @@ new inc\Template_Part_Areas();
 // admin
 new inc\Theme_Update();
 new inc\Admin_Pages();
+// utility
+new lib\Utility();
 
 // 抜粋の文字数調整
 // function twpp_change_excerpt_length( $length ) {

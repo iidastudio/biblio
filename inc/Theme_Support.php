@@ -12,32 +12,15 @@ defined( 'ABSPATH' ) || exit;
 class Theme_Support {
   
   public function __construct() {
-    add_action( 'after_setup_theme', [ $this, 'add_theme_supports' ] );
-    add_action( 'wp_enqueue_scripts', [ $this, 'add_scripts_and_styles' ] );
-    add_action( 'wp_enqueue_scripts', [ $this, 'set_script_translations' ] );
+    add_action( 'after_setup_theme', [$this, 'add_theme_supports'] );
+    add_action( 'after_setup_theme', [$this, 'biblio_enqueue_wp_block_styles'] );
+    add_action( 'wp_enqueue_scripts', [$this, 'add_scripts_and_styles'] );
+    add_action( 'wp_enqueue_scripts', [$this, 'set_script_translations'] );
+    add_action( 'enqueue_block_editor_assets', [$this, 'biblio_block_variation_enqueue'] );
     add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-    add_filter( 'after_setup_theme', [ $this, 'biblio_enqueue_wp_block_styles'] );
-    add_action( 'enqueue_block_editor_assets', [ $this, 'biblio_block_variation_enqueue'] );
-    add_action('enqueue_block_editor_assets', [ $this, 'remove_core_block_patterns' ]);
     add_filter('document_title_separator', [ $this ,'title_separator_change' ]);
-    // remove
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
     remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
-    add_action( 'init', [ $this, 'remove_core_block_patterns' ], 9 );
-    if( !is_admin() ) {
-      add_action( 'wp_enqueue_scripts', [ $this, 'remove_jquery']);
-    }
-  }
-
-  public function remove_core_block_patterns() {
-    remove_theme_support( 'core-block-patterns' );
-  }
-
-  // remove jQuery
-  public function remove_jquery() {
-    if (!is_admin()) {
-      wp_deregister_script('jquery');
-    }
   }
 
   // title separator change
@@ -48,13 +31,16 @@ class Theme_Support {
   // add_theme_support
   public function add_theme_supports() {
     add_editor_style( '/assets/css/editor.css' );
+    remove_theme_support( 'core-block-patterns' );
     load_theme_textdomain( 'biblio', get_template_directory().'/languages' );
   }
 
   // wp_enqueue_style anad wp_enqueue_script
   public function add_scripts_and_styles() {
     wp_enqueue_style('style-common', get_template_directory_uri().'/assets/css/common.css', array(), filemtime( get_template_directory().'/assets/css/common.css' ));
-    wp_enqueue_script('js-common', get_template_directory_uri().'/assets/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/assets/js/common-bundle.js' ), true );
+    wp_enqueue_script('js-common', get_template_directory_uri().'/assets/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/assets/js/common-bundle.js' ) );
+    wp_script_add_data('js-common', 'defer', true);
+    wp_deregister_script('jquery');
   }
 
   public function biblio_block_variation_enqueue() {

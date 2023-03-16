@@ -30,7 +30,6 @@ class Biblio_Settings_Page {
         get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.css',
         array( 'wp-components' ) // ←Gutenbergコンポーネントのデフォルトスタイルを読み込み
     );
-    wp_script_add_data('biblio-settings-page-style', 'async', true);
 
     // JavaScriptファイルの読み込み
     wp_enqueue_script(
