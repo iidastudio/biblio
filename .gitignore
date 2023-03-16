@@ -1,7 +1,7 @@
 .DS_STORE
+.wp-env.override.json
+theme.json
 node_modules/
 vendor/
-.wp-env.override.json
+build/
 /assets/
-theme.json
-plugin-update-checker/
