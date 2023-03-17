@@ -43,34 +43,43 @@ class Biblio_Settings_Page {
 
   public function biblio_register_settings() {
     register_setting(
-        'biblio_admin_settings',
-        'biblio_admin_show_writing_flg',
-        array(
-            'type'         => 'boolean',
-            'show_in_rest' => true,
-            'default'      => false,
-        )
+      'biblio_admin_settings',
+      'biblio_admin_show_writing_flg',
+      array(
+        'type'         => 'boolean',
+        'show_in_rest' => true,
+        'default'      => false,
+      )
     );
-
-        // テキスト
-        register_setting(
-          'my_gutenberg_admin_plugin_settings',
-          'my_gutenberg_admin_plugin_text',
-          array(
-              'type'         => 'string',
-              'show_in_rest' => true,
-              'default'      => 'ここにテキストが入ります',
-          )
-      );
-      // 文字サイズ
-      register_setting(
-          'my_gutenberg_admin_plugin_settings',
-          'my_gutenberg_admin_plugin_font_size',
-          array(
-              'type'         => 'number',
-              'show_in_rest' => true,
-              'default'      => 16,
-          )
-      );
+    register_setting(
+      'biblio_admin_settings',
+      'biblio_admin_show_book_flg',
+      array(
+        'type'         => 'boolean',
+        'show_in_rest' => true,
+        'default'      => false,
+      )
+    );
+    // テキスト
+    register_setting(
+      'biblio_admin_settings',
+      'my_gutenberg_admin_plugin_text',
+      array(
+        'type'         => 'string',
+        'show_in_rest' => true,
+        'default'      => 'ここにテキストが入ります',
+      )
+    );
+    // 文字サイズ
+    register_setting(
+      'biblio_admin_settings',
+      'my_gutenberg_admin_plugin_font_size',
+      array(
+        'type'         => 'number',
+        'show_in_rest' => true,
+        'default'      => 16,
+      )
+    );
   }
+
 }

@@ -15,6 +15,10 @@ class Custom_Post_Types {
 	}
 
   public function create_post_type() {
+    $showWritingFlg = get_option( 'biblio_admin_show_writing_flg' );
+    if( ! $showWritingFlg && ! $showWritingFlg == true ) {
+      return;
+    }
     register_post_type('writing', [ // 投稿タイプ名の定義
       'labels' => [
         'name' => '執筆', // 管理画面上で表示する投稿タイプ名
