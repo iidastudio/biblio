@@ -55,8 +55,7 @@ const Settings = () => {
       save.success( ( response, status ) => {
         console.log( response );
         console.log( status );
-        wp.updates.maybeNotifyUpdates();
-        // location.reload();
+        location.reload();
       });
       save.error( ( response, status ) => {
         console.log( response );
