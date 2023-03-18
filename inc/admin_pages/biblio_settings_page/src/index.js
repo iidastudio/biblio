@@ -3,8 +3,8 @@ import {
   Panel,
   PanelBody,
   TabPanel,
-  ToggleControl,
   TextControl,
+  ToggleControl,
   RangeControl,
   Button,
   Spinner
@@ -40,7 +40,7 @@ const Settings = () => {
     });
   }, []);
 
-  const onClick = () => {
+  const onSaveClick = () => {
     api.loadPromise.then( () => {
       const model = new api.models.Settings({
         'biblio_admin_show_writing_flg': showWritingFlag,
@@ -70,17 +70,60 @@ const Settings = () => {
     setFontSize( defaultValues.fontSize );
   };
 
+  const onSelect = ( tabName ) => {
+    console.log( 'Selecting tab', tabName );
+  };
+
   return (
     <>
       <h1>BIBLIO Settings</h1>
       <WaitLoading isLoading={ isLoading }>
-        <ShowCustomType
-          showWritingFlag = { showWritingFlag }
-          showBookFlag = { showBookFlag }
-          setShowWritingFlag = { setShowWritingFlag }
-          setShowBookFlag = { setShowBookFlag }
-        />
-        <TextControl
+        <TabPanel
+          className="settings-tab-panels"
+          activeClass="is-active"
+          onSelect={ onSelect }
+          tabs={ [
+            {
+              name: 'settings-1',
+              title: '設置1',
+              className: 'tab-settings-1'
+            },
+            {
+              name: 'license',
+              title: 'ライセンス',
+              className: 'tab-license'
+            },
+          ] }
+        >
+          { (tab) => {
+            switch (tab.name) {
+              case 'settings-1':
+                return (
+                  <>
+                    <ShowCustomType
+                      showWritingFlag = { showWritingFlag }
+                      showBookFlag = { showBookFlag }
+                      setShowWritingFlag = { setShowWritingFlag }
+                      setShowBookFlag = { setShowBookFlag }
+                    />
+                    <SaveButton
+                      onSaveClick = { onSaveClick }
+                      onResetClick= { onResetClick }
+                    />
+                  </>  
+                );
+              case 'license':
+                return (
+                  <div className="other-options">
+                    <p>ここにその他のオプションの説明を記述します。</p>
+                  </div>
+                );
+              default:
+                return null;
+            }
+          }}        
+        </TabPanel>
+        {/* <TextControl
           label="テキスト"
           value={ text }
           onChange={ ( value ) => setText( value ) }
@@ -91,19 +134,7 @@ const Settings = () => {
           max="30"
           value={ fontSize }
           onChange={ ( value ) => setFontSize( value ) }
-        />
-        <Button
-          variant='primary'
-          children='初期化'
-          onClick={ onResetClick }
-        >
-        </Button>
-        <Button
-          variant='primary'
-          children='保存'
-          onClick={ onClick }
-        >
-        </Button>
+        /> */}
       </WaitLoading>
     </>
   );
@@ -119,21 +150,43 @@ const WaitLoading = ( { isLoading, children } ) => {
 
 const ShowCustomType = ( { showWritingFlag, showBookFlag, setShowWritingFlag, setShowBookFlag } ) => {
   return (
-    <>
-      <h2>カスタム投稿タイプの表示</h2>
-      <ToggleControl
-        label="執筆を有効にする"
-        checked={ showWritingFlag }
-        onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
-      />
-      <ToggleControl
-        label="書籍を有効にする"
-        checked={ showBookFlag }
-        onChange={ () => setShowBookFlag( ! showBookFlag ) }
-      />
-    </>
+    <Panel header="カスタム投稿タイプの表示">
+      <PanelBody>
+        <ToggleControl
+          label="執筆を有効にする"
+          checked={ showWritingFlag }
+          onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
+        />
+        <ToggleControl
+          label="書籍を有効にする"
+          checked={ showBookFlag }
+          onChange={ () => setShowBookFlag( ! showBookFlag ) }
+        />
+      </PanelBody>
+    </Panel>
   );
 } 
+
+const SaveButton = ( { onResetClick, onSaveClick } ) => {
+  return (
+    <Panel>
+      <PanelBody>
+        <Button
+          variant='primary'
+          children='保存'
+          onClick={ onSaveClick }
+        >
+        </Button>
+        <Button
+          variant='primary'
+          children='初期化'
+          onClick={ onResetClick }
+        >
+        </Button>
+      </PanelBody>
+    </Panel>
+  );
+}
 
 render(
   <Settings />,

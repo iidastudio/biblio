@@ -1,9 +1,16 @@
 #biblio-settings {
   h1{
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   .components-base-control {
-      max-width: 400px;
-      margin-bottom: 20px;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  // TabPanel
+  .components-tab-panel__tabs-item {
+    border: solid 1px #e0e0e0;
+    border-bottom: 0;
+    background: #fff;
+    margin-right: 4px;
   }
 }
