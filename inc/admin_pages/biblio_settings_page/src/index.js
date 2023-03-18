@@ -1,5 +1,8 @@
 import { render, useState, useEffect } from '@wordpress/element'
 import {
+  Panel,
+  PanelBody,
+  TabPanel,
   ToggleControl,
   TextControl,
   RangeControl,
@@ -37,10 +40,6 @@ const Settings = () => {
     });
   }, []);
 
-  if(isLoading) {
-    return <Spinner />
-  }
-
   const onClick = () => {
     api.loadPromise.then( () => {
       const model = new api.models.Settings({
@@ -74,16 +73,12 @@ const Settings = () => {
   return (
     <>
       <h1>BIBLIO Settings</h1>
-      <h2>カスタム投稿タイプの表示</h2>
-      <ToggleControl
-        label="執筆を有効にする"
-        checked={ showWritingFlag }
-        onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
-      />
-      <ToggleControl
-        label="書籍を有効にする"
-        checked={ showBookFlag }
-        onChange={ () => setShowBookFlag( ! showBookFlag ) }
+      <WaitLoading isLoading={ isLoading } />
+      <ShowCustomType
+        showWritingFlag = { showWritingFlag }
+        showBookFlag = { showBookFlag }
+        setShowWritingFlag = { setShowWritingFlag }
+        setShowBookFlag = { setShowBookFlag }
       />
       <TextControl
         label="テキスト"
@@ -112,6 +107,30 @@ const Settings = () => {
     </>
   );
 };
+
+const WaitLoading = ( { isLoading } ) => {
+  if(isLoading) {
+    return <Spinner />
+  }
+}
+
+const ShowCustomType = ( { showWritingFlag, showBookFlag, setShowWritingFlag, setShowBookFlag } ) => {
+  return (
+    <>
+      <h2>カスタム投稿タイプの表示</h2>
+      <ToggleControl
+        label="執筆を有効にする"
+        checked={ showWritingFlag }
+        onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
+      />
+      <ToggleControl
+        label="書籍を有効にする"
+        checked={ showBookFlag }
+        onChange={ () => setShowBookFlag( ! showBookFlag ) }
+      />
+    </>
+  );
+} 
 
 render(
   <Settings />,
