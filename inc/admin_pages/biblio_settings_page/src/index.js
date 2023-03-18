@@ -73,44 +73,47 @@ const Settings = () => {
   return (
     <>
       <h1>BIBLIO Settings</h1>
-      <WaitLoading isLoading={ isLoading } />
-      <ShowCustomType
-        showWritingFlag = { showWritingFlag }
-        showBookFlag = { showBookFlag }
-        setShowWritingFlag = { setShowWritingFlag }
-        setShowBookFlag = { setShowBookFlag }
-      />
-      <TextControl
-        label="テキスト"
-        value={ text }
-        onChange={ ( value ) => setText( value ) }
-      />
-      <RangeControl
-        label="文字サイズ"
-        min="10"
-        max="30"
-        value={ fontSize }
-        onChange={ ( value ) => setFontSize( value ) }
-      />
-      <Button
-        variant='primary'
-        children='初期化'
-        onClick={ onResetClick }
-      >
-      </Button>
-      <Button
-        variant='primary'
-        children='保存'
-        onClick={ onClick }
-      >
-      </Button>
+      <WaitLoading isLoading={ isLoading }>
+        <ShowCustomType
+          showWritingFlag = { showWritingFlag }
+          showBookFlag = { showBookFlag }
+          setShowWritingFlag = { setShowWritingFlag }
+          setShowBookFlag = { setShowBookFlag }
+        />
+        <TextControl
+          label="テキスト"
+          value={ text }
+          onChange={ ( value ) => setText( value ) }
+        />
+        <RangeControl
+          label="文字サイズ"
+          min="10"
+          max="30"
+          value={ fontSize }
+          onChange={ ( value ) => setFontSize( value ) }
+        />
+        <Button
+          variant='primary'
+          children='初期化'
+          onClick={ onResetClick }
+        >
+        </Button>
+        <Button
+          variant='primary'
+          children='保存'
+          onClick={ onClick }
+        >
+        </Button>
+      </WaitLoading>
     </>
   );
 };
 
-const WaitLoading = ( { isLoading } ) => {
+const WaitLoading = ( { isLoading, children } ) => {
   if(isLoading) {
-    return <Spinner />
+    return <> <Spinner /> </>
+  }else {
+    return children
   }
 }
 
