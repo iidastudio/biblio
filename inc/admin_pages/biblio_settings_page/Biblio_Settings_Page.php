@@ -42,6 +42,7 @@ class Biblio_Settings_Page {
   }
 
   public function biblio_register_settings() {
+    // 執筆(カスタム投稿タイプ)
     register_setting(
       'biblio_admin_settings',
       'biblio_admin_show_writing_flg',
@@ -51,9 +52,20 @@ class Biblio_Settings_Page {
         'default'      => false,
       )
     );
+    // 本(カスタム投稿タイプ)
     register_setting(
       'biblio_admin_settings',
       'biblio_admin_show_book_flg',
+      array(
+        'type'         => 'boolean',
+        'show_in_rest' => true,
+        'default'      => false,
+      )
+    );
+    // お知らせ(カスタム投稿タイプ)
+    register_setting(
+      'biblio_admin_settings',
+      'biblio_admin_show_info_flg',
       array(
         'type'         => 'boolean',
         'show_in_rest' => true,

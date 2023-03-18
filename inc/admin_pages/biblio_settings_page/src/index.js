@@ -15,15 +15,17 @@ import './admin.scss';
 const Settings = () => {
 
   const defaultValues = {
-    showWritingFlag: true,
-    showBookFlag: true,
+    showWritingFlg: true,
+    showBookFlg: true,
+    showInfoFlg: true,
     text: 'ここにテキストが入ります',
     fontSize: 16,
   }
 
   const [ isLoading, setIsLoading ] = useState(true);
-  const [ showWritingFlag, setShowWritingFlag ] = useState( defaultValues.showWritingFlag );
-  const [ showBookFlag, setShowBookFlag ] = useState( defaultValues.showBookFlag );
+  const [ showWritingFlg, setShowWritingFlg ] = useState( defaultValues.showWritingFlg );
+  const [ showBookFlg, setShowBookFlg ] = useState( defaultValues.showBookFlg );
+  const [ showInfoFlg, setShowInfoFlg ] = useState( defaultValues.showInfoFlg );
   const [ text, setText ] = useState( defaultValues.text ); // テキスト
   const [ fontSize, setFontSize ] = useState( defaultValues.fontSize );
 
@@ -32,8 +34,9 @@ const Settings = () => {
       const model = new api.models.Settings();
       model.fetch().then( response => {
         setIsLoading(false);
-        setShowWritingFlag( Boolean( response.biblio_admin_show_writing_flg ) );
-        setShowBookFlag( Boolean( response.biblio_admin_show_book_flg ) );
+        setShowWritingFlg( Boolean( response.biblio_admin_show_writing_flg ) );
+        setShowBookFlg( Boolean( response.biblio_admin_show_book_flg ) );
+        setShowInfoFlg( Boolean( response.biblio_admin_show_info_flg ) );
         setText( response.my_gutenberg_admin_plugin_text );
         setFontSize( response.my_gutenberg_admin_plugin_font_size );
       });
@@ -43,8 +46,9 @@ const Settings = () => {
   const onSaveClick = () => {
     api.loadPromise.then( () => {
       const model = new api.models.Settings({
-        'biblio_admin_show_writing_flg': showWritingFlag,
-        'biblio_admin_show_book_flg': showBookFlag,
+        'biblio_admin_show_writing_flg': showWritingFlg,
+        'biblio_admin_show_book_flg': showBookFlg,
+        'biblio_admin_show_info_flg': showInfoFlg,
         'my_gutenberg_admin_plugin_text': text,
         'my_gutenberg_admin_plugin_font_size': fontSize
       });
@@ -64,8 +68,9 @@ const Settings = () => {
   };
 
   const onResetClick = () => {
-    setShowWritingFlag( defaultValues.showWritingFlag );
-    setShowBookFlag( defaultValues.showBookFlag );
+    setShowWritingFlg( defaultValues.showWritingFlg );
+    setShowBookFlg( defaultValues.showBookFlg );
+    setShowInfoFlg( defaultValues.showInfoFlg );
     setText( defaultValues.text );
     setFontSize( defaultValues.fontSize );
   };
@@ -101,10 +106,10 @@ const Settings = () => {
                 return (
                   <>
                     <ShowCustomType
-                      showWritingFlag = { showWritingFlag }
-                      showBookFlag = { showBookFlag }
-                      setShowWritingFlag = { setShowWritingFlag }
-                      setShowBookFlag = { setShowBookFlag }
+                      showWritingFlg = { showWritingFlg }
+                      showBookFlg = { showBookFlg }
+                      setShowWritingFlg = { setShowWritingFlg }
+                      setShowBookFlg = { setShowBookFlg }
                     />
                     <SaveButton
                       onSaveClick = { onSaveClick }
@@ -148,19 +153,24 @@ const WaitLoading = ( { isLoading, children } ) => {
   }
 }
 
-const ShowCustomType = ( { showWritingFlag, showBookFlag, setShowWritingFlag, setShowBookFlag } ) => {
+const ShowCustomType = ( { showWritingFlg, showBookFlg, setShowWritingFlg, setShowBookFlg, showInfoFlg, setShowInfoFlg } ) => {
   return (
     <Panel header="カスタム投稿タイプの表示">
       <PanelBody>
         <ToggleControl
           label="執筆を有効にする"
-          checked={ showWritingFlag }
-          onChange={ () => setShowWritingFlag( ! showWritingFlag ) }
+          checked={ showWritingFlg }
+          onChange={ () => setShowWritingFlg( ! showWritingFlg ) }
         />
         <ToggleControl
           label="書籍を有効にする"
-          checked={ showBookFlag }
-          onChange={ () => setShowBookFlag( ! showBookFlag ) }
+          checked={ showBookFlg }
+          onChange={ () => setShowBookFlg( ! showBookFlg ) }
+        />
+        <ToggleControl
+          label="お知らせを有効にする"
+          checked={ showInfoFlg }
+          onChange={ () => setShowInfoFlg( ! showInfoFlg ) }
         />
       </PanelBody>
     </Panel>
