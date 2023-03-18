@@ -50,7 +50,7 @@ class Custom_Post_Types {
         'labels' => [
           'name' => '本',
           'singular_name' => '本',
-          'add_new' => '新しく本をつくる',
+          'add_new' => '新しく本を作る',
           'all_items' => '本一覧',
         ],
         'public' => true,
@@ -76,10 +76,10 @@ class Custom_Post_Types {
     if( $showInfoFlg && $showInfoFlg == true ) {
       register_post_type('info', [
         'labels' => [
-          'name' => '本',
-          'singular_name' => '本',
-          'add_new' => '新しく本をつくる',
-          'all_items' => '本一覧',
+          'name' => 'お知らせ',
+          'singular_name' => 'お知らせ',
+          'add_new' => '新しいお知らせを投稿する',
+          'all_items' => 'お知らせ一覧',
         ],
         'public' => true,
         'has_archive' => true,
@@ -93,8 +93,8 @@ class Custom_Post_Types {
         array(
           'hierarchical' => true,
           'update_count_callback' => '_update_post_term_count',
-          'label' => '本のカテゴリー',
-          'singular_label' => '本のカテゴリー',
+          'label' => 'お知らせのカテゴリー',
+          'singular_label' => 'お知らせのカテゴリー',
           'public' => true,
           'show_ui' => true,
         )
