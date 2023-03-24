@@ -1,7 +1,8 @@
-import { render, useState, useEffect } from '@wordpress/element'
+import { render, useState, useEffect } from '@wordpress/element';
 import {
   Panel,
   PanelBody,
+  PanelRow,
   TabPanel,
   TextControl,
   ToggleControl,
@@ -75,10 +76,6 @@ const Settings = () => {
     setFontSize( defaultValues.fontSize );
   };
 
-  const onSelect = ( tabName ) => {
-    console.log( 'Selecting tab', tabName );
-  };
-
   return (
     <>
       <h1>BIBLIO Settings</h1>
@@ -86,11 +83,10 @@ const Settings = () => {
         <TabPanel
           className="settings-tab-panels"
           activeClass="is-active"
-          onSelect={ onSelect }
           tabs={ [
             {
               name: 'settings-1',
-              title: '設置1',
+              title: '設定1',
               className: 'tab-settings-1'
             },
             {
@@ -108,8 +104,10 @@ const Settings = () => {
                     <ShowCustomType
                       showWritingFlg = { showWritingFlg }
                       showBookFlg = { showBookFlg }
+                      showInfoFlg = { showInfoFlg }
                       setShowWritingFlg = { setShowWritingFlg }
                       setShowBookFlg = { setShowBookFlg }
+                      setShowInfoFlg = { setShowInfoFlg }
                     />
                     <SaveButton
                       onSaveClick = { onSaveClick }
@@ -181,18 +179,20 @@ const SaveButton = ( { onResetClick, onSaveClick } ) => {
   return (
     <Panel>
       <PanelBody>
-        <Button
-          variant='primary'
-          children='保存'
-          onClick={ onSaveClick }
-        >
-        </Button>
-        <Button
-          variant='primary'
-          children='初期化'
-          onClick={ onResetClick }
-        >
-        </Button>
+        <PanelRow>
+          <Button
+            variant='primary'
+            children='保存'
+            onClick={ onSaveClick }
+          >
+          </Button>
+          <Button
+            variant='primary'
+            children='初期化'
+            onClick={ onResetClick }
+          >
+          </Button>
+        </PanelRow>
       </PanelBody>
     </Panel>
   );
