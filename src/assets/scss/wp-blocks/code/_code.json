@@ -14,16 +14,11 @@
         },
         "spacing": {
           "padding": {
-            "top": ".5em",
-            "right": "1em",
-            "bottom": ".5em",
-            "left": "1em"
+            "top": "1rem",
+            "right": "1rem",
+            "bottom": "1rem",
+            "left": "1rem"
           }
-        },
-        "border": {
-          "style": "solid",
-          "width": "1px",
-          "color": "var(--wp--preset--color--biblio-support-text)"
         }
       }
     }
