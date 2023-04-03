@@ -31,7 +31,6 @@ class Helper {
     }
     $has_block_flg = has_block( $target_block_name, get_the_content() );
     if( $has_block_flg || $blocks_name_on_part_flg ){
-      echo 'true';
       return true;
     }
   }
