@@ -47,9 +47,9 @@ class Block_styles {
 			register_block_style(
 				'core/navigation',
 				array(
-					'name'         => 'biblio',
-					'label'        => __( 'Biblio', 'biblio' ),
-					'style_handle' => 'biblio',
+					'name'         => 'biblio-toggle-list',
+					'label'        => __( 'List', 'biblio' ),
+					'style_handle' => 'biblio-toggle-list',
 				)
 			);
 			register_block_style(
@@ -58,6 +58,14 @@ class Block_styles {
 					'name'         => 'biblio-squircle',
 					'label'        => __( 'Squircle', 'biblio' ),
 					'style_handle' => 'biblio-squircle',
+				)
+			);
+			register_block_style(
+				'core/post-navigation-link',
+				array(
+					'name'         => 'biblio-simple',
+					'label'        => __( 'Simple', 'biblio' ),
+					'style_handle' => 'biblio-simple',
 				)
 			);
 		}
