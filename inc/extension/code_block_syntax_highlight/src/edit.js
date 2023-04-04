@@ -24,7 +24,7 @@ export default function Edit( enableBlocks ) {
       ];
 
       const setLangageClassName = ( value ) => {
-        
+
         deleteLanguageClassName();
 
         const newClassNames = classNames(attributes.className,`language-${value}`);
@@ -42,8 +42,6 @@ export default function Edit( enableBlocks ) {
         const filteredClassNames = classNames.filter(className => !className.startsWith('language-')); // 'language-'で始まるクラス名をフィルターする
         attributes.className = filteredClassNames.join(' ');
       }
-
-      console.log(attributes.className);
 
       return (
         <>
