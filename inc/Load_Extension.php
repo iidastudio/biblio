@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 namespace biblio\inc;
-use biblio\inc\extension\code_block_syntax\Code_Block_Syntax_Highlight;
+use biblio\inc\extension\code_block_syntax_highlight\Code_Block_Syntax_Highlight;
 
 class Load_Extension {
   

@@ -5,7 +5,7 @@
  * @package BIBLIO
  * @since 1.0.0
  */
-namespace biblio\inc\extension\code_block_syntax;
+namespace biblio\inc\extension\code_block_syntax_highlight;
 use biblio\lib\Helper;
 
 class Code_Block_Syntax_Highlight {
