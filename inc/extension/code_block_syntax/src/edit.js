@@ -23,23 +23,27 @@ export default function Edit( enableBlocks ) {
           { value: 'javascript', label: 'JavaScript' },
       ];
 
-      // ランゲージ名をたしたのと同じようにクラスもアトリビュート内のオブジェクトっぽいのでおなじようにセットアトリビュートでついかするひつようがありそう
-
       const setLangageClassName = ( value ) => {
-        const newClassNames = classNames(attributes.className,`language-${attributes.language}`);
+        
+        deleteLanguageClassName();
+
+        const newClassNames = classNames(attributes.className,`language-${value}`);
         console.log(newClassNames);
+        
         setAttributes({
           ...attributes,
           language: value,
-          className: newClassNames
+          className: newClassNames,
         });
       }
 
       const deleteLanguageClassName = () => {
-
+        const classNames = attributes.className.split(' ');
+        const filteredClassNames = classNames.filter(className => !className.startsWith('language-')); // 'language-'で始まるクラス名をフィルターする
+        attributes.className = filteredClassNames.join(' ');
       }
 
-      console.log(attributes);
+      console.log(attributes.className);
 
       return (
         <>
@@ -48,10 +52,10 @@ export default function Edit( enableBlocks ) {
             <Panel>
               <PanelBody title='Syntax Highlight'>
                 <SelectControl
-                    label={ "Language" }
-                    value={ attributes.language }
-                    options={ languageOptions }
-                    onChange={ setLangageClassName }
+                  label={ "Language" }
+                  value={ languageOptions.value }
+                  options={ languageOptions }
+                  onChange={ setLangageClassName }
                 />
               </PanelBody>
             </Panel>
