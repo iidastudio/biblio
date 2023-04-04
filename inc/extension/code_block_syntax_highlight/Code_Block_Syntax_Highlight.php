@@ -8,7 +8,7 @@
 namespace biblio\inc\extension\code_block_syntax;
 use biblio\lib\Helper;
 
-class Code_Block_Syntax {
+class Code_Block_Syntax_Highlight {
 
   public function __construct() {
     add_action( 'init', [$this, 'code_block_styntax_scripts'] );
