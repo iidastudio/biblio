@@ -26,9 +26,11 @@ export default function Edit( enableBlocks ) {
       const setLangageClassName = ( value ) => {
 
         deleteLanguageClassName();
+        let newClassNames = attributes.className;
 
-        const newClassNames = classNames(attributes.className,`language-${value}`);
-        console.log(newClassNames);
+        if (value !== '') {
+          newClassNames = classNames(attributes.className,`language-${value}`);
+        }
         
         setAttributes({
           ...attributes,
