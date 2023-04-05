@@ -12,7 +12,6 @@ export default function Edit( enableBlocks ) {
       if ( props.name !== enableBlocks ) {
         return <BlockEdit { ...props } />;
       }
-      console.log(props);
 
       const { attributes, setAttributes } = props;
 
