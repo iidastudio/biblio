@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "biblio-extension/editor-support-hover-border",
+	"version": "1.0.0",
+	"title": "Editor support hover border",
+	"description": "When using the block editor, hovering over a block should show its border.",
+	"textdomain": "biblio",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
