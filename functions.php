@@ -30,14 +30,6 @@ new inc\Load_Extension();
 // utility
 new lib\Utility();
 
-// 抜粋の末尾
-function twpp_change_excerpt_more( $more ) {
-  $html = '<a href="' . esc_url( get_permalink() ) . '" class="wp-block-post-excerpt__more-link">...</a>';
-  return $html;
-}
-add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
-
-
 //-------------------------------------------------
 // post_idをもとにして投稿ごとにnoimageサムネイルを設置する
 //-------------------------------------------------
