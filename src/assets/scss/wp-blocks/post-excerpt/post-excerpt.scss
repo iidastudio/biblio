@@ -1,8 +1,5 @@
-// .wp-block-post-excerpt {
-//   &__excerpt {
-//     display: -webkit-box;
-//     -webkit-line-clamp: 2;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden; 
-//   }
-// }
+.wp-block-post-excerpt {
+  .wp-block-post-excerpt__excerpt {
+    line-height: inherit;
+  }
+}

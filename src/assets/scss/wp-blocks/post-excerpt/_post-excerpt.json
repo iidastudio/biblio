@@ -4,8 +4,8 @@
     "blocks": {
       "core/post-excerpt": {
         "typography": {
-          "fontSize": "14px",
-          "letterSpacing": "1.25"
+          "fontSize": "var:preset|font-size|xxs",
+          "lineHeight": "1.5"
         }
       }
     }

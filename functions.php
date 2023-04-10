@@ -34,7 +34,15 @@ new lib\Utility();
 // post_idをもとにして投稿ごとにnoimageサムネイルを設置する
 //-------------------------------------------------
 function wpdocs_addTitleToThumbnail( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-  if ( 'post' === get_post_type( $post_id ) ) {
+  $array_post_type = [
+    'post',
+    'writing',
+    'book',
+    'info'
+  ];
+  $flg = in_array(get_post_type( $post_id ), $array_post_type);
+  
+  if ( $flg ) {
     if($html === "") {
       $img_num = $post_id % 2;
       $post_title = get_the_title( $post_id );
