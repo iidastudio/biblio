@@ -30,11 +30,7 @@ new inc\Load_Extension();
 // utility
 new lib\Utility();
 
-// 抜粋の文字数調整
-// function twpp_change_excerpt_length( $length ) {
-//   return 50; 
-// }
-// add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
+// 抜粋の末尾
 function twpp_change_excerpt_more( $more ) {
   $html = '<a href="' . esc_url( get_permalink() ) . '" class="wp-block-post-excerpt__more-link">...</a>';
   return $html;

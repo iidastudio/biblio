@@ -1,9 +1,13 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/columns": {
         "spacing": {
-          "blockGap": "1rem"
+          "blockGap": "1rem",
+          "margin": {
+            "bottom": "0"
+          }
         }
       }
     }
@@ -11,9 +15,7 @@
   "settings": {
     "blocks": {
       "core/columns": {
-        "custom": {
-
-        }
+        
       }
     }
   }
