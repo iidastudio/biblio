@@ -48,11 +48,9 @@ z-index: 1;
 
 const getIframeBody = () => {
   const iframe = document.querySelector('iframe[name="editor-canvas"]');
-  if (iframe) {
-    const iframeDoc = iframe.contentWindow.document;
-    const iframeBody = iframeDoc.querySelector('head');
-    return iframeBody;
-  }
+  const iframeDoc = iframe?.contentWindow.document;
+  const iframeBody = iframeDoc?.querySelector('head');
+  return iframeBody;
 };
 
 const HoverBorder = () => {
@@ -76,7 +74,7 @@ const HoverBorder = () => {
 
     if (isActive && !existingStyle ) {
       const hoverBorderStyle = createHoverBorderStyle();
-      iframeBody.appendChild(hoverBorderStyle);
+      iframeBody?.appendChild(hoverBorderStyle);
     } else if ( !isActive && existingStyle ) {
       existingStyle.remove();
     }
