@@ -25,8 +25,7 @@
     "type":"flex",
     "columns":2
   },
-  "align":"wide",
-  "layout":{"type":"default"}
+  "align":"wide"
 } -->
 <div class="wp-block-query alignwide"><!-- wp:post-template -->
   <!-- wp:columns {"isStackedOnMobile":false} -->

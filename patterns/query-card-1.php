@@ -23,9 +23,13 @@
     "exclude":[],
     "inherit":false
   },
-  "displayLayout":{"type":"flex","columns":3}
+  "displayLayout":{
+    "type":"flex",
+    "columns":3
+  },
+  "align":"wide"
 } -->
-<div class="wp-block-query">
+<div class="wp-block-query alignwide">
   <!-- wp:post-template -->
 
     <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}}} -->
