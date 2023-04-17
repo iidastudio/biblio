@@ -1,0 +1,34 @@
+.is-style-biblio-simple {
+  &.wp-block-post-navigation-link {
+    a {
+      &:nth-of-type(1) {
+        font-weight: 600;
+      }
+      &:nth-of-type(2) {
+        font-size: 0.8em;
+      }
+    }
+  }
+  
+  &.has-text-align-left.wp-block-post-navigation-link {
+    border-left: solid 2px var(--color--text);
+    .is-arrow-arrow,
+    .is-arrow-chevron {
+      padding-left: 4px;
+    }
+    a:hover {
+      transform: translateX( 2px );
+    }
+  }
+  
+  &.has-text-align-right.wp-block-post-navigation-link {
+    border-right: solid 2px var(--color--text);
+    .is-arrow-arrow,
+    .is-arrow-chevron {
+      padding-right: 4px;
+    }
+    a:hover {
+      transform: translateX( -2px );
+    }
+  }
+}
