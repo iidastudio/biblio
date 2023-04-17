@@ -1,28 +1,11 @@
-<!-- wp:template-part {"slug":"header","className":"l-header c-header"} /-->
+<!-- wp:group {"className":"global-wrap home-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group global-wrap home-wrap">
 
-<!-- wp:group {
-  "tagName":"main",
-  "className":"l-main","layout":{
-    "type":"constrained",
-    "contentSize":"var:custom|layout|wide-size",
-    "wideSize":"var:custom|layout|extra-wide-size"
-  },
-  "style":{
-    "spacing":{
-      "padding":{
-        "top":"0",
-        "right":"var:style|root|padding-right",
-        "bottom":"0",
-        "left":"var:style|root|padding-left"
-      }
-    }
-  }
-} -->
-<main class="wp-block-group l-main" style="padding-top:0;padding-right:var(--wp--style--root--padding-right);padding-bottom:0;padding-left:var(--wp--style--root--padding-left)">
-
-  <!-- wp:pattern {"slug":"biblio/query/card/1"} /-->
-
-</main>
+  <!-- wp:template-part {"slug":"header","className":"l-header c-header"} /-->
+  
+  <!-- wp:template-part {"slug":"main-home","className":"l-main"} /-->
+  
+  <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"l-footer c-footer"} /-->
+  
+</div>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"l-footer c-footer"} /-->

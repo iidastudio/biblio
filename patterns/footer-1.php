@@ -4,7 +4,7 @@
  * Slug: biblio/footer/1
  * Categories: footer
  * Keywords: footer
- * Block Types: core/template-part/footer
+ * Block Types: core/template-part
  */
 ?>
 

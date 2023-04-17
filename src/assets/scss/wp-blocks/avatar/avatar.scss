@@ -1,6 +1,9 @@
 @use '../../tool' as *;
 
 .wp-block-avatar {
+  img {
+    display: block;
+  }
   &.is-style-biblio-squircle {
     line-height: 1;
     img {

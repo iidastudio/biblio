@@ -4,7 +4,7 @@
  * Slug: biblio/header/1
  * Categories: header
  * Keywords: header simple
- * Block Types: core/template-part/header
+ * Block Types: core/template-part
  */
 ?>
 

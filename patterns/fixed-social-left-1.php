@@ -2,7 +2,7 @@
 /**
  * Title: Fixed area
  * Slug: biblio/fixed/social/left/1
- * Categories: Fixed
+ * Categories: fixed
  * Keywords: fixed social left
  * Block Types: biblio/fixed
  */

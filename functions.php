@@ -18,6 +18,7 @@ require_once('vendor/autoload.php');
  * autoload
  */
 new inc\Block_Styles();
+new inc\Block_Patterns();
 new inc\Custom_Post_Types();
 new inc\Ogp_Settings();
 new inc\Theme_Support();

@@ -11,19 +11,19 @@
       "area": "footer"
     },
     {
-      "name": "home-main",
-      "title": "Home main",
-      "area": "biblio/home/main"
+      "name": "main-home",
+      "title": "Main home",
+      "area": "biblio/main/home"
     },
     {
-      "name": "single-main",
-      "title": "Single main",
-      "area": "biblio/single/main"
+      "name": "main-single",
+      "title": "Main single",
+      "area": "biblio/main/single"
     },
     {
-      "name": "page-main",
-      "title": "Page main",
-      "area": "biblio/page/main"
+      "name": "main-page",
+      "title": "Main page",
+      "area": "biblio/main/page"
     }
   ]
 }
