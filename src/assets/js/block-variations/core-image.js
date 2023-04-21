@@ -23,6 +23,6 @@ wp.blocks.registerBlockVariation('core/image', [
           ],
       ],
     ],
-    scope: ['inserter'],
+    scope: ['inserter', 'transform'],
   },
 ]);

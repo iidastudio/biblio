@@ -21,22 +21,22 @@ class Template_Part_Areas {
       $default_area_definitions,
       array(
         array(
-          'area'        => 'biblio/home/main',
-          'label'       => __( 'Home main', 'biblio' ),
+          'area'        => 'biblio/main/home',
+          'label'       => __( 'Main home', 'biblio' ),
           'icon'        => 'layout',
           'description' => '',
           'area_tag'    => 'main',
         ),
         array(
-          'area'        => 'biblio/single/main',
-          'label'       => __( 'Single main', 'biblio' ),
+          'area'        => 'biblio/main/single',
+          'label'       => __( 'Main single', 'biblio' ),
           'icon'        => 'layout',
           'description' => '',
           'area_tag'    => 'main',
         ),
         array(
-          'area'        => 'biblio/page/main',
-          'label'       => __( 'Page main', 'biblio' ),
+          'area'        => 'biblio/main/page',
+          'label'       => __( 'Main page', 'biblio' ),
           'icon'        => 'layout',
           'description' => '',
           'area_tag'    => 'main',

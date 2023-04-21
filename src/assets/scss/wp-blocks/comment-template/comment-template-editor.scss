@@ -1,3 +1,19 @@
 .wp-block-comment-template {
   padding: 0;
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+  > li {
+    background-color: var(--wp--preset--color--biblio-support-foreground);
+    padding: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  ol > li {
+    border-top: solid 1px var(--wp--preset--color--biblio-support-text);
+    margin-block-start: 1rem !important;
+    padding: 0;
+    padding-block-start: 1rem;
+  }
 }

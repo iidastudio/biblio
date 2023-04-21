@@ -1,7 +1,7 @@
 @use '../../tool' as *;
 
 .wp-block-post-featured-image {
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -19,8 +19,11 @@
   header {
     .wp-block-post-featured-image {
       width: unset;
-      margin-right: calc( -1 * var(--wp--style--root--padding-right)) !important;  
-      margin-left: calc( -1 * var(--wp--style--root--padding-left)) !important;  
+      margin-right: calc( 50% - 50vw ) !important;  
+      margin-left: calc( 50% - 50vw ) !important;  
+      @include mq(min) {
+        max-width: 100vw;
+      } 
     }
   }
 }

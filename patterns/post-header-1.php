@@ -3,7 +3,6 @@
  * Title: Single header 1
  * Slug: biblio/main/single/header/1
  * Categories: post-parts
- * inserter: false
  */
 ?>
 <!-- wp:group {
@@ -26,7 +25,7 @@
 
     <!-- wp:group {"style":{"spacing":{"blockGap":"4px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
     <div class="wp-block-group">
-      <!-- wp:avatar {"size":16,"isLink":true,"className":"is-style-biblio-squircle"} /-->
+      <!-- wp:avatar {"size":12,"isLink":true,"className":"is-style-biblio-squircle"} /-->
       <!-- wp:post-author-name {"isLink":true,"style":{"typography":{"fontSize":"14px"}}} /-->
     </div>
     <!-- /wp:group -->
@@ -34,7 +33,13 @@
     <!-- wp:group {"style":{"spacing":{"blockGap":"0.25em"}},"layout":{"type":"flex","justifyContent":"left"}} -->
     <div class="wp-block-group">
       <!-- wp:post-date {"format":"Y/m/d","className":"icon-publish-date"} /-->
-      <!-- wp:post-terms {"term":"category","className":"icon-category"} /-->
+      <!-- wp:post-date {"displayType":"modified","format":"Y/m/d","className":"icon-modified-date"} /-->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:group {"style":{"spacing":{"blockGap":"0.25em"}},"layout":{"type":"flex","justifyContent":"left"}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-terms {"term":"category","className":"icon-category","style":{"typography":{"fontSize":"var:preset|fontSize|xxs"}}} /-->
     </div>
     <!-- /wp:group -->
 

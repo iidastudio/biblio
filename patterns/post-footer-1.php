@@ -3,7 +3,6 @@
  * Title: Single footer
  * Slug: biblio/main/single/footer/1
  * Categories: post-parts
- * inserter: false
  */
 ?>
 <!-- wp:group {
@@ -48,7 +47,7 @@
 
         <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex"}} -->
         <div class="wp-block-group">
-          <!-- wp:avatar {"size":32,"className":"is-style-biblio-squircle"} /-->
+          <!-- wp:avatar {"size":28,"className":"is-style-biblio-squircle"} /-->
 
           <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"blockGap":"0.2em"}}} -->
           <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px">
@@ -66,7 +65,7 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:group {"style":{"spacing":{"blockGap":"0.2em"}}} -->
+        <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}}} -->
         <div class="wp-block-group">
           <!-- wp:comment-content /-->
         <!-- wp:comment-reply-link {"textAlign":"right"} /-->

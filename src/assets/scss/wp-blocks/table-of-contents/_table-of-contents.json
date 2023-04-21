@@ -29,13 +29,6 @@
             "typography": {
               "textDecoration": "none"
             },
-            "spacing": {
-              "padding": {
-                "top": "4px",
-                "bottom": "4px",
-                "right": "4px"
-              }
-            },
             ":hover": {
               "color": {
                 "background": "var(--wp--preset--color--biblio-support-foreground)"

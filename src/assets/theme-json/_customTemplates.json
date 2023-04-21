@@ -6,9 +6,14 @@
       "postTypes": [ "page" ]
     },
     {
-      "name": "single-writings",
+      "name": "single-writing",
       "title": "Single for writing",
       "postTypes": [ "post" ]
+    },
+    {
+      "name": "page-book",
+      "title": "Page for book",
+      "postTypes": [ "page" ]
     }
   ]
 }

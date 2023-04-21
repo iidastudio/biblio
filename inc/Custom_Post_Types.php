@@ -25,10 +25,12 @@ class Custom_Post_Types {
           'all_items' => '執筆物一覧',
         ],
         'public' => true, // 投稿タイプをpublicにするか
+        'hierarchical' => true,
+        'taxonomies' => ['writing-category'],
         'has_archive' => true, // アーカイブ機能ON/OFF
         'menu_position' => 5, // 管理画面上での配置場所(投稿の下に配置)
         'show_in_rest' => true, // wordpress5.x系から出てきた新エディタ「Gutenberg」を有効にする
-        'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt', 'comments', 'revisions', "post-formats"), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
+        'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt', 'comments', 'revisions', "post-formats", 'page-attributes'), // カスタム投稿で使用する項目を設定（タイトル、エディター、アイキャッチ）
       ]);
       /* タクソノミー(カテゴリー分け)の定義 */
       register_taxonomy(
@@ -41,6 +43,7 @@ class Custom_Post_Types {
           'singular_label' => '執筆物カテゴリー',
           'public' => true,
           'show_ui' => true,// 管理画面表示ON/OFF
+          'show_in_rest' => true,
         )
       );
     }
@@ -55,6 +58,7 @@ class Custom_Post_Types {
         ],
         'public' => true,
         'has_archive' => true,
+        'taxonomies' => ['book-category'],
         'menu_position' => 5,
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt', 'comments', 'revisions', "post-formats"),
@@ -69,6 +73,7 @@ class Custom_Post_Types {
           'singular_label' => '本のカテゴリー',
           'public' => true,
           'show_ui' => true,
+          'show_in_rest' => true,
         )
       );
     }

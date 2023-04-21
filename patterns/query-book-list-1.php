@@ -60,7 +60,7 @@
 
               <!-- wp:group {"style":{"spacing":{"blockGap":"2px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
               <div class="wp-block-group">
-                <!-- wp:avatar {"size":14,"isLink":true,"className":"is-style-biblio-squircle"} /-->
+                <!-- wp:avatar {"size":12,"isLink":true,"className":"is-style-biblio-squircle"} /-->
                 <!-- wp:post-author-name {"isLink":true,"style":{"typography":{"fontSize":"var:preset|fontSize|xs"}}} /-->
               </div>
               <!-- /wp:group -->

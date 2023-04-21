@@ -112,9 +112,7 @@
     },
 		"custom": {
 			"fontSize": {
-				"ratio": "1.5",
-				"maxViewport": "1280px",
-				"minViewport": "40rem"
+				"ratio": "1.5"
 			}
 		}
   }
