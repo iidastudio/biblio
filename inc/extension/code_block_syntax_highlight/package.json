@@ -10,8 +10,5 @@
     "build": "run-s build:*",
     "build:wp-build": "wp-scripts build",
     "build:css": "sass lib/prism.scss:lib/prism.css -s compressed --no-source-map"
-  },
-  "dependencies": {
-    "classnames": "^2.3.2"
   }
 }

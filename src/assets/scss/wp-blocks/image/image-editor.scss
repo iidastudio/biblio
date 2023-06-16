@@ -14,15 +14,25 @@
     margin-block-end: .5em;
   }
   &.alignleft {
-    margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
     margin-inline-end: 1em;
   }
   &.alignright {
     margin-inline-start: 1em;
-    margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
   }
 }
-.wp-block-group:where(:not(.is-layout-constrained)) > {
+
+// エントリーコンテントの直下の時だけ、右寄せ左寄せがずれないように調整
+:not(.vertical-rl :is(.wp-block-image, .wp-block-gallery)) {
+    &.alignleft {
+      margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
+    }
+    &.alignright {
+      margin-inline-end: calc((100% - var(--wp--style--global--content-size)) / 2);
+    }
+}
+
+// コンテント幅をインナーブロックで使用しない場合に右寄せ左寄せがずれないように調整
+.wp-block-group.is-layout-flow > {
   .wp-block-image {
     &.alignleft {
       margin-inline-start: initial;

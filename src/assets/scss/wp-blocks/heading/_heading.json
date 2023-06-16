@@ -6,5 +6,19 @@
         
       }
     }
+  },
+  "settings": {
+    "blocks": {
+      "core/heading": {
+        "custom": {
+          "margin": {
+            "block": {
+              "start": "var(--wp--preset--spacing--70)",
+              "end": "var(--wp--preset--spacing--50)"
+            }
+          }
+        }
+      }
+    }
   }
 }

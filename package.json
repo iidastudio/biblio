@@ -21,7 +21,8 @@
     "watch:image": "chokidar './src/assets/img/' -c 'npm run image' --silent --initial",
     "watch:json": "chokidar './src/**/*.json' -c 'npm run json' --initial",
     "watch:fonts": "chokidar './src/assets/fonts/' -c 'npm run font' --initial",
-    "build": "run-p json css js image fonts",
+    "build": "run-p json css js image fonts custom-block",
+    "custom-block": "node ./config/build-custom-block.js",
     "json": "run-s json:*",
     "json:themejson": "merge-theme-json -b ./src/assets/theme-json/base.json -t ./src/assets/theme-json ./src/assets/scss/wp-blocks -o ./theme.json",
     "json:pxtorem": "node ./themejson-pxtorem",
@@ -41,12 +42,12 @@
     "check-licenses": "wp-scripts check-licenses --prod --gpl2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.20.2",
-    "@wordpress/browserslist-config": "^5.11.0",
-    "@wordpress/env": "^5.13.0",
-    "@wordpress/scripts": "^25.5.1",
-    "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.28.3",
+    "@babel/preset-env": "^7.21.5",
+    "@wordpress/browserslist-config": "^5.15.0",
+    "@wordpress/env": "^6.0.0",
+    "@wordpress/scripts": "^26.3.0",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
     "browserlist": "^1.0.1",
     "chokidar": "^3.5.3",
     "chokidar-cli": "^3.0.0",
@@ -62,8 +63,8 @@
     "po2json": "^0.4.5",
     "postcss-cli": "^10.1.0",
     "postcss-pxtorem": "^6.0.0",
-    "rimraf": "^4.3.1",
-    "sass": "^1.58.3",
+    "rimraf": "^5.0.0",
+    "sass": "^1.62.1",
     "sass-auto-index": "git+https://github.com/iidastudio/sass-auto-index.git"
   },
   "babel": {
@@ -75,7 +76,10 @@
     "extends @wordpress/browserslist-config"
   ],
   "dependencies": {
-    "@wordpress/i18n": "^4.28.0",
+    "@wordpress/i18n": "^4.32.0",
+    "@wordpress/icons": "^9.23.0",
+    "classnames": "^2.3.2",
+    "lodash.merge": "^4.6.2",
     "yakuhanjp": "^3.4.1"
   },
   "config": {

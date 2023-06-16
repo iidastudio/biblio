@@ -23,15 +23,6 @@
       display: none;
     }
   }
-  // グループ内のブロックやベース要素のpadding最適化
-  &.alignfull {
-    &.is-layout-flow {
-      padding-inline: 0;
-    }
-    &.is-layout-constrained :where([class*="wp-block-"].alignfull) {
-      margin-inline: calc( var(--wp--style--root--padding-left) * -1 );
-    }
-  }
 }
 
 // グループロック内で画像（左寄せ、右寄せ）の後に段落ブロックが来た場合はマージントップを削除する処理

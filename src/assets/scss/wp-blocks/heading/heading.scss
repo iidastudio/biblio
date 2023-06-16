@@ -6,6 +6,23 @@
     + * {
       margin-block-start: 0 !important;
     }
+    // 画像ブロック等で右寄せ左寄せする場合、その次の要素もmargin-block-start:0を適用
+    // その後も３枚目まで適用させる
+    + :where(.alignleft, .alignright) {
+      + * {
+        margin-block-start: 0 !important;
+      }
+      + :where(.alignleft, .alignright) {
+        + *{
+          margin-block-start: 0 !important;
+        }
+        + :where(.alignleft, .alignright) {
+          + *{
+            margin-block-start: 0 !important;
+          }
+        }
+      }
+    }
     &:first-child {
       margin-block-start: 0 !important;
     }
@@ -18,23 +35,23 @@
     margin-block-end: var(--wp--preset--spacing--50);
   }
   h2.wp-block-heading {
-    margin-block-start: var(--wp--preset--spacing--70);
-    margin-block-end: var(--wp--preset--spacing--50);
+    margin-block-start: var(--wp--custom--margin--block--start);
+    margin-block-end: var(--wp--custom--margin--block--end) !important;
   }
   h3.wp-block-heading {
-    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125);
-    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125);
+    margin-block-start: calc(var(--wp--custom--margin--block--start) / 1.125);
+    margin-block-end: calc(var(--wp--custom--margin--block--end) / 1.125) !important;
   }
   h4.wp-block-heading {
-    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125);
-    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125);
+    margin-block-start: calc(var(--wp--custom--margin--block--start) / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--custom--margin--block--end) / 1.125 / 1.125) !important;
   }
   h5.wp-block-heading {
-    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125 / 1.125);
-    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125 / 1.125);
+    margin-block-start: calc(var(--wp--custom--margin--block--start) / 1.125 / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--custom--margin--block--end) / 1.125 / 1.125 / 1.125) !important;
   }
   h6.wp-block-heading {
-    margin-block-start: calc(var(--wp--preset--spacing--70) / 1.125 / 1.125 / 1.125);
-    margin-block-end: calc(var(--wp--preset--spacing--50) / 1.125 / 1.125 / 1.125);
+    margin-block-start: calc(var(--wp--custom--margin--block--start) / 1.125 / 1.125 / 1.125);
+    margin-block-end: calc(var(--wp--custom--margin--block--end) / 1.125 / 1.125 / 1.125) !important;
   }
 }
