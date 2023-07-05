@@ -11,13 +11,13 @@
 // 優先度不足のためエディターのみ再記述
 :is(.wp-block-image, .wp-block-gallery) {
   &:is(.alignleft, .alignright) {
-    margin-block-end: .5em;
+    margin-block-end: .5em !important;
   }
   &.alignleft {
     margin-inline-end: 1em;
   }
   &.alignright {
-    margin-inline-start: 1em;
+    margin-inline-start: 1em !important;
   }
 }
 

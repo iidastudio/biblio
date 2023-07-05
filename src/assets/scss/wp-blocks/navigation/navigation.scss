@@ -55,40 +55,16 @@
     //-------------------------------------------------
     // submenu
     //-------------------------------------------------
-    // submenu fukidashi arrow
-    .wp-block-navigation__container,
-    .wp-block-page-list {
-      > .wp-block-navigation-submenu {
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 1rem;
-          height: 1rem;
-          background: var(--color--text);
-          mask-size: 1rem, 1rem;
-          mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%228%22%20viewBox%3D%220%200%2016%208%22%3E%0A%20%20%3Cpath%20id%3D%22Polygon_1%22%20data-name%3D%22Polygon%201%22%20d%3D%22M8%2C0l8%2C8H0Z%22%2F%3E%0A%3C%2Fsvg%3E%0A');
-          mask-repeat: no-repeat;
-          mask-position: bottom;
-          opacity: 0;
-        }
-        &:hover::before {
-          opacity: 1;
-          transition: var(--wp--custom--base--transition);
-        }
-      }
-    }
 
     // sabmenu container
     .wp-block-navigation__container,
     .wp-block-page-list {
-      > .wp-block-navigation-submenu {
+      > .wp-block-navigation-item.has-child {
         > .wp-block-navigation__submenu-container {
-          top: 100%;
+          top: calc(100% - 16px);
           left: 50%;
           transform: translateX(-50%);
+          padding-top: 16px;
           // border-radius
           > .wp-block-navigation-item {
             &:first-child {
@@ -99,6 +75,22 @@
               border-bottom-left-radius: 2px;
               border-bottom-right-radius: 2px;
             }
+          }
+
+          // fukidashi arrow
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1rem;
+            height: 1rem;
+            background: var(--color--text);
+            mask-size: 1rem, 1rem;
+            mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%228%22%20viewBox%3D%220%200%2016%208%22%3E%0A%20%20%3Cpath%20id%3D%22Polygon_1%22%20data-name%3D%22Polygon%201%22%20d%3D%22M8%2C0l8%2C8H0Z%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+            mask-repeat: no-repeat;
+            mask-position: bottom;
           }
         }
       }
@@ -119,7 +111,7 @@
       // ul
       .wp-block-navigation__submenu-container {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         border: 0;
         // height: auto;

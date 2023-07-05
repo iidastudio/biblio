@@ -3,13 +3,12 @@ import { InspectorControls } from '@wordpress/block-editor'
 import { createHigherOrderComponent } from '@wordpress/compose';
 import { addFilter } from "@wordpress/hooks";
 import classNames from 'classnames';
-import './style.scss';
 
 const enableBlocks = 'core/code';
 
 const withInspectorControls = createHigherOrderComponent( ( BlockEdit ) => {
-
   return ( props ) => {
+    
     if ( props.name !== enableBlocks ) {
       return <BlockEdit { ...props } />;
     }
@@ -41,10 +40,11 @@ const withInspectorControls = createHigherOrderComponent( ( BlockEdit ) => {
     }
 
     const deleteLanguageClassName = () => {
-      const classNames = attributes.className.split(' ');
-      const filteredClassNames = classNames.filter(className => !className.startsWith('language-')); // 'language-'で始まるクラス名をフィルターする
-      attributes.className = filteredClassNames.join(' ');
+      const classNames = attributes?.className?.split(' ');
+      const filteredClassNames = classNames?.filter(className => !className.startsWith('language-')); // 'language-'で始まるクラス名をフィルターする
+      attributes.className = filteredClassNames?.join(' ');
     }
+    console.log('hogehoge');
 
     return (
       <>
