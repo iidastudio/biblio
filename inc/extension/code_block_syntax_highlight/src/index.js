@@ -44,7 +44,6 @@ const withInspectorControls = createHigherOrderComponent( ( BlockEdit ) => {
       const filteredClassNames = classNames?.filter(className => !className.startsWith('language-')); // 'language-'で始まるクラス名をフィルターする
       attributes.className = filteredClassNames?.join(' ');
     }
-    console.log('hogehoge');
 
     return (
       <>
