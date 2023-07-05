@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ // fix インナーブロックの余分なパディングを削除
+.has-global-padding > .wp-block-biblio-vertical-group.wp-block-biblio-vertical-group.alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]),p,h1,h2,h3,h4,h5,h6,ul,ol) {
+  padding-right: 0;
+	padding-left: 0;
+}
+
+// ブロック生成時のBlockAppenderのはみ出しを修正
+.wp-block-biblio-vertical-group__inner {
+	> .block-list-appender {
+			width: 100%;
+			margin-block-start: 0 !important;
+		> .components-dropdown.block-editor-inserter {
+			width: 100%;
+		}
+	}
+}
+
+// ブロックを追加するボタンの位置調整
+.wp-block-biblio-vertical-group .block-editor-block-list__empty-block-inserter {
+	left: 0;
+	bottom: 0;
+}

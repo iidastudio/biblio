@@ -1,0 +1,114 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+//-------------------------------------------------
+// グループ調整
+//-------------------------------------------------
+
+
+.wp-block-biblio-vertical-group {
+  &.has-background.has-background,
+  &.has-border-color,
+  &[style*="border-"] {
+    padding-top: 1em;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-bottom: 1em;
+    padding-left: var(--wp--style--root--padding-left);
+  }
+  // 横並びや縦並びの時にはclearfixを無視
+  &.is-horizontal,
+  &.is-vertical,
+  &.is-nowrap {
+    &::after {
+      display: none;
+    }
+  }
+  // グループ内のブロックやベース要素のpadding最適化
+  &.alignfull {
+    width: -webkit-fill-available;
+  }
+}
+
+// グループロック内で画像（左寄せ、右寄せ）の後に段落ブロックが来た場合はマージントップを削除する処理
+.wp-block-biblio-vertical-group__inner > {
+  :where(.wp-block-image, .wp-block-cover, .wp-block-video, .wp-block-embed) {
+    &:where(.alignright, .alignleft) {
+      &:first-child {
+        + p {
+          margin-block-start: 0;
+        }
+      }  
+    }
+  }
+}
+
+//-------------------------------------------------
+// 縦書き用
+//-------------------------------------------------
+.wp-block-biblio-vertical-group__inner {
+  writing-mode: vertical-rl;
+  column-fill: auto;
+  column-gap: 2rem;
+  column-count: 1;
+  overflow-wrap: break-word;
+  width: 100%;
+  font-family: var(--wp--preset--font-family--system-gothic-vertical);
+  > {
+    * {
+      margin-top: 0 !important;
+    }
+  }
+
+  // floatがはみ出さない処理
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+
+  // resizeblo-box
+  :where(.wp-block-image, .wp-block-cover) {
+    &.is-selected {
+      .components-resizable-box__handle-bottom {
+        &::before {
+          right: initial;
+        }
+      }
+    }
+  }
+
+  // image block
+  :is( .wp-block-image, .wp-block-video, .wp-block-embed ) {
+    display: flex;
+    .wp-element-caption {
+      writing-mode: horizontal-tb;
+      // for Firefox
+      @-moz-document url-prefix() {
+        // padding-bottom: 1em;
+      }
+    }
+  }
+
+  // quote block
+  .wp-block-quote {
+    margin-inline-end: 0;
+    &::before {
+      top: auto;
+      bottom: 4px;
+    }
+    &::after {
+      top: 4px;
+      bottom: auto;
+    }
+    cite {
+      margin-top: 0;
+      margin-block-start: 1.5em;
+      margin-inline-end: 1em;
+      font-style: normal;
+    }
+  }
+}

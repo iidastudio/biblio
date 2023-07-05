@@ -1,0 +1,101 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "biblio/vertical-group",
+	"version": "0.1.0",
+	"title": "Vertical Group",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"keywords": [ "container", "wrapper", "group", "vertical", "section" ],
+	"attributes": {
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"templateLock": {
+			"type": [ "string", "boolean" ],
+			"enum": [ "all", "insert", "contentOnly", false ]
+		},
+		"allowedBlocks": {
+			"type": "array",
+			"default": [
+				"core/buttons",
+				"core/paragraph",
+				"core/heading",
+				"core/quote",
+				"core/image",
+				"core/video",
+				"core/embed"
+			]
+		},
+		"height": {
+			"type": "string",
+			"default": "400px"
+		}
+	},
+	"supports": {
+		"__experimentalOnEnter": true,
+		"__experimentalSettings": true,
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"position": {
+			"sticky": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalLayout": {
+			"allowSizingOnChildren": true
+		}
+	},
+	"textdomain": "biblio",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./front.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
