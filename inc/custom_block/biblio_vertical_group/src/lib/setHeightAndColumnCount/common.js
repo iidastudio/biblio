@@ -142,12 +142,10 @@ export const imageJustToRight = (innerParent, child) => {
 
 export const removeTempSpacingElement = (innerParent, child) => {
 
-  console.log(child.id === 'biblio-temp-spacing-element', child)
   if ( child.id === 'biblio-temp-spacing-element' ) {
     const innerParentRectRight = innerParent.getBoundingClientRect().right;
     const childRectRight = child.nextElementSibling.getBoundingClientRect().right;
     const distanceRight = parseInt( innerParentRectRight - childRectRight );
-    console.log(distanceRight, child)
     if ( isFloatClass(child.nextElementSibling) && distanceRight !== 0 ) {
       innerParent.removeChild(child);
     }

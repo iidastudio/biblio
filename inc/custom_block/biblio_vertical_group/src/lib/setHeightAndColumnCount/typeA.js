@@ -117,7 +117,7 @@ export const typeA = ( target, forEdit ) => {
     
   }
 
-  console.log('width',childrenWidth, 'margin',childrenMargin, 'crack',childrenCrack)
+  // console.log('width',childrenWidth, 'margin',childrenMargin, 'crack',childrenCrack)
   const totalchildrenWidth = childrenWidth + childrenMargin + childrenCrack;
 
   // calculate columnCount
