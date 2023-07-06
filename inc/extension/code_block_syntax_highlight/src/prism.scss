@@ -116,6 +116,7 @@ pre.line-numbers > code
 {
   position: relative;
   white-space: inherit;
+  overflow: revert;
 }
 
 .line-numbers .line-numbers-rows 
@@ -475,7 +476,7 @@ pre[class*="language-"]
 
 .token.variable 
 {
-  color: var(--comment);
+  color: var(--foreground);
 }
 
 .token.number 
