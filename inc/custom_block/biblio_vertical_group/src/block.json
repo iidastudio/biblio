@@ -32,6 +32,10 @@
 		"height": {
 			"type": "string",
 			"default": "400px"
+		},
+		"orientation": {
+			"type": "string",
+			"default": "mixed"
 		}
 	},
 	"supports": {

@@ -1,4 +1,5 @@
 @use '../../tool' as *;
+@use './navigation-mb.scss';
 
 //===========================================================
 // common style
@@ -26,6 +27,7 @@
 // block-style: biblio
 //===========================================================
 .wp-block-navigation.is-style-biblio-toggle-list {
+
   .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) {
     line-height: 1;
 
@@ -117,7 +119,6 @@
         // height: auto;
         background-color: transparent;
         font-size: fontSize(xs);
-        transition: var(--wp--custom--base--transition);
 
         // li
         .wp-block-navigation-item {
@@ -216,7 +217,7 @@
         .wp-block-navigation__submenu-container {
           position: relative;
           padding-top: 0;
-          padding-left: spacing(sm, 1, px);
+          padding-left: spacing(sm, 4, px);
           overflow: hidden;
           width: 100% !important;
           visibility: hidden;
@@ -237,7 +238,6 @@
               padding-right: 0;
             }
             .wp-block-navigation__submenu-container {
-              padding-left: spacing(sm, 4, px);
               border-left: solid 1px var(--color--support-text);
             }
             &:last-child {

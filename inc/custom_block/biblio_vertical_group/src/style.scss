@@ -57,6 +57,7 @@
   overflow-wrap: break-word;
   width: 100%;
   font-family: var(--wp--preset--font-family--system-gothic-vertical);
+
   > {
     * {
       margin-top: 0 !important;
@@ -68,6 +69,16 @@
     clear: both;
     content: "";
     display: block;
+  }
+
+  &.biblio-text-orientation-mixed {
+    text-orientation: mixed;
+  }
+  &.biblio-text-orientation-upright {
+    text-orientation: upright;
+  }
+  &.biblio-text-orientation-sideways {
+    text-orientation: sideways;
   }
 
   // resizeblo-box

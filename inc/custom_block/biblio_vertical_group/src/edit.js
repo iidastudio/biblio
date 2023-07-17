@@ -9,7 +9,7 @@ import {
 	useInnerBlocksProps,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
-import { PanelBody } from '@wordpress/components';
+import { PanelBody, SelectControl } from '@wordpress/components';
 import { GroupEditControls } from './components/GroupEditControls';
 import { targetObserver } from './lib/targetObserver';
 import { setHeightAndColumnCount } from './lib/setHeightAndColumnCount';
@@ -38,6 +38,28 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		}, 100));
 	}, [attributes?.height] );
 
+	const onHeightChange = ( value ) => {
+		setAttributes( { ...attributes, height: value } );
+	};
+
+	const orientationOptions = [
+		{ value: '', label: 'Select Orientation'},
+		{ value: 'mixed', label: 'mixed' },
+		{ value: 'upright', label: 'upright' },
+		{ value: 'sideways', label: 'sideways' },
+	];
+
+	let customPropatyOrientation = 'biblio-text-orientation-mixed'
+
+	const setTextOrientation = ( value ) => {
+		setAttributes({ ...attributes, orientation: value });
+	}
+
+	const setTextOrientationClassName = () => {
+		const textOrientationClassName = attributes.orientation ? `biblio-text-orientation-${attributes.orientation}` : "";
+		return textOrientationClassName;
+	}
+
 	const blockProps = useBlockProps({
 		ref,
 		'data-biblio-init-height': attributes?.height
@@ -45,7 +67,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 
 	const innerBlocksProps = useInnerBlocksProps(
 		{
-			className: 'wp-block-biblio-vertical-group__inner'
+			className: `wp-block-biblio-vertical-group__inner ${setTextOrientationClassName()}`,
 		},
 		{
 			templateLock,
@@ -56,19 +78,20 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		}
 	);
 
-
-	const onHeightChange = ( value ) => {
-		setAttributes( { ...attributes, height: value } );
-	};
-
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title="Vertical Text Settings">
 					<HeightControl
 							label="Max Height"
-							value={ attributes?.height }
+							value={ attributes.height }
 							onChange={ onHeightChange }
+					/>
+					<SelectControl
+						label={ "Text Orientation" }
+						value={ attributes.orientation }
+						options={ orientationOptions }
+						onChange={ setTextOrientation }
 					/>
 				</PanelBody>
 			</InspectorControls>
