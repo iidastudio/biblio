@@ -1,0 +1,208 @@
+@use '../../tool' as *;
+
+.wp-block-navigation.is-style-biblio-toggle-list {
+
+  .wp-block-navigation__responsive-container.is-menu-open.has-modal-open {
+    // ポップアップメニューの上下にpaddingを追加
+    padding-block: 16px;
+
+    // メニュー1行を幅いっぱいに拡げる
+    .wp-block-page-list,
+    .wp-block-pages-list__item ,
+    .wp-block-navigation__container,
+    .wp-block-navigation__submenu-container,
+    .wp-block-navigation-item,
+    .wp-block-navigation-item__content {
+      width: 100%;
+    }
+
+
+    // first lavel menu border
+    .wp-block-page-list,
+    .wp-block-navigation__container {
+      > {
+        .wp-block-navigation-item {
+          border-bottom: solid 1px var(--color--support-text);
+        }
+      }
+    }
+    
+    // メニュー１行のpadding
+    .wp-block-navigation-item__content {
+      padding: 1em !important;
+      &:hover,
+      &:focus {
+        background-color: var(--color--support-foreground);
+      }
+    }
+
+    // lineを繋げるための調整マージン
+    .wp-block-navigation__submenu-container {
+      .wp-block-navigation-item__content {
+        margin-left: 0.8em;
+      }
+    }
+
+    // submenu-containerの余分なpaddingを0にする
+    .wp-block-navigation__submenu-container {
+      padding-top: 0;
+      padding-right: 0;
+      height: 0;
+      display: none;
+    }
+
+    // toggle open and close
+    .wp-block-navigation__submenu-container {
+      &.is-opened {
+        height: auto;
+        display: block;
+      }
+    }
+
+    .wp-block-navigation-item__content {
+      position: relative;
+
+      // line common
+      &::before, &::after {
+        display: block;
+        content: "";
+        background-color: var(--color--support-text);
+        position: absolute;
+        left: -0.8em;
+      }
+      // line vertical
+      &::before {
+        height: 100%;
+        width: 1px;
+        top: 0;
+      }
+      // line horizontal
+      &::after {
+        height: 1px;
+        width: 0.8em;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    // line last content
+    .wp-block-navigation-item {
+      &:last-of-type {
+        > .wp-block-navigation-item__content {
+          &::before {
+            height: 50%;
+            width: 1px;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    // 縦line
+    .wp-block-navigation__submenu-container {
+      border-left: solid 1px var(--color--support-text);
+    }
+    &:last-child {
+      .wp-block-navigation__submenu-container {
+        border-left: solid 1px transparent;
+        // grand child
+        .wp-block-navigation-item:not(:last-child) {
+          .wp-block-navigation__submenu-container {
+            border-left: solid 1px var(--color--support-text);
+            .wp-block-navigation-item:last-child {
+              .wp-block-navigation__submenu-container {
+                border-left: solid 1px transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 縦line 位置調整
+    .wp-block-navigation__submenu-container {
+      padding-left: 1.25em;
+      .wp-block-navigation__submenu-container {
+        padding-left: 2em;
+      }
+    }
+
+    // first lavelの調整
+    .wp-block-page-list,
+    .wp-block-navigation__container {
+      > .wp-block-navigation-item {
+        > .wp-block-navigation-item__content {
+          flex-basis: 100%; 
+
+          // 不要なlineを非表示にする
+          &::before, &::after {
+            display: none;
+          }
+        } 
+        
+        &.has-child {
+          > .wp-block-navigation-item__content {
+            // margin-left: 0.8em分を削除
+            flex-basis: calc(100% - var(--toggle-size) - 8px * 2) !important; 
+          }
+        }
+      }
+    }
+
+    // トグルサイズ
+    --toggle-size: 26px;
+
+    // トグルをテキストと横並びにする
+    .wp-block-navigation-item {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0;
+
+      // トグルがあるメニューはトグル分を引いた幅を設定
+      &.has-child > {
+        .wp-block-navigation-item__content {
+          flex-basis: calc(100% - 0.8em - var(--toggle-size) - 8px * 2);
+          padding-right: 0 !important;
+        }
+      }
+    }
+    
+    // トグルボタン 
+    .wp-block-navigation-submenu__toggle {
+      display: block;
+      width: var(--toggle-size);
+      height: var(--toggle-size);
+      border: solid 1px var(--color--support-text);
+      margin: 0 8px;
+
+      svg {
+        height: 10px;
+        overflow: hidden;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: currentColor;
+      }
+    }
+
+    .wp-block-navigation__submenu-icon {
+      position: relative;
+      &.is-opened {
+        svg {
+          display: none;
+        }
+        &::before {
+          display: block;
+          content: "";
+          width: 10px;
+          height: 1px;
+          background-color: currentColor;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+  }
+}
