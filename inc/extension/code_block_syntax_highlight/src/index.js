@@ -87,7 +87,6 @@ const registerBlockType = (settings, name) => {
   if ( name !== enableBlock ) {
     return settings;
   }
-console.log(settings)
   settings = {
     ...settings, attributes: {
       ...settings.attributes,
@@ -139,7 +138,6 @@ function saveSetClassName ( extraProps, blockType, attributes ) {
   const languageClass = attributes.language !== "" ? `language-${attributes.language}` : "";
   const linenumberClass = attributes.linenumber === true ? "line-numbers" : "";
 
-  console.log(attributes)
   const newExtraProps = {
     // ...extraProps,
     className: `${extraProps.className} ${languageClass} ${linenumberClass}`,
