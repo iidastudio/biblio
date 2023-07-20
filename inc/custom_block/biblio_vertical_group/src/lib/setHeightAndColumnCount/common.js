@@ -23,10 +23,18 @@ export const extractUnit = (value) => {
  */
 export const isFloatClass = (child) => {
   return child?.classList &&
-  (child?.classList.contains('wp-block-image') || child?.classList.contains('wp-block-video') || child?.classList.contains('wp-block-embed')) &&
+  (child?.classList.contains('wp-block-image') || child?.classList.contains('wp-block-video')) &&
   (child?.classList.contains('alignleft') || child?.classList.contains('alignright'));
 }
 
+/**
+ * Calculates the offset position of the first column for a child element within its parent container.
+ * This function takes into account multiple columns if present.
+ *
+ * @param {HTMLElement} innerParent - The parent container element.
+ * @param {HTMLElement} child - The child element for which to calculate the offset position.
+ * @returns {number} - The offset position (right edge) of the first column for the child element.
+ */
 export const calcChildFirstColumnOffsetRight = (innerParent, child) => {
 
   let childFirstColumnOffsetRight = 0;
@@ -42,7 +50,7 @@ export const calcChildFirstColumnOffsetRight = (innerParent, child) => {
   if ( innerParentOffsetRight !== childOffsetRight ) {
   
     if ( innerParentOffsetRight >= childOffsetRight ) {
-      console.log('1段落しかない')
+      // console.log('1段落しかない')
       return childFirstColumnOffsetRight = childOffsetRight;
     } else {
       const childLastColumnWidth = innerParentOffsetRight - childOffsetLeft;
@@ -51,24 +59,33 @@ export const calcChildFirstColumnOffsetRight = (innerParent, child) => {
       const childColumnCount = childLastColumnExclusionWidth / innerParentOffsetWidth;
 
       if ( childColumnCount < 1 ) {
-        ('２段落以上ある。上下段のみ中途半端')
+        // ('２段落以上ある。上下段のみ中途半端')
         return childFirstColumnOffsetRight = childLastColumnExclusionWidth + innerParentOffsetLeft - innerParentOffsetWidth;
       } else if ( Number.isInteger(childColumnCount) ) {
-        console.log('２段落以上ある。右端ぴったり');
+        // console.log('２段落以上ある。右端ぴったり');
         return childFirstColumnOffsetRight = childLastColumnExclusionWidth + innerParentOffsetLeft;
       } else {
-        console.log('２段落以上ある。');
+        // console.log('２段落以上ある。');
         return childFirstColumnOffsetRight = (childLastColumnExclusionWidth + innerParentOffsetLeft) - innerParentOffsetWidth * Math.floor(childColumnCount);
       }
     }
 
   } else {
-    console.log('1段落しかない。右端ぴったり')
+    // console.log('1段落しかない。右端ぴったり')
     return childFirstColumnOffsetRight = childOffsetRight;
   }
-
 }
 
+
+/**
+ * Checks if the child element is placed attached to the right edge of the parent container.
+ * This function takes into account multiple columns if present.
+ *
+ * @param {HTMLElement} innerParent - The parent container element.
+ * @param {HTMLElement} child - The child element to be checked for alignment.
+ * @param {boolean} forEdit - Flag indicating if the check is performed in an editor environment.
+ * @returns {boolean} - True if the child is aligned just to the right, false otherwise.
+ */
 export const isJustToRight = (innerParent, child, forEdit ) => {
 
   const targetChild = child.id === 'biblio-temp-spacing-element' ? child.nextElementSibling.nextElementSibling : child;
@@ -109,6 +126,12 @@ export const isJustToRight = (innerParent, child, forEdit ) => {
 }
 
 
+/**
+ * Adjust the layout of the image block so that it is attached to the right edge of the parent container.
+ * 
+ * @param {HTMLElement} innerParent - The parent container element.
+ * @param {HTMLElement} child - The image block element to be aligned to the right.
+ */
 export const imageJustToRight = (innerParent, child) => {
 
   child.style.marginBlockStart = null;
@@ -140,6 +163,12 @@ export const imageJustToRight = (innerParent, child) => {
   }
 }
 
+/**
+ * Removes the temporary spacing element, if it exists, added by the `imageJustToRight` function.
+ *
+ * @param {HTMLElement} innerParent - The parent container element.
+ * @param {HTMLElement} child - The element to be checked for the temporary spacing element.
+ */
 export const removeTempSpacingElement = (innerParent, child) => {
 
   if ( child.id === 'biblio-temp-spacing-element' ) {
