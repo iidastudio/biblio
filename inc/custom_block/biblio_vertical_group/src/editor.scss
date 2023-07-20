@@ -26,3 +26,28 @@
 	left: 0;
 	bottom: 0;
 }
+
+// components-placeholder
+.wp-block-biblio-vertical-group .components-placeholder {
+	.components-placeholder__label {
+		font-size: 18pt;
+		font-weight: 400;
+		margin-left: 16px;
+		svg {
+			margin-right: 0;
+			margin-bottom: 12px;
+		}
+	}
+	.components-placeholder__fieldset {
+		flex-direction: row;
+	}
+	.components-placeholder__instructions {
+		display: block;
+		margin-bottom: 0;
+		margin-left: 1em;
+	}
+	.components-button {
+		height: fit-content;
+		margin-right: 0;
+	}
+}

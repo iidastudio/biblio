@@ -1,13 +1,5 @@
 @use '../../tool' as *;
 
-.wp-block-image {
-  .components-resizable-box__container {
-    max-width: 100% !important;
-    height: auto !important;
-    vertical-align: middle;
-  }
-}
-
 // 優先度不足のためエディターのみ再記述
 :is(.wp-block-image, .wp-block-gallery) {
   &:is(.alignleft, .alignright) {

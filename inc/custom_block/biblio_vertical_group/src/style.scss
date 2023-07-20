@@ -71,6 +71,7 @@
     display: block;
   }
 
+  // orientation
   &.biblio-text-orientation-mixed {
     text-orientation: mixed;
   }
@@ -93,7 +94,7 @@
   }
 
   // image block
-  :is( .wp-block-image, .wp-block-video, .wp-block-embed ) {
+  :is( .wp-block-image, .wp-block-video ) {
     display: flex;
     .wp-element-caption {
       writing-mode: horizontal-tb;
