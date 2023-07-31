@@ -36,9 +36,9 @@ class Biblio_Settings_Page {
         'biblio-settings-page-script',
         get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.js',
         $asset_file['dependencies'],
-        $asset_file['version']
+        $asset_file['version'],
+        array('strategy' => 'defer')
     );
-    wp_script_add_data('biblio-settings-page-script', 'defer', true);
   }
 
   public function biblio_register_settings() {

@@ -1,4 +1,4 @@
-import { render, useState, useEffect } from '@wordpress/element';
+import { render, useState, useEffect, createRoot } from '@wordpress/element';
 import {
   Panel,
   PanelBody,
@@ -198,7 +198,4 @@ const SaveButton = ( { onResetClick, onSaveClick } ) => {
   );
 }
 
-render(
-  <Settings />,
-  document.getElementById('biblio-settings')
-);
+createRoot(document.getElementById('biblio-settings')).render(<Settings />);

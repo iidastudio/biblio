@@ -38,8 +38,7 @@ class Theme_Support {
   // wp_enqueue_style anad wp_enqueue_script
   public function add_scripts_and_styles() {
     wp_enqueue_style('style-common', get_template_directory_uri().'/assets/css/common.css', array(), filemtime( get_template_directory().'/assets/css/common.css' ));
-    wp_enqueue_script('js-common', get_template_directory_uri().'/assets/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/assets/js/common-bundle.js' ) );
-    wp_script_add_data('js-common', 'defer', true);
+    wp_enqueue_script('js-common', get_template_directory_uri().'/assets/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/assets/js/common-bundle.js' ), array('strategy' => 'defer') );
     wp_deregister_script('jquery');
   }
 
