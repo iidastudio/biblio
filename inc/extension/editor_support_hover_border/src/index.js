@@ -63,9 +63,8 @@ const HoverBorder = () => {
 
   const dataName = "[data-biblio-hover-border]";
 
-  // Gutenbergプラグインが有効化されているか判定（Editor_Support_Hover_Boderからwp_localize_scriptを使用して取得）
+  // iframeが使用されているか
   const hasIframe = !! document.querySelector("iframe[name='editor-canvas']");
-  console.log(hasIframe);
 
   // Gutenberg有効時（iframe使用のため分岐）
   if (hasIframe) {
