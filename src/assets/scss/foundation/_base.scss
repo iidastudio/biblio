@@ -63,7 +63,6 @@ ol, ul:not(:where(
 .wp-block-navigation__container,
 .wp-block-page-list,
 .wp-block-post-template)){
-	margin: 0;
 	padding-inline-start: 1.4em;
 	line-height: 1.5;
 	li:not(:where(:first-child, .wp-social-link, .comment)) {
