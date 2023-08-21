@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "settings": {
+    "blocks": {
+      "core/footnotes": {
+
+      }
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/footnotes": {
+        "typography": {
+          "fontSize": "14px"
+        }
+      }
+    }
+  }
+}
