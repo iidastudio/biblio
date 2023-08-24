@@ -73,6 +73,7 @@ class Theme_Support {
     'comment-template',
     'cover',
     'embed',
+    'footnotes',
     'freeform',
     'gallery',
     'group',

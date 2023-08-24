@@ -25,9 +25,10 @@
   }
   &.is-flex-container.is-flex-container {
     display: grid;
-    gap: var( --wp--custom--post-template--gap)
+    gap: var(--wp--custom--post-template--gap);
   }
 }
+
 
 // block-editor-block-list__block wp-block is-layout-flow wp-block-post-template-is-layout-flow wp-block-post-template
 // block-editor-block-list__block wp-block is-layout-flow wp-block-post-template-is-layout-flow wp-block-post-template

@@ -3,7 +3,7 @@
  * Title: Query book list 1
  * Slug: biblio/query/book/list/1
  * Categories: query
- * Keywords: query book list
+ * Keywords: biblio query book list
  * Block Types: core/query
  */
 ?>
@@ -12,9 +12,9 @@
     "perPage":12,
     "pages":0,
     "offset":0,
-    "postType":"writing",
     "order":"desc",
     "orderBy":"date",
+    "postType":"post",
     "author":"",
     "search":"",
     "sticky":"exclude",

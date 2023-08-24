@@ -23,6 +23,7 @@
 <div class="wp-block-group" style="padding-top:16px; padding-bottom:16px;">
 
   <!-- wp:group {
+    "align":"wide",
     "layout":{
       "type":"flex",
       "justifyContent":"space-between",
@@ -34,7 +35,7 @@
       }
     }
   } -->
-  <div class="wp-block-group">
+  <div class="wp-block-group alignwide">
 
     <!-- wp:group {"className":"c-site-branding", "layout":{"type":"flex","justifyContent":"left"}, "style":{"spacing":{"blockGap":"0.5em"}}} -->
     <div class="wp-block-group c-site-branding">
