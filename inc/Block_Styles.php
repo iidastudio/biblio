@@ -68,6 +68,14 @@ class Block_styles {
 					'style_handle' => 'biblio-simple',
 				)
 			);
+			register_block_style(
+				'core/separator',
+				array(
+					'name'         => 'biblio-dotted-wide',
+					'label'        => __( 'Dotted wide', 'biblio' ),
+					'style_handle' => 'biblio-dotted-wide',
+				)
+			);
 		}
 	}
 }

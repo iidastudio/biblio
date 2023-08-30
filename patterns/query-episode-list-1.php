@@ -13,8 +13,8 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:post-title {"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"md"} /-->
 
-<!-- wp:separator {"style":{"layout":{"selfStretch":"fill","flexSize":null}},"className":"is-style-default"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-default"/>
+<!-- wp:separator {"style":{"layout":{"selfStretch":"fill","flexSize":null}},"className":"is-style-biblio-dotted-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-biblio-dotted-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"}} -->

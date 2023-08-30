@@ -1,5 +1,12 @@
 .wp-block-separator {
-  border-top: 0;
-  border-bottom: solid 1px;
-  border-color: var(--wp--preset--color--text-black);
+  border-bottom: 0;
+  border-top: solid 2px var( --wp--preset--color--biblio-text );  
+
+  &:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull):not(.is-style-biblio-dotted-wide) {
+    width: 100px;
+  }
+
+  &.is-style-biblio-dotted-wide {
+    border-top: dotted 2px var( --wp--preset--color--biblio-text );
+  }
 }
