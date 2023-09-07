@@ -27,14 +27,19 @@
           "name": "Support Text"
         },
         {
-          "slug": "biblio/support/foreground",
-          "color": "hsla(0,0%,80%,0.09)",
-          "name": "Support Foreground"
+          "slug": "biblio/support/background",
+          "color": "hsla(0,0%,80%,0.1)",
+          "name": "Support Background"
         },
         {
-          "slug": "biblio/accent",
-          "color": "#ED514E",
-          "name": "Accent"
+          "slug": "biblio/primary",
+          "color": "#DBFF00",
+          "name": "Primary"
+        },
+        {
+          "slug": "biblio/secondary",
+          "color": "#185B69",
+          "name": "Secondary"
         }
       ],
 

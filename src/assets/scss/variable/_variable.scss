@@ -8,8 +8,9 @@ $colors: (
   text: var(--wp--preset--color--biblio-text),
   background: var(--wp--preset--color--biblio-background),
   support-text: var(--wp--preset--color--biblio-support-text),
-  support-foreground: var(--wp--preset--color--biblio-support-foreground),
-  accent: var(--wp--preset--color--biblio-accent),
+  support-background: var(--wp--preset--color--biblio-support-background),
+  primary: var(--wp--preset--color--biblio-primary),
+  secondary: var(--wp--preset--color--biblio-secondary),
 );
 
 // font-size, px to rem.

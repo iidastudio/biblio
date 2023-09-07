@@ -4,7 +4,7 @@
     "blocks": {
       "core/quote": {
         "color": {
-          "background": "var(--wp--preset--color--biblio-support-foreground)"
+          "background": "var(--wp--preset--color--biblio-support-background)"
         },
         "spacing": {
           "padding": {
