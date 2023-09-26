@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+	"title": "Industrial",
+	"settings": {
+		"color": {
+			"palette": [
+        {
+          "slug": "biblio/primary",
+          "color": "#DBFF00",
+          "name": "Primary"
+        },
+        {
+          "slug": "biblio/secondary",
+          "color": "#6d6d6d",
+          "name": "Secondary"
+        },
+        {
+          "slug": "biblio/text",
+          "color": "#333333",
+          "name": "Text"
+        },
+        {
+          "slug": "biblio/background",
+          "color": "#f8f8f8",
+          "name": "Background"
+        },
+        {
+          "slug": "biblio/support/text",
+          "color": "hsla(0,0%,70%,0.5)",
+          "name": "Support Text"
+        },
+        {
+          "slug": "biblio/support/background",
+          "color": "hsla(0,0%,80%,0.1)",
+          "name": "Support Background"
+        }
+			]
+		}
+	},
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "color": {
+          "text": "var(--wp--preset--color--biblio-background)",
+          "background": "var(--wp--preset--color--biblio-text)"
+        }
+      },
+      "core/post-comments-form": {
+        "elements": {
+          "button": {
+            "color": {
+              "text": "var(--wp--preset--color--biblio-text)",
+              "background": "var(--wp--preset--color--biblio-primary)"
+            }
+          }
+        }
+      },
+      "core/social-link": {
+        "color": {
+          "text": "var(--wp--preset--color--biblio-primary)"
+        }
+      }
+    }
+  }
+}
