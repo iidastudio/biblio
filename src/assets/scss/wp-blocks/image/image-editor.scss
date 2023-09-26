@@ -14,7 +14,7 @@
 }
 
 // エントリーコンテントの直下の時だけ、右寄せ左寄せがずれないように調整
-:not(.vertical-rl :is(.wp-block-image, .wp-block-gallery)) {
+:not(.wp-block-biblio-vertical-group__inner) > :is(.wp-block-image, .wp-block-gallery, .wp-block-video, .wp-block-embed) {
     &.alignleft {
       margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
     }

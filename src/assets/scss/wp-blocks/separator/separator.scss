@@ -2,13 +2,13 @@
 
 .wp-block-separator {
   border-bottom: 0;
-  border-top: solid 2px color(text);  
+  border-top: solid 2px var(--color--text);  
 
   &:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull):not(.is-style-biblio-dotted-wide) {
     width: 100px;
   }
 
   &.is-style-biblio-dotted-wide {
-    border-top: dotted 2px color(text);
+    border-top: dotted 2px var(--color--text);
   }
 }

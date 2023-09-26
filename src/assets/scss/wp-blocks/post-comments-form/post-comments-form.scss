@@ -30,7 +30,7 @@
 
   textarea, input:not([type=submit]):not([type=checkbox]) {
     width: 100%;
-    background-color: color(support-background);
+    background-color: var(--color--support-background);
     border: 0;
     margin-top: spacing(xs);
     padding: 0.5em 0.8em;

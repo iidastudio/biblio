@@ -10,7 +10,7 @@
     height: fit-content;
     &:not(.dots) {
       padding: .6rem .75rem;
-      background-color: var(--color--support-foreground);
+      background-color: var(--color--support-background);
     }
     &:hover:not(.dots) {
       opacity: 1;
