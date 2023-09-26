@@ -1,7 +1,11 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/post-template": {
+        "spacing": {
+          "blockGap": "3rem"
+        },
         "elements": {
           "h2": {
             "typography": {
@@ -12,17 +16,6 @@
             "typography": {
               "textDecoration": "none"
             }
-          }
-        }
-      }
-    }
-  },
-  "settings": {
-    "blocks": {
-      "core/post-template": {
-        "custom": {
-          "post-template": {
-            "gap": "3rem"
           }
         }
       }
