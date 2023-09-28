@@ -118,7 +118,7 @@
         border: 0;
         // height: auto;
         background-color: transparent;
-        font-size: fontSize(xs);
+        font-size: var(--fontSize--xs);
 
         // li
         .wp-block-navigation-item {

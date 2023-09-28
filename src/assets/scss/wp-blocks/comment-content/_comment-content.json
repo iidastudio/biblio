@@ -4,7 +4,7 @@
     "blocks": {
       "core/comment-content": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xs)",
+          "fontSize": "var(--wp--preset--font-size-biblio-xs)",
           "lineHeight": "1.5"
         }
       }

@@ -1,5 +1,3 @@
-@use "../tool" as *;
-
 body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -83,7 +81,7 @@ ol, ul:not(:where(
 }
 
 sup, sub {
-	font-size: fontSize(xs);
+	font-size: var(--fontSize--xs);
 	line-height: 0;
 	letter-spacing: 0.15em;
 	position: relative;
@@ -103,7 +101,7 @@ code {
 	background-color: var(--color--support-background);
 	border: solid 1px var(--color--support-text);
 	border-radius: 2px;
-	font-size: fontSize(sm);
+	font-size: var(--fontSize--sm);
 	padding: 0.2em 0.4em;
 	margin: 0 0.2em;
 	line-height: 1;

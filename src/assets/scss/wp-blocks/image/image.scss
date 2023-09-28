@@ -1,11 +1,9 @@
-@use '../../tool' as *;
-
 figure.wp-block-image {
   img {
     max-width: 100%;
   }
   figcaption {
-    font-size: fontSize(xs);
+    font-size: var(--fontSize--xs);
     margin: .5em auto 0 auto;
     text-align: center;
     opacity: .8;

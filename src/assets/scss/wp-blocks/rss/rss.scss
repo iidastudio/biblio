@@ -8,21 +8,21 @@
     margin-top: spacing(md);
   }
   a {
-    font-size: fontSize(md);
+    font-size: var(--fontSize--md);
   }
   &__item-excerpt {
     margin: 0;
     margin-top: spacing(xxs);
     line-height: 1.5;
-    font-size: fontSize(sm);
+    font-size: var(--fontSize--sm);
   }
   &__item-author {
-    font-size: fontSize(xs);
+    font-size: var(--fontSize--xs);
     line-height: 1;
     margin-top: spacing(xxs);
   }
   &__item-publish-date {
-    font-size: fontSize(xs);
+    font-size: var(--fontSize--xs);
     line-height: 1;
     margin-top: spacing(xxs);
   }

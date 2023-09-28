@@ -10,24 +10,24 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xl)"
+          "fontSize": "var(--wp--preset--font-size--biblio-xl)"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--lg)"
+          "fontSize": "var(--wp--preset--font-size--biblio-lg)"
         }
       },
       "h3": {
         "// fontSize": "20.25-18",
         "typography": {
-          "fontSize": "calc(var(--wp--preset--font-size--md) * 1.125)"
+          "fontSize": "calc(var(--wp--preset--font-size--biblio-md) * 1.125)"
         }
       },
       "h4": {
         "typography": {
           "// fontSize": "18-16px",
-          "fontSize": "var(--wp--preset--font-size--md)"
+          "fontSize": "var(--wp--preset--font-size--biblio-md)"
         }
       },
       "h5": {

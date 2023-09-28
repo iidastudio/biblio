@@ -15,7 +15,7 @@
           }
         },
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xs)"
+          "fontSize": "var(--wp--preset--font-size--biblio-xs)"
         },
         "elements": {
           "link": {

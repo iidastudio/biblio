@@ -13,15 +13,17 @@ $colors: (
   secondary: var(--wp--preset--color--biblio-secondary),
 );
 
-// font-size, px to rem.
 $font-size: (
-  xxs: 10px,
-  xs:  12px,
-  sm:  14px,
-  md:  16px,
-  lg:  24px,
-  xl:  32px,
-  xxl: 48px,
+  3xs: var(--wp--preset--font-size--biblio-3-xs),
+  2xs: var(--wp--preset--font-size--biblio-2-xs),
+  xs:  var(--wp--preset--font-size--biblio-xs),
+  sm:  var(--wp--preset--font-size--biblio-sm),
+  md:  var(--wp--preset--font-size--biblio-md),
+  lg:  var(--wp--preset--font-size--biblio-lg),
+  xl:  var(--wp--preset--font-size--biblio-xl),
+  2xl: var(--wp--preset--font-size--biblio-2-xl),
+  3xl: var(--wp--preset--font-size--biblio-3-xl),
+  4xl: var(--wp--preset--font-size--biblio-4-xl),
 );
 
 // margin or padding, px to rem.

@@ -13,7 +13,7 @@
       background-color: var(--color--text);
       border-width: 0;
       padding: spacing(xxs);
-      font-size: fontSize(sm);
+      font-size: var(--fontSize--sm);
       margin: 0;
     }
     &__input {
