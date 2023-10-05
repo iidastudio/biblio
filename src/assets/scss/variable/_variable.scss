@@ -35,6 +35,14 @@ $spacing: (
   lg:  48px,
   xl:  64px,
   xxl: 80px,
+  20: var(--wp--preset--spacing--biblio-20), // 4px
+  30: var(--wp--preset--spacing--biblio-30), // 8px
+  40: var(--wp--preset--spacing--biblio-40), // 16px
+  50: var(--wp--preset--spacing--biblio-50), // 24-22px
+  60: var(--wp--preset--spacing--biblio-60), // 32-24px
+  70: var(--wp--preset--spacing--biblio-70), // 48-32px
+  80: var(--wp--preset--spacing--biblio-80), // 72-48px
+  90: var(--wp--preset--spacing--biblio-90), // 108-72px
 );
 
 $line-height: (

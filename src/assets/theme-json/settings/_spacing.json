@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "settings": {
     "spacing": {
       "blockGap": true,
