@@ -49,6 +49,9 @@
 //-------------------------------------------------
 // 縦書き用
 //-------------------------------------------------
+.wp-block-biblio-vertical-group {
+  font-family: var(--wp--preset--font-family--system-gothic-vertical);
+}
 .wp-block-biblio-vertical-group__inner {
   writing-mode: vertical-rl;
   column-fill: auto;
@@ -56,7 +59,6 @@
   column-count: 1;
   overflow-wrap: break-word;
   width: 100%;
-  font-family: var(--wp--preset--font-family--system-gothic-vertical);
 
   > {
     * {

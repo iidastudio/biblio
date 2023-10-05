@@ -8,19 +8,22 @@ $colors: (
   text: var(--wp--preset--color--biblio-text),
   background: var(--wp--preset--color--biblio-background),
   support-text: var(--wp--preset--color--biblio-support-text),
-  support-foreground: var(--wp--preset--color--biblio-support-foreground),
-  accent: var(--wp--preset--color--biblio-accent),
+  support-background: var(--wp--preset--color--biblio-support-background),
+  primary: var(--wp--preset--color--biblio-primary),
+  secondary: var(--wp--preset--color--biblio-secondary),
 );
 
-// font-size, px to rem.
 $font-size: (
-  xxs: 10px,
-  xs:  12px,
-  sm:  14px,
-  md:  16px,
-  lg:  24px,
-  xl:  32px,
-  xxl: 48px,
+  3xs: var(--wp--preset--font-size--biblio-3-xs),
+  2xs: var(--wp--preset--font-size--biblio-2-xs),
+  xs:  var(--wp--preset--font-size--biblio-xs),
+  sm:  var(--wp--preset--font-size--biblio-sm),
+  md:  var(--wp--preset--font-size--biblio-md),
+  lg:  var(--wp--preset--font-size--biblio-lg),
+  xl:  var(--wp--preset--font-size--biblio-xl),
+  2xl: var(--wp--preset--font-size--biblio-2-xl),
+  3xl: var(--wp--preset--font-size--biblio-3-xl),
+  4xl: var(--wp--preset--font-size--biblio-4-xl),
 );
 
 // margin or padding, px to rem.
@@ -32,6 +35,14 @@ $spacing: (
   lg:  48px,
   xl:  64px,
   xxl: 80px,
+  20: var(--wp--preset--spacing--biblio-20), // 4px
+  30: var(--wp--preset--spacing--biblio-30), // 8px
+  40: var(--wp--preset--spacing--biblio-40), // 16px
+  50: var(--wp--preset--spacing--biblio-50), // 24-22px
+  60: var(--wp--preset--spacing--biblio-60), // 32-24px
+  70: var(--wp--preset--spacing--biblio-70), // 48-32px
+  80: var(--wp--preset--spacing--biblio-80), // 72-48px
+  90: var(--wp--preset--spacing--biblio-90), // 108-72px
 );
 
 $line-height: (

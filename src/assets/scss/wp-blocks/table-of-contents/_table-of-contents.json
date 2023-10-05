@@ -4,7 +4,7 @@
     "blocks": {
       "core/table-of-contents": {
         "color": {
-          "background": "var(--wp--preset--color--biblio-support-foreground)"
+          "background": "var(--wp--preset--color--biblio-support-background)"
         },
         "spacing": {
           "padding": {
@@ -15,7 +15,7 @@
           }
         },
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xs)"
+          "fontSize": "var(--wp--preset--font-size--biblio-xs)"
         },
         "elements": {
           "link": {
@@ -31,7 +31,7 @@
             },
             ":hover": {
               "color": {
-                "background": "var(--wp--preset--color--biblio-support-foreground)"
+                "background": "var(--wp--preset--color--biblio-support-background)"
               }
             }
           }

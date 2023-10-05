@@ -1,17 +1,15 @@
-@use '../../tool' as *;
-
 .wp-block-gallery.has-nested-images {
   --wp--style--gallery-gap-default: 1rem;
 
   figure.wp-block-image {
     figcaption {
-      font-size: fontSize(xs);
+      font-size: var(--fontSize--xs);
       background: rgba($color: #000000, $alpha: 0.5);
       padding: 0.4em;
     }
   }
   .blocks-gallery-caption {
-    font-size: fontSize(xs);
+    font-size: var(--fontSize--xs);
     margin-top: calc( -1 * var(--wp--style--unstable-gallery-gap) + 0.5em);
     color: var(--color--support-text);
   }

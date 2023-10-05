@@ -2,10 +2,10 @@
 
 // for each template
 .blog .wp-block-post-author-name {
-  font-size: fontSize(xs);
+  font-size: var(--fontSize--xs);
 }
 .single .wp-block-post-author-name {
-  font-size: fontSize(sm);
+  font-size: var(--fontSize--sm);
 }
 
 .wp-block-post-author-name {

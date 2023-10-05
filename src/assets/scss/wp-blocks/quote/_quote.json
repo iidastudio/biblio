@@ -4,7 +4,7 @@
     "blocks": {
       "core/quote": {
         "color": {
-          "background": "var(--wp--preset--color--biblio-support-foreground)"
+          "background": "var(--wp--preset--color--biblio-support-background)"
         },
         "spacing": {
           "padding": {
@@ -15,7 +15,7 @@
           }
         },
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--sm)",
+          "fontSize": "var(--wp--preset--font-size--biblio-sm)",
           "lineHeight": "1.5"
         },
         "elements": {
@@ -26,7 +26,7 @@
               }
             },
             "typography": {
-              "fontSize": "var(--wp--preset--font-size--xxs)",
+              "fontSize": "var(--wp--preset--font-size--biblio-2-xs)",
               "fontStyle": "italic"
             }
           }

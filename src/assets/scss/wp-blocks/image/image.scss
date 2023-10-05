@@ -1,11 +1,9 @@
-@use '../../tool' as *;
-
 figure.wp-block-image {
   img {
     max-width: 100%;
   }
   figcaption {
-    font-size: fontSize(xs);
+    font-size: var(--fontSize--xs);
     margin: .5em auto 0 auto;
     text-align: center;
     opacity: .8;
@@ -36,7 +34,7 @@ figure.wp-block-image {
 }
 
 // 縦書きグループ時以外では、右寄せ左寄せがずれないように調整
-:not(.wp-block-biblio-vertical-group :is(.wp-block-image, .wp-block-gallery, .wp-block-video, .wp-block-embed))  {
+:not(.wp-block-biblio-vertical-group__inner) > :is(.wp-block-image, .wp-block-gallery, .wp-block-video, .wp-block-embed) {
   &.alignleft {
     margin-inline-start: calc((100% - var(--wp--style--global--content-size)) / 2);
   }

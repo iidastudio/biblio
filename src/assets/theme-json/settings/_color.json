@@ -12,6 +12,16 @@
 
       "palette": [
         {
+          "slug": "biblio/primary",
+          "color": "#333333",
+          "name": "Primary"
+        },
+        {
+          "slug": "biblio/secondary",
+          "color": "#ffffff",
+          "name": "Secondary"
+        },
+        {
           "slug": "biblio/text",
           "color": "#333333",
           "name": "Text"
@@ -22,19 +32,24 @@
           "name": "Background"
         },
         {
+          "slug": "biblio/component/text",
+          "color": "#ffffff",
+          "name": "Component text"
+        },
+        {
+          "slug": "biblio/component/background",
+          "color": "#333333",
+          "name": "Component background"
+        },
+        {
           "slug": "biblio/support/text",
           "color": "hsla(0,0%,70%,0.5)",
           "name": "Support Text"
         },
         {
-          "slug": "biblio/support/foreground",
-          "color": "hsla(0,0%,80%,0.09)",
-          "name": "Support Foreground"
-        },
-        {
-          "slug": "biblio/accent",
-          "color": "#ED514E",
-          "name": "Accent"
+          "slug": "biblio/support/background",
+          "color": "hsla(0,0%,80%,0.1)",
+          "name": "Support Background"
         }
       ],
 

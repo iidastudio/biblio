@@ -3,6 +3,6 @@
 .wp-block-pullquote {
   &__citation {
     margin-top: 1em;
-    font-size: fontSize(sm);
+    font-size: var(--fontSize--sm);
   }
 }
