@@ -4,4 +4,4 @@ theme.json
 node_modules/
 vendor/
 build/
-/assets/
+dist/
