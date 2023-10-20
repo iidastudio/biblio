@@ -48,7 +48,7 @@ function wpdocs_addTitleToThumbnail( $html, $post_id, $post_thumbnail_id, $size,
     if($html === "") {
       $img_num = $post_id % 2;
       $post_title = get_the_title( $post_id );
-      $html = '<img width="768" height="432" src="'. get_template_directory_uri(). '/assets/img/alt-images/alt-img_'. $img_num.'.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="'. esc_html( $post_title ) .'" loading="lazy" />';
+      $html = '<img width="768" height="432" src="'. get_template_directory_uri(). '/dist/img/alt-images/alt-img_'. $img_num.'.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="'. esc_html( $post_title ) .'" loading="lazy" />';
     }
   }
   return $html;

@@ -6,7 +6,7 @@ import imageminPngquant from 'imagemin-pngquant';
 import imageminGifsicle from 'imagemin-gifsicle';
 import imageminSvgo from 'imagemin-svgo';
 
-imagemin(['src/assets/img/**/*.{jpg,png,gif,svg}'], {
+imagemin(['src/img/**/*.{jpg,png,gif,svg}'], {
   plugins: [
     imageminMozjpeg({ quality: 80 }),
     imageminPngquant({ quality: [0.65, 0.8] }), //'65-80'←この書き方だとエラー出た
@@ -14,7 +14,7 @@ imagemin(['src/assets/img/**/*.{jpg,png,gif,svg}'], {
     imageminSvgo()
   ],
   replaceOutputDir: output => {
-    return output.replace(/src\/assets/, process.env.npm_package_config_dist)
+    return output.replace(src, dist)
   }
 }).then(() => {
   console.log('Images optimized');

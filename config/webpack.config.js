@@ -11,11 +11,11 @@ export default {
     ],
   },
   entry: {
-    'common':'/src/assets/js/common.js',
-    'block-variations':'/src/assets/js/block-variations.js',
+    'common':'/src/js/common.js',
+    'block-variations':'/src/js/block-variations.js',
   },
   output: {
-    path: path.resolve(__dirname, '../assets/js/'),
+    path: path.resolve(__dirname, '../dist/js/'),
     filename: '[name]-bundle.js',
   },
   module: {
