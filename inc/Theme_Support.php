@@ -30,20 +30,20 @@ class Theme_Support {
 
   // add_theme_support
   public function add_theme_supports() {
-    add_editor_style( '/assets/css/editor.css' );
+    add_editor_style( '/dist/css/editor.css' );
     remove_theme_support( 'core-block-patterns' );
     load_theme_textdomain( 'biblio', get_template_directory().'/languages' );
   }
 
   // wp_enqueue_style anad wp_enqueue_script
   public function add_scripts_and_styles() {
-    wp_enqueue_style('style-common', get_template_directory_uri().'/assets/css/common.css', array(), filemtime( get_template_directory().'/assets/css/common.css' ));
-    wp_enqueue_script('js-common', get_template_directory_uri().'/assets/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/assets/js/common-bundle.js' ), array('strategy' => 'defer') );
+    wp_enqueue_style('style-common', get_template_directory_uri().'/dist/css/common.css', array(), filemtime( get_template_directory().'/dist/css/common.css' ));
+    wp_enqueue_script('js-common', get_template_directory_uri().'/dist/js/common-bundle.js', array('wp-i18n'), filemtime( get_template_directory().'/dist/js/common-bundle.js' ), array('strategy' => 'defer') );
     wp_deregister_script('jquery');
   }
 
   public function biblio_block_variation_enqueue() {
-    wp_enqueue_script( 'block-variation-script', get_template_directory_uri().'/assets/js/block-variations-bundle.js', array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), filemtime( get_template_directory().'/assets/js/block-variations-bundle.js' )
+    wp_enqueue_script( 'block-variation-script', get_template_directory_uri().'/dist/js/block-variations-bundle.js', array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), filemtime( get_template_directory().'/dist/js/block-variations-bundle.js' )
     );
   }
 
@@ -139,7 +139,7 @@ class Theme_Support {
         "$blocks_name-block-$block_name":
         'wp-block-library';
 
-        $dir = "assets/css/$blocks_name-blocks/$block_name/";
+        $dir = "dist/css/$blocks_name-blocks/$block_name/";
         $style_path = $dir.$block_name.".css";
         $editor_style_path = $dir.$block_name."-editor.css";
 
