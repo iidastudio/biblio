@@ -9,8 +9,7 @@ import imageminSvgo from 'imagemin-svgo';
 imagemin(['./src/img/**/*.{jpg,png,gif,svg}'], {
   plugins: [
     imageminMozjpeg({ quality: 80 }),
-    imageminPngquant({ quality: [0.65, 0.8] }), //'65-80'←この書き方だとエラー出た
-    imageminGifsicle(),
+    imageminPngquant({ quality: [0.65, 0.8] }),
     imageminSvgo()
   ],
   replaceOutputDir: output => {
