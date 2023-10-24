@@ -5,7 +5,7 @@
  * @package Biblio
  * @since 1.0.0
  */
-namespace biblio\inc\admin_pages\biblio_settings_page;
+namespace biblio\dist\admin_pages\biblio_settings_page;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -22,19 +22,19 @@ class Biblio_Settings_Page {
       return;
     }
     
-    $asset_file = include( get_template_directory(). '/inc/admin_pages/biblio_settings_page/build/index.asset.php' );
+    $asset_file = include( get_template_directory(). '/dist/admin_pages/biblio_settings_page/index.asset.php' );
 
     // CSSファイルの読み込み
     wp_enqueue_style(
         'biblio-settings-page-style',
-        get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.css',
+        get_template_directory_uri(). '/dist/admin_pages/biblio_settings_page/index.css',
         array( 'wp-components' ) // ←Gutenbergコンポーネントのデフォルトスタイルを読み込み
     );
 
     // JavaScriptファイルの読み込み
     wp_enqueue_script(
         'biblio-settings-page-script',
-        get_template_directory_uri(). '/inc/admin_pages/biblio_settings_page/build/index.js',
+        get_template_directory_uri(). '/dist/admin_pages/biblio_settings_page/index.js',
         $asset_file['dependencies'],
         $asset_file['version'],
         array('strategy' => 'defer')

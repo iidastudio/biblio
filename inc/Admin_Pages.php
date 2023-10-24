@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 namespace biblio\inc;
-use biblio\inc\admin_pages\biblio_settings_page\Biblio_Settings_Page;
+use biblio\dist\admin_pages\biblio_settings_page\Biblio_Settings_Page;
 
 defined( 'ABSPATH' ) || exit;
 
