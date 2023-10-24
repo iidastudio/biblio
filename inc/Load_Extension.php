@@ -6,14 +6,17 @@
  * @since 1.0.0
  */
 namespace biblio\inc;
-use biblio\inc\extension\code_block_syntax_highlight\Code_Block_Syntax_Highlight;
-use biblio\inc\extension\editor_support_hover_border\Editor_Support_Hover_Border;
+
 class Load_Extension {
-  
+
   public function __construct() {
-    new Code_Block_Syntax_Highlight;
+      add_action( 'enqueue_block_editor_assets', [$this,  'biblio_register_extentions'] );
+  }
+
+  public function biblio_register_extentions() {
+    register_block_type( get_template_directory() . '/dist/extensions/code_block_syntax_highlight' );
     if( is_admin() ) {
-      new Editor_Support_Hover_Border;
+      register_block_type( get_template_directory() . '/dist/extensions/editor_support_hover_border' );
     }
   }
 
