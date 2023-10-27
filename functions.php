@@ -28,7 +28,7 @@ new inc\Theme_Update();
 new inc\Admin_Pages();
 // extension, custom block
 new inc\Load_Blocks();
-new inc\Load_Extension();
+new inc\Load_Extensions();
 // utility
 new lib\Utility();
 

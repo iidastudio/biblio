@@ -8,7 +8,7 @@
 namespace biblio\inc;
 use biblio\dist\extensions\code_block_syntax_highlight\Code_Block_Syntax_Highlight;
 
-class Load_Extension {
+class Load_Extensions {
 
   public function __construct() {
     add_action( 'enqueue_block_editor_assets', [$this,  'biblio_register_extentions'] );
