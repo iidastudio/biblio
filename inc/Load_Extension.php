@@ -6,11 +6,15 @@
  * @since 1.0.0
  */
 namespace biblio\inc;
+use biblio\dist\extensions\code_block_syntax_highlight\Code_Block_Syntax_Highlight;
 
 class Load_Extension {
 
   public function __construct() {
-      add_action( 'enqueue_block_editor_assets', [$this,  'biblio_register_extentions'] );
+    add_action( 'enqueue_block_editor_assets', [$this,  'biblio_register_extentions'] );
+
+    // php
+    new Code_Block_Syntax_Highlight;
   }
 
   public function biblio_register_extentions() {
