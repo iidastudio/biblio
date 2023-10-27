@@ -27,7 +27,7 @@ new inc\Template_Part_Areas();
 new inc\Theme_Update();
 new inc\Admin_Pages();
 // extension, custom block
-new inc\Load_Custom_Block();
+new inc\Load_Blocks();
 new inc\Load_Extension();
 // utility
 new lib\Utility();

@@ -7,7 +7,7 @@
  */
 namespace biblio\inc;
 
-class Load_Custom_Block {
+class Load_Blocks {
 
   public function __construct() {
     add_action( 'init', [$this,  'biblio_register_blocks'] );
