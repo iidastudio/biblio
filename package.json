@@ -13,16 +13,16 @@
     "cli": "wp-env run cli",
     "wp-env": "wp-env",
     "browsersync": "browser-sync start -p 'localhost:8888' -f '**/*.html' '**/*.php' '**/*.scss' '**/*.js' '**/*.json'",
+
     "watch": "run-p watch:*",
-    "watch:sass-auto-index": "sass-auto-index ./src/scss -w",
+    "watch:admin_pages": "chokidar './src/admin_pages/**/*' -c 'npm run admin_pages' --initial",
+    "watch:blocks": "chokidar './src/blocks/**/*' -c 'npm run blocks' --initial",
+    "watch:extensions": "chokidar './src/extensions/**/*' -c 'npm run extensions' --initial",
     "watch:css": "chokidar './src/scss/' -c 'npm run css' --silent --initial",
     "watch:js": "chokidar './src/js/' -c 'npm run js' --silent --initial ",
     "watch:image": "chokidar './src/img/' -c 'npm run image' --silent --initial",
     "watch:json": "chokidar './src/**/*.json' -c 'npm run json' --initial",
     "watch:fonts": "chokidar './src/fonts/' -c 'npm run fonts' --initial",
-    "watch:blocks": "chokidar './src/blocks/**/*' -c 'npm run blocks' --initial",
-    "watch:extensions": "chokidar './src/extensions/**/*' -c 'npm run extensions' --initial",
-    "watch:admin_pages": "chokidar './src/admin_pages/**/*' -c 'npm run admin_pages' --initial",
 
     "admin_pages": "npm run clean:admin_pages && wp-scripts build --webpack-copy-php --webpack-src-dir=src/admin_pages --output-path=dist/admin_pages",
     "blocks": "npm run clean:blocks && wp-scripts build --webpack-copy-php --webpack-src-dir=src/blocks --output-path=dist/blocks",
@@ -74,8 +74,7 @@
     "postcss-cli": "^10.1.0",
     "postcss-pxtorem": "^6.0.0",
     "rimraf": "^5.0.0",
-    "sass": "^1.62.1",
-    "sass-auto-index": "git+https://github.com/iidastudio/sass-auto-index.git"
+    "sass": "^1.62.1"
   },
   "babel": {
     "presets": [
