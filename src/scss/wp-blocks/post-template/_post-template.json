@@ -4,12 +4,15 @@
     "blocks": {
       "core/post-template": {
         "spacing": {
-          "blockGap": "3rem"
+          "blockGap": "2rem"
         },
         "elements": {
           "h2": {
-            "typography": {
-              "fontSize": "20px"
+            "spacing": {
+              "margin": {
+                "top": "0",
+                "bottom": "0"
+              }
             }
           },
           "link": {
@@ -17,7 +20,8 @@
               "textDecoration": "none"
             }
           }
-        }
+        },
+        "css": ">.wp-block-post{display:grid;grid-template-rows:subgrid;grid-row:span 3;gap:1rem;}"
       }
     }
   }

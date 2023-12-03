@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
   "settings": {
     "typography": {
       "customFontSize": true,
@@ -35,78 +36,87 @@
 			"fontSizes": [
 				{
 					"fluid": false,
+					"name": "3XS",
 					"size": "0.625rem",
-					"slug": "biblio-3xs",
-					"name": "3XS"
+					"slug": "biblio-3xs"
 				},
 				{
 					"fluid": false,
+					"name": "2XS",
 					"size": "0.75rem",
-					"slug": "biblio-2xs",
-					"name": "2XS"
+					"slug": "biblio-2xs"
 				},
 				{
 					"fluid": false,
+					"name": "XS",
 					"size": "0.875rem",
-					"slug": "biblio-xs",
-					"name": "XS"
+					"slug": "biblio-xs"
 				},
 				{
-					"size": "1rem",
 					"fluid": {
 						"min": "0.875rem",
 						"max": "1rem"
 					},
-					"slug": "biblio-sm",
-					"name": "S"
+					"name": "S",
+					"size": "1rem",
+					"slug": "biblio-sm"
 				},
 				{
-					"size": "1.125rem",
 					"fluid": {
 						"min": "1rem",
 						"max": "1.125rem"
 					},
-					"slug": "biblio-md",
-					"name": "M"
+					"name": "M",
+					"size": "1.125rem",
+					"slug": "biblio-md"
 				},
 				{
-					"size": "1.5rem",
+					"fluid": {
+						"min": "1.125rem",
+						"max": "1.25rem"
+					},
+					"name": "L",
+					"size": "1.25rem",
+					"slug": "biblio-lg"
+				},
+				{
 					"fluid": {
 						"min": "1.25rem",
 						"max": "1.5rem"
 					},
-					"slug": "biblio-lg",
-					"name": "L"
+					"name": "XL",
+					"size": "1.5rem",
+					"slug": "biblio-xl"
 				},
 				{
-					"size": "2rem",
 					"fluid": {
 						"min": "1.5rem",
 						"max": "2rem"
 					},
-					"slug": "biblio-xl",
-					"name": "XL"
+					"name": "2XL",
+					"size": "2rem",
+					"slug": "biblio-2xl"
 				},
 				{
-					"size": "3rem",
 					"fluid": {
 						"min": "2rem",
 						"max": "3rem"
 					},
-					"slug": "biblio-2xl",
-					"name": "2XL"
+					"name": "3XL",
+					"size": "3rem",
+					"slug": "biblio-3xl"
 				},
 				{
 					"fluid": false,
+					"name": "4XL",
 					"size": "calc(var(--wp--preset--font-size--biblio-2-xl) * var(--wp--custom--font-size--ratio))",
-					"slug": "biblio-3xl",
-					"name": "3XL"
+					"slug": "biblio-4xl"
 				},
 				{
 					"fluid": false,
+					"name": "5XL",
 					"size": "calc(var(--wp--preset--font-size--biblio-3-xl) * var(--wp--custom--font-size--ratio))",
-					"slug": "biblio-4xl",
-					"name": "4XL"
+					"slug": "biblio-5xl"
 				}
 			]
     },
