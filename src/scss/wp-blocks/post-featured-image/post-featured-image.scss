@@ -1,40 +1,15 @@
 @use '../../tool' as *;
 
+// 画像がずれるのを修正
 .wp-block-post-featured-image {
   margin: auto;
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 2;
+  aspect-ratio: 16/9;
   a {
     height: 100%;
   }
   img {
     height: 100%;
     object-fit: cover;
-  }
-}
-
-.single {
-  header {
-    .wp-block-post-featured-image {
-      width: unset;
-      margin-right: calc( 50% - 50vw ) !important;  
-      margin-left: calc( 50% - 50vw ) !important;  
-      @include mq(min) {
-        max-width: 100vw;
-      } 
-    }
-  }
-}
-@include mq(sm) {
-  .single{
-    header {
-      .wp-block-post-featured-image {
-        width: 100%;
-        margin-right: auto !important;
-        margin-left: auto !important;
-      } 
-    } 
   }
 }

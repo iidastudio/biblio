@@ -5,7 +5,7 @@
       "heading": {
         "typography": {
           "fontWeight": "600",
-          "lineHeight": "1.2"
+          "lineHeight": "1.4"
         }
       },
       "h1": {
@@ -19,14 +19,12 @@
         }
       },
       "h3": {
-        "// fontSize": "20.25-18",
         "typography": {
           "fontSize": "calc(var(--wp--preset--font-size--biblio-md) * 1.125)"
         }
       },
       "h4": {
         "typography": {
-          "// fontSize": "18-16px",
           "fontSize": "var(--wp--preset--font-size--biblio-md)"
         }
       },
