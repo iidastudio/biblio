@@ -18,10 +18,15 @@
           "link": {
             "typography": {
               "textDecoration": "none"
+            },
+            ":hover": {
+              "typography": {
+                "textDecoration": "underline"
+              }
             }
           }
         },
-        "css": ">.wp-block-post{display:grid;grid-template-rows:subgrid;grid-row:span 3;gap:1rem;}"
+        "css": ">.wp-block-post{display:grid;grid-template-rows:subgrid;grid-row:span 3;gap:var(--wp--preset--spacing--40);}"
       }
     }
   }

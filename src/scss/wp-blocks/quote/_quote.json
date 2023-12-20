@@ -20,11 +20,6 @@
         },
         "elements": {
           "cite": {
-            "spacing": {
-              "margin": {
-                "top": "2em"
-              }
-            },
             "typography": {
               "fontSize": "var(--wp--preset--font-size--biblio-2-xs)",
               "fontStyle": "italic"

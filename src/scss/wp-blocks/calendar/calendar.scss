@@ -1,42 +1,26 @@
-div.wp-block-calendar {
-  max-width: 360px;
-}
-
 .wp-block-calendar {
-  font-size: var(--fontSize--sm);
+  font-size: var(--font-size--xs);
   caption {
     margin-bottom: 0.5em;
   }
   table {
-    // border-collapse: separate;
-
     thead {
       th {
         background-color: initial;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
         border-bottom: solid 1px var(--color--text);
       }
     }
   
     tbody {
-      border-bottom: solid 1px var(--color--support-text);
       td {
-        line-height: 2.5;
-        border: solid 10px transparent;
-        padding: 0;
-        a:link {
-          font-weight: 600;
-          text-decoration: none;
-          color: var(--color--background);
-          background-color: var(--color--text);
-          width: 100%;
-          display: block;
-          border-radius: 2px;
-        }
+        line-height: 2;
       }
     }
+  }
+  .wp-calendar-nav {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
   }
   
 }

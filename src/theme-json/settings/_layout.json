@@ -1,16 +1,8 @@
 {
   "settings": {
     "layout": {
-      "contentSize": "var(--wp--custom--layout--content-size)",
-      "wideSize": "var(--wp--custom--layout--wide-size)"
-    },
-    "custom": {
-      "layout": {
-        "content": "640px",
-        "wide": "calc(1280px - var(--wp--style--root--padding-left) * 2)",
-        "contentSize": "min(100%, var(--wp--custom--layout--content))",
-        "wideSize": "min(100%, var(--wp--custom--layout--wide))"
-      }
+      "contentSize": "640px",
+      "wideSize": "1280px"
     }
   }
 }

@@ -3,6 +3,7 @@
 .wp-block-quote {
   border-left: 0;
   position: relative;
+  // citeのデフォルトfont-size、なぜか親から継承される設定のため調整。theme.jsonで設定するとエディターで変更しても反映されない。これも完全ではないから本当はコアで修正が必要そう
   p {
     line-height: inherit;
     &:first-child {
@@ -15,20 +16,20 @@
   }
   &::before, &::after {
     font-family: "biblio-icon";
-    font-size: 1.5em;
+    font-size: 1.25rem;
     color: var(--color--support-text);
     position: absolute;
     line-height: 1;
   }
   &::before {
     content: "\e905";
-    top: 4px;
-    left: 4px;
+    top: 2px;
+    left: 2px;
   }
   &::after {
     content: "\e906";
-    bottom: 4px;
-    right: 4px;
+    bottom: 2px;
+    right: 2px;
     top: auto;
     left: auto;
   }

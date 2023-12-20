@@ -1,16 +1,17 @@
 .wp-block-gallery.has-nested-images {
+  // デフォルトのgapを上書き
   --wp--style--gallery-gap-default: 1rem;
 
   figure.wp-block-image {
     figcaption {
-      font-size: var(--fontSize--xs);
+      font-size: var(--font-size--2xs);
       background: rgba($color: #000000, $alpha: 0.5);
       padding: 0.4em;
     }
   }
   .blocks-gallery-caption {
-    font-size: var(--fontSize--xs);
-    margin-top: calc( -1 * var(--wp--style--unstable-gallery-gap) + 0.5em);
-    color: var(--color--support-text);
+    // font-size: var(--font-size--2xs);
+    // margin-top: calc( -1 * var(--wp--style--unstable-gallery-gap) + 0.5em);
+    opacity: .8;
   }
 }

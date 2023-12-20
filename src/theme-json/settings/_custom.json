@@ -3,7 +3,7 @@
     "custom": {
       "// generated custom variables": "--wp--custom--{key}--{nested-key}: {value};",
       "base": {
-        "transition": "opacity .2s ease, visibility .2s ease"
+        "transition": ".2s ease"
       },
       "utility": {
         "height": {

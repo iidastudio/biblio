@@ -1,25 +1,6 @@
 @use '../../tool' as *;
 
-//-------------------------------------------------
-// core clumns style reset and restyle.
-//-------------------------------------------------
-// reset
-@media (min-width: 600px) {
-  .wp-block-post-template {
-    &.is-flex-container.is-flex-container {
-      &.columns-2, &.columns-3, &.columns-4, &.columns-5, &.columns-6 {
-        & > li {
-          width: auto;
-        }
-      }
-    }
-  }
-}
-
-
-// block-editor-block-list__block wp-block is-layout-flow wp-block-post-template-is-layout-flow wp-block-post-template
-// block-editor-block-list__block wp-block is-layout-flow wp-block-post-template-is-layout-flow wp-block-post-template
-
+// スマホ幅の時に２カラムをキープするようにする
 // .wp-block-post-template,
 // .wp-block-query.min-columns-2 {
 //   &.is-flex-container.is-flex-container {
@@ -31,6 +12,7 @@
 //   }
 // }
 
+// カラムの大きさに合わせて自動的にカラム数を調整する
 // .wp-block-post-template,
 // .wp-block-query.is-style-biblio-auto-fit {
 //   // align none (wide)
@@ -40,29 +22,3 @@
 //     }
 //   }
 // }
-
-.wp-block-post-template {
-  &.is-flex-container.is-flex-container {
-    @include mq(sm) {
-      &.columns-2, &.columns-3, &.columns-4, &.columns-5, &.columns-6 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @include mq(md) {
-      &.columns-3, &.columns-4, &.columns-5, &.columns-6 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    @include mq(lg) {
-      &.columns-4 {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      &.columns-5 {
-        grid-template-columns: repeat(5, 1fr);
-      }
-      &.columns-6 {
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-  }
-}

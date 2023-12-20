@@ -15,14 +15,14 @@
 
 // biblio font Settings
 @font-face {
-	$font-family: "biblio" !default;
-	$font-path: "../fonts" !default;
+	$font-path: "../fonts/biblio" !default;
+	$font-filename: "biblio";
 	
-  font-family: $font-family;
+  font-family: Biblio;
   src:
-    url('#{$font-path}/#{$font-family}/#{$font-family}.woff2') format('woff2'),
-    url('#{$font-path}/#{$font-family}/#{$font-family}.woff') format('woff'),
-    url('#{$font-path}/#{$font-family}/#{$font-family}.svg') format('svg');
+    url('#{$font-path}/#{$font-filename}.woff2') format('woff2'),
+    url('#{$font-path}/#{$font-filename}.woff') format('woff'),
+    url('#{$font-path}/#{$font-filename}.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 	unicode-range: u+2014, u+2015, u+2026;

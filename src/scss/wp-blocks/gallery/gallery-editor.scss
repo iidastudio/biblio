@@ -1,0 +1,6 @@
+// エディターでは謎のdivがありheightが足りないため調整
+.wp-block-gallery.has-nested-images {
+  a > div {
+    height: 100%;
+  }
+}

@@ -38,7 +38,7 @@
 
     <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 
-        <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"2","style":{"border":{"radius":"8px"}}} /-->
+        <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"19.5/9"} /-->
         <!-- wp:post-title {"isLink":true,"fontSize":"biblio-lg"} /-->
 
         <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained"}} -->

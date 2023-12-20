@@ -1,5 +1,3 @@
-@use '../../tool' as *;
-
 // 優先度不足のためエディターのみ再記述
 :is(.wp-block-image, .wp-block-gallery) {
   &:is(.alignleft, .alignright) {

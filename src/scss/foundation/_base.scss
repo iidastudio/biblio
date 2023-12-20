@@ -4,7 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 	font-feature-settings: "pkna" 1;
   font-kerning: normal;
-	font-family: var(--wp--preset--font-family--system-gothic);
 }
 
 * {
@@ -30,12 +29,8 @@ p {
 }
 
 a {
-	text-underline-offset: 0.1em;
+	text-underline-offset: 0.15em;
 	transition: var(--wp--custom--base--transition);
-	&:hover {
-		text-decoration: none;
-		opacity: 0.8;
-	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,15 +102,4 @@ pre {
 	line-height: 1;
 	letter-spacing: 0;
 	overflow: auto;
-}
-
-// block editor レスポンシブ テスト
-@media (min-width: 360px) {
-	.site-sidebar-right {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 300px;
-		background-color: silver;
-	}
 }

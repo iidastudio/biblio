@@ -1,19 +1,29 @@
-ul.wp-block-archives {
-  &.wp-block-archives-list {
-    li {
-      margin-top: 0;
+.wp-block-archives {
+  padding-left: 0;
+  list-style: none;
+  li {
+    margin-top: 0;
+  }
+  a {
+    text-decoration: none;
+    transition: var(--wp--custom--base--transition);
+    &:hover {
+      text-decoration: underline;
+      padding-left: 0.5em;
     }
-    &.alignleft, &.alignright {
-      float: none;
-    }
+  }
+  &.alignleft, &.alignright {
+    float: none !important;
+    margin-left: 0;
   }
   &.alignleft {
     text-align: left;
   }
   &.alignright {
     text-align: right;
-    list-style: none;
-    padding-left: 0;
+    a:hover {
+      padding-right: 0.5em;
+    }
   }
   &.aligncenter {
     text-align: center;

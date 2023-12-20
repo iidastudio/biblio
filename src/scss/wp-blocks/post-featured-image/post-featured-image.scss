@@ -6,10 +6,16 @@
   width: 100%;
   aspect-ratio: 16/9;
   a {
-    height: 100%;
+    overflow: hidden;
+    &:hover {
+      img {
+        filter: opacity(0.7);
+      }
+    }
   }
   img {
     height: 100%;
     object-fit: cover;
+    transition: .2s ease;
   }
 }

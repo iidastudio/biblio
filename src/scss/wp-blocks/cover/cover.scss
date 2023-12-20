@@ -1,22 +1,12 @@
 @use '../../tool' as *;
 
-// fix 全幅時に全幅にならない、幅広時に中央に配置されないのを修正
-body .is-layout-constrained > .wp-block-cover.alignfull {
-  max-width: none;
-}
-
 .wp-block-cover {
-  // クリア時のデフォルトカラーを透明にする
-  .has-background-dim:not([class*=-background-color]) {
-    background-color: transparent;
-  }
-
   // 強引に位置を調整、gutenbergnのアップデートで構造が変わるかも
   &:is(.alignleft, .alignright) {
     max-width: calc(var(--wp--style--global--content-size) / 2);
-    margin-top: spacing(md, 0.5, em);
+    margin-top: calc(var(--wp--style--block-gap) + 0.5em);
     @include mq(sm) {
-      margin-top: spacing(lg, 0.5, em);
+      margin-top: calc(var(--wp--style--block-gap) + 0.5em);
     }
   }
   &.alignleft {
@@ -44,6 +34,14 @@ body .is-layout-constrained > .wp-block-cover.alignfull {
   }
 }
 
+// コンテンツの最初に右寄せ左寄せの画像がくるときの対応
+:where(body .is-layout-constrained) > :first-child:first-child {
+  &.wp-block-cover {
+    &:is(.alignleft, .alignright) {
+      margin-block-start: 0.5em !important;
+    }
+  }
+}
 
 // 強引に位置を調整 全幅幅広グループ内での左寄せ右寄せに対応
 .wp-block-group {

@@ -10,17 +10,17 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--biblio-xl)"
+          "fontSize": "var(--wp--preset--font-size--biblio-2-xl)"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--biblio-lg)"
+          "fontSize": "var(--wp--preset--font-size--biblio-xl)"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "calc(var(--wp--preset--font-size--biblio-md) * 1.125)"
+          "fontSize": "var(--wp--preset--font-size--biblio-lg)"
         }
       },
       "h4": {
@@ -30,12 +30,12 @@
       },
       "h5": {
         "typography": {
-          "fontSize": "1rem"
+          "fontSize": "var(--wp--preset--font-size--biblio-sm)"
         }
       },
       "h6": {
         "typography": {
-          "fontSize": ".875rem"
+          "fontSize": "var(--wp--preset--font-size--biblio-sm)"
         }
       },
       "link": {
@@ -44,6 +44,16 @@
 				},
         "typography": {
           "textDecoration": "underline"
+        },
+        ":hover": {
+          "typography": {
+            "textDecoration": "none"
+          }
+        },
+        ":focus": {
+          "typography": {
+            "textDecoration": "none"
+          }
         }
       }
     }

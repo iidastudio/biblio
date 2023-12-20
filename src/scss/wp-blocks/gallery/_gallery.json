@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "settings": {
     "spacing": {
       "blockGap": true
@@ -9,6 +10,18 @@
       "core/gallery": {
         "spacing": {
           "// blockGap": "1rem"
+        },
+        "elements": {
+          "caption": {
+            "typography": {
+              "fontSize": "var(--wp--preset--font-size--biblio-2-xs)"
+            },
+            "spacing": {
+              "margin": {
+                "top": "calc( -1 * var(--wp--style--unstable-gallery-gap) + 0.5em);"
+              }
+            }
+          }
         }
       }
     }

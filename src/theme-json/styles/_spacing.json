@@ -1,18 +1,11 @@
 {
   "styles": {
     "spacing": {
-			"blockGap": "var(--wp--preset--spacing--60)",
+			"blockGap": "var(--wp--preset--spacing--70)",
 			"padding": {
 				"right": "16px",
 				"left": "16px"
 			}
 		}
-  },
-	"settings": {
-		"custom": {
-			"spacing": {
-				"blockGap": "var(--wp--preset--spacing--60)"
-			}
-		}
-	}
+  }
 }
