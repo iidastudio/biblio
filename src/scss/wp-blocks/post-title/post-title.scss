@@ -1,5 +1,7 @@
-// @use '../../tool' as *;
-
-// .blog div.wp-block-post-title {
-//   margin-top: 24px;
-// }
+.wp-block-post-title {
+  a {
+    &:hover {
+      filter: opacity(0.8);
+    }
+  }
+}

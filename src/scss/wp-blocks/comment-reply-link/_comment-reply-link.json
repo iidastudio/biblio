@@ -11,7 +11,8 @@
             "border": {
               "style": "solid",
               "width": "1px",
-              "color": "currentColor"
+              "color": "var(--wp--preset--color--biblio-text)",
+              "radius": "2px"
             },
             "spacing": {
               "padding": {
@@ -25,6 +26,12 @@
               "fontSize": "inherit",
               "lineHeight": "inherit",
               "textDecoration": "none"
+            },
+            ":hover": {
+              "color": {
+                "background": "var(--wp--preset--color--biblio-text)",
+                "text": "var(--wp--preset--color--biblio-background)"
+              }
             }
           }
         }

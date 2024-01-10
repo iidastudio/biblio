@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "blocks": {
+      "core/comments-pagenation": {
+
+      },
+      "core/comments-pagination-numbers": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--biblio-xs)"
+        }
+      },
+      "core/comments-pagination-previous": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--biblio-xs)"
+        }
+      },
+      "core/comments-pagination-next": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--biblio-xs)"
+        }
+      }
+    }
+  }
+}

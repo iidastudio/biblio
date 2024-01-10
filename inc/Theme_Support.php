@@ -79,6 +79,7 @@ class Theme_Support {
     'group',
     'heading',
     'image',
+    'latest-comments',
     'latest-posts',
     'media-text',
     'navigation',

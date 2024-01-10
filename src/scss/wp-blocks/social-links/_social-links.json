@@ -1,18 +1,13 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/social-links": {
         "spacing": {
           "blockGap": "8px"
-        }
-      }
-    }
-  },
-  "settings": {
-    "blocks": {
-      "core/social-links": {
-        "custom": {
-          "svgSize": "1em"
+        },
+        "typography": {
+          "fontSize": "20px"
         }
       }
     }

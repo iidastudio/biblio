@@ -69,7 +69,7 @@ class Helper {
   // 再起的にインナーブロックを解析してテンプレート名を返す
   private static function get_template_parts_slug_recursive( $inner_blocks ) {
     foreach ( $inner_blocks as $block ) {
-      if ( isset( $block['blockName'] ) && $block['blockName'] === "core/template-part" ) {
+      if ( isset( $block['blockName'] ) && isset($block['attrs']['slug']) && $block['blockName'] === "core/template-part") {
         $template_slug[] = $block['attrs']['slug'];
       }
       if ( isset( $block['innerBlocks'] ) && ! empty( $block['innerBlocks'] ) ) {

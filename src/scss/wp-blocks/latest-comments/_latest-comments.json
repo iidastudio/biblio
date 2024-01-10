@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "styles": {
+    "blocks": {
+      "core/latest-comments": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--biblio-sm)"
+        },
+        "spacing": {
+          "padding": {
+            "left": "0"
+          }
+        }
+      }
+    }
+  }
+}

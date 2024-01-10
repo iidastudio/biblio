@@ -76,6 +76,14 @@ class Block_styles {
 					'style_handle' => 'biblio-dotted-wide',
 				)
 			);
+			register_block_style(
+				'core/post-terms',
+				array(
+					'name'         => 'biblio-outline',
+					'label'        => __( 'Outline', 'biblio' ),
+					'style_handle' => 'biblio-outline',
+				)
+			);
 		}
 	}
 }

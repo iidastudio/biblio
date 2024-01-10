@@ -5,19 +5,20 @@
   .wp-block-search {
     &__label {
       display: inline-block;
-      margin-bottom: spacing(xxs);
+      margin-bottom: var(--spacing--20);
       font-weight: 600;
     }
     &__button {
       color: var(--color--background);
       background-color: var(--color--text);
       border-width: 0;
-      padding: spacing(xxs);
-      font-size: var(--fontSize--sm);
+      padding: var(--spacing--20);
+      font-size: var(--font-size--sm);
+      line-height: 1;
       margin: 0;
     }
     &__input {
-      padding: spacing(xxs);
+      padding: var(--spacing--20);
       margin: 0;
       background-color: var(--color--support-background);
       border: 0;
@@ -29,29 +30,40 @@
   // inside button
   &.wp-block-search__button-inside {
     .wp-block-search__inside-wrapper {
+      border: solid 1px var(--color--support-text);
       background-color: var(--color--support-background);
-      .wp-block-search {
-        &__button {
-          padding: spacing(xxs);
-        }
-        &__input {
-          padding: spacing(xxs);
-          background: none;
-        }
-      }
+    }
+    .wp-block-search__button {
+      padding: var(--spacing--20);
+    }
+    .wp-block-search__input {
+      padding: var(--spacing--20);
+      background: none;
+    }
+  }
+  // outside button
+  &.wp-block-search__button-outside {
+    .wp-block-search__input {
+      padding: var(--spacing--30);
+    }
+  }
+  // button only
+  &.wp-block-search__button-only {
+    .wp-block-search__input {
+      padding: var(--spacing--30);
     }
   }
   // text button
   &.wp-block-search__text-button {
-      .wp-block-search {
-        &__button {
-          padding: spacing(xs);
-        }
-        &__input {
-          margin: 0;
-          padding: spacing(xs);
-        }
-      }
+    .wp-block-search__button {
+      padding: var(--spacing--30);
+    }
   }
-
+  // no button
+  &.wp-block-search__no-button {
+    .wp-block-search__input {
+      border: solid 1px var(--color--support-text);
+      padding: var(--spacing--30);
+    }
+  }
 }

@@ -21,7 +21,8 @@ class Block_Patterns {
 
 	private $pattern_categorys_to_add = [
 		'fixed' => 'Fixed',
-		'post-parts' => 'Post parts'
+		'post-parts' => 'Post parts',
+		'hero' => 'Hero'
 	];
 
 	public function biblio_register_block_pattern_categorys() {

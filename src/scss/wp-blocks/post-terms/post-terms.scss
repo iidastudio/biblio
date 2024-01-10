@@ -1,0 +1,19 @@
+.wp-block-post-terms {
+  a {
+    text-underline-offset: 0.05em;
+  }
+
+  // variation styles
+  &.is-style-biblio-outline {
+    a {
+      border: solid 1px currentColor;
+      padding-inline: 3px;
+      border-radius: 2px;
+    }
+    .wp-block-post-terms__separator {
+      width: 0.3em;
+      display: inline-block;
+      opacity: 0;
+    }
+  }
+}

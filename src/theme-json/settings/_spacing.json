@@ -46,16 +46,21 @@
           "name": "48-32px"
         },
         {
-          "size": "calc(var(--wp--preset--spacing--80) * 1.5)",
+          "size": "calc(var(--wp--preset--spacing--80) * var(--wp--custom--spacing--ratio))",
           "slug": "90",
           "name": "72-48px"
         },
         {
-          "size": "calc(var(--wp--preset--spacing--90) * 1.5)",
+          "size": "calc(var(--wp--preset--spacing--90) * var(--wp--custom--spacing--ratio))",
           "slug": "100",
           "name": "108-72px"
         }
       ]
-    }
+    },
+		"custom": {
+			"spacing": {
+				"ratio": "1.5"
+			}
+		}
   }
 }

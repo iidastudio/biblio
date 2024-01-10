@@ -9,7 +9,7 @@
   "tagName":"header",
   "style":{
     "spacing":{
-      "blockGap":"var:preset|spacing|60"
+      "blockGap":"var:preset|spacing|50"
     }
   },
   "className":"t-post-header",
@@ -29,6 +29,7 @@
       <!-- wp:post-date {"displayType":"modified","format":"Y/m/d","className":"icon-modified-date", "fontSize":"biblio-2-xs"} /-->
     </div>
     <!-- /wp:group -->
+    <!-- wp:post-terms {"term":"category","className":"icon-category"} /-->
 
   </div>
   <!-- /wp:group -->

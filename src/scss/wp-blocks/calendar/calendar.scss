@@ -6,6 +6,7 @@
   table {
     thead {
       th {
+        border: solid 1px var(--color--support-text);
         background-color: initial;
         border-bottom: solid 1px var(--color--text);
       }
@@ -13,6 +14,7 @@
   
     tbody {
       td {
+        border: solid 1px var(--color--support-text);
         line-height: 2;
       }
     }

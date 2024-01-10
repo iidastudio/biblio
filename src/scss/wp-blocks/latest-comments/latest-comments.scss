@@ -1,0 +1,33 @@
+.wp-block-latest-comments {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing--40);
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing--20);
+  }
+  .wp-block-latest-comments__comment {
+    margin: 0;
+  }
+  .wp-block-latest-comments__comment-excerpt p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  &.has-avatars {
+    .wp-block-latest-comments__comment-avatar {
+      mask-image: var(--img--avatar-mask);
+      border-radius: 0;
+      width: var(--spacing--70);
+      height: var(--spacing--70);
+      margin-top: 4px;
+    }
+    .wp-block-latest-comments__comment-meta {
+      margin-left: 0;
+    }
+    .wp-block-latest-comments__comment-excerpt {
+      margin-left: 0;
+    }
+  }
+}

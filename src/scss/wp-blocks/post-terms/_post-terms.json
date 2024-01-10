@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "styles": {
     "blocks": {
       "core/post-terms": {
@@ -13,6 +14,11 @@
           "link": {
             "typography": {
               "textDecoration": "none"
+            },
+            ":hover": {
+              "typography": {
+                "textDecoration": "underline"
+              }
             }
           }
         }

@@ -39,19 +39,19 @@
 			"fontSizes": [
 				{
 					"fluid": false,
-					"name": "3XS",
+					"name": "3XS 10px",
 					"size": "0.625rem",
 					"slug": "biblio-3xs"
 				},
 				{
 					"fluid": false,
-					"name": "2XS",
+					"name": "2XS 12px",
 					"size": "0.75rem",
 					"slug": "biblio-2xs"
 				},
 				{
 					"fluid": false,
-					"name": "XS",
+					"name": "XS 14px",
 					"size": "0.875rem",
 					"slug": "biblio-xs"
 				},
@@ -60,7 +60,7 @@
 						"min": "0.875rem",
 						"max": "1rem"
 					},
-					"name": "S",
+					"name": "S 16-14px",
 					"size": "1rem",
 					"slug": "biblio-sm"
 				},
@@ -69,7 +69,7 @@
 						"min": "1rem",
 						"max": "1.125rem"
 					},
-					"name": "M",
+					"name": "M 18-16px",
 					"size": "1.125rem",
 					"slug": "biblio-md"
 				},
@@ -78,7 +78,7 @@
 						"min": "1.125rem",
 						"max": "1.25rem"
 					},
-					"name": "L",
+					"name": "L 20-18px",
 					"size": "1.25rem",
 					"slug": "biblio-lg"
 				},
@@ -87,7 +87,7 @@
 						"min": "1.25rem",
 						"max": "1.5rem"
 					},
-					"name": "XL",
+					"name": "XL 24-20px",
 					"size": "1.5rem",
 					"slug": "biblio-xl"
 				},
@@ -96,7 +96,7 @@
 						"min": "1.5rem",
 						"max": "2rem"
 					},
-					"name": "2XL",
+					"name": "2XL 32-24px",
 					"size": "2rem",
 					"slug": "biblio-2xl"
 				},
@@ -105,19 +105,19 @@
 						"min": "2rem",
 						"max": "3rem"
 					},
-					"name": "3XL",
+					"name": "3XL 48-32px",
 					"size": "3rem",
 					"slug": "biblio-3xl"
 				},
 				{
 					"fluid": false,
-					"name": "4XL",
+					"name": "4XL 72-48px",
 					"size": "calc(var(--wp--preset--font-size--biblio-2-xl) * var(--wp--custom--font-size--ratio))",
 					"slug": "biblio-4xl"
 				},
 				{
 					"fluid": false,
-					"name": "5XL",
+					"name": "5XL 108-72px",
 					"size": "calc(var(--wp--preset--font-size--biblio-3-xl) * var(--wp--custom--font-size--ratio))",
 					"slug": "biblio-5xl"
 				}

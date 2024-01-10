@@ -103,3 +103,36 @@ pre {
 	letter-spacing: 0;
 	overflow: auto;
 }
+
+// nextpageブロックのフロント側
+.post-nav-links {
+	display: flex;
+  font-size: 0;
+	line-height: 1;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing--30);
+
+	.post-page-numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: var(--font-size--sm);
+		padding-inline: 0.5rem;
+		min-width: 2rem;
+		height: 2rem;
+		border-radius: 2px;
+	}
+	.current {
+		color: var(--color--background);
+		background: var(--color--text);
+	}
+	a {
+		background: var(--color--support-background);
+		text-decoration: none;
+		&:hover {
+			color: var(--color--background);
+			background: var(--color--text);
+		}
+	}
+}

@@ -3,17 +3,8 @@
   "styles": {
     "blocks": {
       "core/tag-cloud": {
-        "typography": {
+        "// typography": {
           "fontSize": "12px"
-        },
-        "elements": {
-          "link": {
-            "spacing": {
-              "margin": {
-                "right": "0"
-              }
-            }
-          }
         }
       }
     }
