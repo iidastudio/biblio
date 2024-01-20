@@ -27,13 +27,13 @@
     "admin_pages": "npm run clean:admin_pages && wp-scripts build --webpack-copy-php --webpack-src-dir=src/admin_pages --output-path=dist/admin_pages",
     "blocks": "npm run clean:blocks && wp-scripts build --webpack-copy-php --webpack-src-dir=src/blocks --output-path=dist/blocks",
     "extensions": "npm run clean:extensions && wp-scripts build --webpack-copy-php --webpack-src-dir=src/extensions --output-path=dist/extensions",
-    "json": "run-s json:*",
+    "json": "run-p json:*",
     "json:themejson": "merge-theme-json -b ./src/theme-json/base.json -t ./src/theme-json ./src/scss/wp-blocks -o ./theme.json",
     "css": "run-s css:*",
     "css:sass": "npm run clean:css && sass ./src/scss:./dist/css -s expanded --no-source-map",
     "css:autoprefixer": "postcss ./dist/css/**/*.css --base ./dist/css -d ./dist/css --no-map --config config/postcss.config.mjs",
     "js": "npm run clean:js && wp-scripts build --config config/webpack.config.mjs",
-    "image": "npm run clean:image && node config/imagemin.mjs",
+    "image": "npm run clean:image && node config/imagemin.config.mjs",
     "fonts": "npm run clean:fonts && cpx './src/fonts/**/{*.svg,*.ttf,*.woff,*.woff2}' ./dist/fonts",
 
     "clean": "rimraf ./dist",
@@ -45,8 +45,9 @@
     "clean:image": "rimraf ./dist/img",
     "clean:fonts": "rimraf ./dist/fonts",
 
-    "check-engines": "wp-scripts check-engines",
-    "check-licenses": "wp-scripts check-licenses --prod --gpl2"
+    "zip": "run-s zip:*",
+    "zip:pack": "rimraf biblio biblio.zip && rsync -a --exclude='/vendor' --exclude='/node_modules' --exclude='/src' --exclude='/config' --exclude='/.git' --exclude='.*' --exclude='package.json' --exclude='package-lock.json' --exclude='composer.json' --exclude='composer.lock' ./ biblio",
+    "zip:archive": "zip -9 -qmr biblio.zip biblio"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
