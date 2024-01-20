@@ -25,6 +25,7 @@ const withInspectorControls = createHigherOrderComponent( ( BlockEdit ) => {
         { value: 'typescript', label: 'TypeScript' },
         { value: 'jsx', label: 'React JSX' },
         { value: 'tsx', label: 'React TSX' },
+        { value: 'json', label: 'JSON' },
         { value: 'python', label: 'Python' },
         { value: 'git', label: 'Git' },
         { value: 'shell', label: 'Shell' },
