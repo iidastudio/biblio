@@ -1,15 +1,25 @@
 {
     "name": "iidastudio/biblio",
-    "authors": [
-        {
-            "name": "Takayuki Iida"
-        }
-    ],
-    "description": "",
-    "require": {}, 
     "autoload": {
         "psr-4": {
             "biblio\\": "./"
         }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "wp-coding-standards/wpcs": "^3.0",
+        "squizlabs/php_codesniffer": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=.phpcs.xml.dist "
     }
 }
