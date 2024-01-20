@@ -1,0 +1,13 @@
+.wp-block-code {
+  overflow-x: auto;
+  white-space: pre !important;
+  code {
+    display: inline;
+    white-space: pre !important;
+  }
+}
+.code-toolbar {
+  > .wp-block-code {
+    margin: 0;
+  }
+}
