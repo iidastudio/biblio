@@ -9,14 +9,14 @@ namespace biblio\inc;
 
 defined( 'ABSPATH' ) || exit;
 
-class Block_styles {
-	
+class Block_Styles {
+
 	public function __construct() {
-		add_action( 'after_setup_theme', [ $this, 'register_block_styles' ] );
+		add_action( 'after_setup_theme', array( $this, 'register_block_styles' ) );
 	}
 
-  public function register_block_styles() {
-		if ( function_exists( 'register_block_style' ) ) {			
+	public function register_block_styles() {
+		if ( function_exists( 'register_block_style' ) ) {
 			/**
 			 * Register block styles
 			 */

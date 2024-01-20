@@ -11,85 +11,86 @@ defined( 'ABSPATH' ) || exit;
 
 class Theme_Update {
 
-  private $old_transient_name;
-  private $now_transient_name;
+	private $old_transient_name;
+	private $now_transient_name;
 
-  public function __construct() {
-    if( is_admin() ) {
-      add_filter( 'pre_set_site_transient_update_themes', [ $this, 'update_check'] );
-      add_filter( 'site_transient_update_themes', [ $this, 'update_check'] );
-      add_action( 'after_switch_theme', [$this, 'delete_old_transient'] );
-    }
+	public function __construct() {
+		if ( is_admin() ) {
+			add_filter( 'pre_set_site_transient_update_themes', array( $this, 'update_check' ) );
+			add_filter( 'site_transient_update_themes', array( $this, 'update_check' ) );
+			add_action( 'after_switch_theme', array( $this, 'delete_old_transient' ) );
+		}
 	}
 
-  public function update_check( $transient ) {
+	public function update_check( $transient ) {
 
-    $theme_name = get_template();
-    $theme_data = wp_get_theme();
-    $version = $theme_data->get( 'Version' );
-    $this->now_transient_name = 'biblio-theme-update'.$version;
+		$theme_name               = get_template();
+		$theme_data               = wp_get_theme();
+		$version                  = $theme_data->get( 'Version' );
+		$remote                   = get_transient( $this->now_transient_name );
+		$this->now_transient_name = 'biblio-theme-update' . $version;
 
-    if( false == $remote = get_transient( $this->now_transient_name ) ) {
+		if ( false === $remote ) {
 
-      $remote = wp_remote_get(
-        'https://qim.chu.jp/release/biblio-info.php',
-        array(
-          'timeout' => 10,
-          'headers' => array(
-            'Accept' => 'application/json'
-          )
-        )
-      );
+			$remote = wp_remote_get(
+				'https://qim.chu.jp/release/biblio-info.php',
+				array(
+					'timeout' => 10,
+					'headers' => array(
+						'Accept' => 'application/json',
+					),
+				)
+			);
 
-      // do nothing if errors
-      if(
-        is_wp_error( $remote )
-        || 200 !== wp_remote_retrieve_response_code( $remote )
-        || empty( wp_remote_retrieve_body( $remote ) )
-      ) {
-        return $transient;
-      }
+			// do nothing if errors
+			if (
+			is_wp_error( $remote )
+			|| 200 !== wp_remote_retrieve_response_code( $remote )
+			|| empty( wp_remote_retrieve_body( $remote ) )
+			) {
+					return $transient;
+			}
 
-      // encode the response body
-      $remote = json_decode( wp_remote_retrieve_body( $remote ) );
-      
-      if( ! $remote ) {
-        return $transient; // who knows, maybe JSON is not valid
-      }
+			// encode the response body
+			$remote = json_decode( wp_remote_retrieve_body( $remote ) );
 
-      set_transient( $this->now_transient_name, $remote, HOUR_IN_SECONDS );
-    }
+			if ( ! $remote ) {
+				return $transient; // who knows, maybe JSON is not valid
+			}
 
-    $remote_data = array(
-      'theme' => $theme_name,
-      'url' => $remote->details_url,
-      'requires' => $remote->requires,
-      'requires_php' => $remote->requires_php,
-      'new_version' => $remote->version,
-      'package' => $remote->download_url,
-    );
+			set_transient( $this->now_transient_name, $remote, HOUR_IN_SECONDS );
+		}
 
-    $newTransient = new \stdClass();
-    // check all the versions now
-    if(
-      $remote
-      && version_compare( $version, $remote->version, '<' )
-      && version_compare( $remote->requires, get_bloginfo( 'version' ), '<' )
-      && version_compare( $remote->requires_php, PHP_VERSION, '<' )
-    ) {
-      $this->old_transient_name = $this->now_transient_name;
-      $newTransient->response[ $theme_name ] = $remote_data;
-    } else {
-      $newTransient->no_update[ $theme_name ] = $remote_data;
-    }
+		$remote_data = array(
+			'theme'        => $theme_name,
+			'url'          => $remote->details_url,
+			'requires'     => $remote->requires,
+			'requires_php' => $remote->requires_php,
+			'new_version'  => $remote->version,
+			'package'      => $remote->download_url,
+		);
 
-    return $newTransient;
-  }
+		$new_transient = new \stdClass();
+		// check all the versions now
+		if (
+		$remote
+		&& version_compare( $version, $remote->version, '<' )
+		&& version_compare( $remote->requires, get_bloginfo( 'version' ), '<' )
+		&& version_compare( $remote->requires_php, PHP_VERSION, '<' )
+		) {
+			$this->old_transient_name               = $this->now_transient_name;
+			$new_transient->response[ $theme_name ] = $remote_data;
+		} else {
+			$new_transient->no_update[ $theme_name ] = $remote_data;
+		}
 
-  // アップデート完了時に古いversionのtrasientを削除
-  public function delete_old_transient() {
-    if( $this->old_transient_name !== $this->now_transient_name ) {
-      delete_transient( $this->old_transient_name );
-    }
-  }
+		return $new_transient;
+	}
+
+	// アップデート完了時に古いversionのtrasientを削除
+	public function delete_old_transient() {
+		if ( $this->old_transient_name !== $this->now_transient_name ) {
+			delete_transient( $this->old_transient_name );
+		}
+	}
 }

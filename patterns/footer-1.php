@@ -11,11 +11,11 @@
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 
-  <!-- wp:paragraph {"align":"center"} -->
-  <p class="has-text-align-center">
-      Proudly powered by <a href="https://wordpress.org/">WordPress</a>.
-  </p>
-  <!-- /wp:paragraph -->
+	<!-- wp:paragraph {"align":"center"} -->
+	<p class="has-text-align-center">
+		Proudly powered by <a href="https://wordpress.org/">WordPress</a>.
+	</p>
+	<!-- /wp:paragraph -->
 
 </div>
 <!-- /wp:group -->

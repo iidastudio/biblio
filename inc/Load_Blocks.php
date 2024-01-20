@@ -9,12 +9,11 @@ namespace biblio\inc;
 
 class Load_Blocks {
 
-  public function __construct() {
-    add_action( 'init', [$this,  'biblio_register_blocks'] );
-  }
-
-  public function biblio_register_blocks() {
-		register_block_type( get_template_directory() . '/dist/blocks/vertical_group' );
+	public function __construct() {
+		add_action( 'init', array( $this, 'biblio_register_blocks' ) );
 	}
 
+	public function biblio_register_blocks() {
+		register_block_type( get_template_directory() . '/dist/blocks/vertical_group' );
+	}
 }
