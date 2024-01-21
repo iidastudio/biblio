@@ -74,6 +74,7 @@ jobs:
         id: upload-release-asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
         run: |
           gh release upload "$tag" ./biblio.zip \
               --repo="$GITHUB_REPOSITORY"
