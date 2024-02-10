@@ -46,7 +46,7 @@
     "clean:fonts": "rimraf ./dist/fonts",
 
     "zip": "run-s zip:*",
-    "zip:pack": "rimraf biblio biblio.zip && rsync -a --exclude='/vendor' --exclude='/node_modules' --exclude='/src' --exclude='/config' --exclude='/.git' --exclude='.*' --exclude='package.json' --exclude='package-lock.json' --exclude='composer.json' --exclude='composer.lock' ./ biblio",
+    "zip:pack": "rimraf biblio biblio.zip && rsync -a --include='/vendor/autoload.php' --include='/vendor/composer' --exclude='/vendor/*' --exclude='/node_modules' --exclude='/src' --exclude='/config' --exclude='/.git' --exclude='.*' --exclude='package.json' --exclude='package-lock.json' --exclude='composer.json' --exclude='composer.lock' ./ biblio",
     "zip:archive": "zip -9 -qmr biblio.zip biblio"
   },
   "devDependencies": {
