@@ -18,8 +18,8 @@ class Load_Extensions {
 	}
 
 	public function biblio_register_extentions() {
-		register_block_type( get_template_directory() . '/dist/extensions/code_block_syntax_highlight' );
 		if ( is_admin() ) {
+			register_block_type( get_template_directory() . '/dist/extensions/code_block_syntax_highlight' );
 			register_block_type( get_template_directory() . '/dist/extensions/editor_support_hover_border' );
 		}
 	}

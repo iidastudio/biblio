@@ -1,17 +1,6 @@
 // Yakumono
-@use "../../../node_modules/yakuhanjp/dist/scss/yakuhanjp_s" with (
-	$yakuhanjps-font-dir: "../fonts",
-	$yakuhanjps-swap-use: true,
-	$yakuhanjps-eot-use: false,
-	$yakuhanjps-weight: (300:"DemiLight",400:"Regular",700:"Bold") 
-);
-
-@use "../../../node_modules/yakuhanjp/dist/scss/yakuhanmp_s" with (
-	$yakuhanmps-font-dir: "../fonts",
-	$yakuhanmps-swap-use: true,
-	$yakuhanmps-eot-use: false,
-	$yakuhanmps-weight: (300:"Regular",400:"Medium",700:"Bold") 
-);
+@use "../../../node_modules/yakuhanjp/dist/css/yakuhanjp_s";
+@use "../../../node_modules/yakuhanjp/dist/css/yakuhanmp_s";
 
 // biblio font Settings
 @font-face {

@@ -6,8 +6,19 @@
     white-space: pre !important;
   }
 }
+
+// highlight syntax prism用の調整
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  &.code-toolbar {
+    max-width: fit-content;
+  }
+}
 .code-toolbar {
   > .wp-block-code {
+    max-width: var(--wp--style--global--content-size);
     margin: 0;
+  }
+  .alignwide {
+    max-width: var(--wp--style--global--wide-size) !important;
   }
 }
