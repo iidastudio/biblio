@@ -86,6 +86,7 @@ class Theme_Support {
 		'image',
 		'latest-comments',
 		'latest-posts',
+		'list',
 		'media-text',
 		'navigation',
 		'nextpage',

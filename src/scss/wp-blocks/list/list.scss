@@ -1,0 +1,19 @@
+.wp-block-list {
+  padding-inline-start: 1.4em;
+  line-height: 1.5;
+  li {
+    &:not(:first-child) {
+      margin-block-start: 0.5em;
+    }
+    ol, ul:where(:not(.wp-block-navigation__submenu-container)) {
+      li {
+        &:first-child {
+          margin-block-start: 0.125em;
+        }
+        &:not(:first-child) {
+          margin-block-start: 0.125em;
+        }
+      }
+    }
+  }
+}

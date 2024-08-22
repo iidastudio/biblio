@@ -50,31 +50,6 @@ strong {
 	font-weight: 600;
 }
 
-// list
-ol, ul:not(:where(
-.c-comments__list,
-.wp-block-navigation__container,
-.wp-block-page-list,
-.wp-block-post-template)){
-	padding-inline-start: 1.4em;
-	line-height: 1.5;
-	li:not(:where(:first-child, .wp-social-link, .comment)) {
-		margin-block-start: 0.5em;
-	}
-	li {
-		ol, ul:where(:not(.wp-block-navigation__submenu-container)) {
-			li {
-				&:first-child {
-					margin-block-start: 0.125em;
-				}
-				&:not(:first-child) {
-					margin-block-start: 0.125em;
-				}
-			}
-		}
-	}
-}
-
 sup, sub {
 	font-size: var(--fontSize--xs);
 	line-height: 0;
