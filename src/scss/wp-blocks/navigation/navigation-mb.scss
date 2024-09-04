@@ -1,5 +1,3 @@
-@use '../../tool' as *;
-
 .wp-block-navigation.is-style-biblio-toggle-list {
 
   .wp-block-navigation__responsive-container.is-menu-open.has-modal-open {
@@ -18,13 +16,8 @@
 
 
     // first lavel menu border
-    .wp-block-page-list,
-    .wp-block-navigation__container {
-      > {
-        .wp-block-navigation-item {
-          border-bottom: solid 1px var(--color--support-text);
-        }
-      }
+    :where(.wp-block-page-list, .wp-block-navigation__container) > .wp-block-navigation-item {
+      border-bottom: solid 1px var(--color--support-text);
     }
     
     // メニュー１行のpadding
@@ -142,7 +135,7 @@
         
         &.has-child {
           > .wp-block-navigation-item__content {
-            // margin-left: 0.8em分を削除
+            // toggle位置がずれないように
             flex-basis: calc(100% - var(--toggle-size) - 8px * 2) !important; 
           }
         }
