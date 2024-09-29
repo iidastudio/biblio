@@ -1,8 +1,7 @@
 import { registerPlugin, withPluginContext } from '@wordpress/plugins';
-import { PluginMoreMenuItem } from '@wordpress/edit-post';
+import { PluginMoreMenuItem } from '@wordpress/editor';
 import { PreferenceToggleMenuItem, store as preferencesStore } from '@wordpress/preferences';
 import { useSelect } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
 const HoverBorderToggleMenuItem = () => {
