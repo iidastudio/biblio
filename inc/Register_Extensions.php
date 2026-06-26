@@ -1,6 +1,6 @@
 <?php
 /**
- * Load Extension
+ * Register Extensions
  *
  * @package BIBLIO
  * @since 1.0.0
@@ -8,7 +8,7 @@
 namespace biblio\inc;
 use biblio\dist\extensions\code_block_syntax_highlight\Code_Block_Syntax_Highlight;
 
-class Load_Extensions {
+class Register_Extensions {
 
 	public function __construct() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'biblio_register_extentions' ) );

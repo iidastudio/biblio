@@ -1,13 +1,13 @@
 <?php
 /**
- * Load Custom Block
+ * Register Custom Block
  *
  * @package BIBLIO
  * @since 1.0.0
  */
 namespace biblio\inc;
 
-class Load_Blocks {
+class Register_Blocks {
 
 	public function __construct() {
 		add_action( 'init', array( $this, 'biblio_register_blocks' ) );
